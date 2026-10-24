@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9월 14일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>3주차 · 9월 14일(월)</span><span>근거: 수업 녹취 (자동 받아쓰기, 약 1시간 14분)</span></div>
+  <h1>드랙, 수행성, 그리고 "다르게 살 가능성"</h1>
+  <p class="lead">이날은 학생 조의 발표(드랙과 Butler)를 받아 교수가 할렘 드랙 볼의 역사를 보여 주고, 드랙이 소비되면서도 변화의 가능성을 갖는 양가성을 한국 사회의 규범 문제로 연결했다. 핵심 문장은 "행위(performing)가 곧 존재 방식이 된다"이다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이날의 자료</h2>
+  <ul class="reads">
+    <li>Judith Butler, 『젠더 트러블』 옮긴이 개념 해설 중 드랙, 성별/젠더/섹슈얼리티, 수행성 (PDF 지정 부분)</li>
+    <li>Hamilton Lodge Ball 사진과 신문 기사 (1930년대 자료, 수업 슬라이드)</li>
+    <li>Langston Hughes 자서전에 실린 rent party 초대 카드 (수업 슬라이드)</li>
+    <li>Thaddeus Morgan의 기사 "How 19th-Century Drag Balls Evolved into House Balls" (HISTORY) <span class="tag t-note">교재 요약에 정리</span></li>
+    <li>영상: K-pop 그룹 뮤직비디오 1분, Madonna "Vogue", 보깅·왁킹 배틀 영상 <span class="tag t-warn">제목은 받아쓰기라 불확실</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>성적·시험·발표 안내 <span class="tag t-ok">녹취</span></b>
+      <ul>
+        <li>교양 수업이므로 10 중 6~7을 읽고 투자하면 된다. 아예 안 읽으면 말할 거리가 없다고 했다.</li>
+        <li>시험은 볼 가능성이 높다. 수강생은 약 60명이고 이탈하면 50명대가 될 것이라고 했다.</li>
+        <li>교수가 AI에게 "AI 시대의 평가 방식"을 물었더니 전부 준비하라는 답이 나왔고, 지인은 "교양인데 그렇게까지 해야 하나"라고 했다. 그래서 시험은 필요악이며, 궁극적으로는 바꿔야 한다고 했다.</li>
+        <li>인문학은 하나의 답으로 수렴하지 않는다. 수업 내용을 그대로 쓰는 것보다 자기 생각을 드러내는 쪽이 낫다고 했다.</li>
+        <li>발표는 자유 형식(PPT 여부, 1명 또는 3명 발표 모두 가능)이다. 맥락 정보만 나열하는 발표는 별로이고, 그 텍스트를 어떻게 읽었는지가 중요하다. 10분 안팎으로 하고 15분을 넘기면 중단한다.</li>
+      </ul></div></li>
+    <li><div><b>학생 조 발표: 드랙은 세상을 바꿀 수 있는가 <span class="tag t-ok">녹취</span></b>아래 "발표 내용 요약" 참조. 발표 후 질문 한 건과 답변이 있었다.</div></li>
+    <li><div><b>교수 총평 <span class="tag t-ok">녹취</span></b>"어려운 게 아니라 익숙하지 않은 것"이라고 했다. 드랙은 이런 담론에 익숙하지 않은 학생이 많을 것 같아 일부러 넣었다. 오늘은 세 가지를 다룬다고 했다: 드랙이란 무엇인가, 미국 문화에서 어떤 맥락인가, 한국의 우리에게 정치적·미학적 의미는 무엇인가.</div></li>
+    <li><div><b>뮤직비디오 1분 시청 <span class="tag t-ok">녹취</span></b>교수는 K-pop 뮤직비디오를 틀고, 이 담론에 익숙한 사람은 왜 이 영상을 틀었는지 알 것이라고 했다. 수업 끝부분에서 보깅과 연결된다. <span class="tag t-warn">그룹명은 받아쓰기로 "르세라핌"으로 들림</span></div></li>
+    <li><div><b>드랙의 정의 <span class="tag t-ok">녹취</span></b>정의를 쓸 때는 OED처럼 권위 있는 사전을 쓰라는 팁을 줬다. OED는 처음 쓰인 연도를 보여 준다. 학생이 개념 해설의 정의를 낭독했다(여장 남성, 남장 여성, 드랙은 동성애와 같지 않음, 큰 범주에서 트랜스젠더에 속함). <span class="tag t-warn">OED 연도는 받아쓰기가 뒤엉켜 1821, 1861, 1862 등 확정 불가</span></div></li>
+    <li><div><b>Hamilton Lodge Ball <span class="tag t-ok">녹취</span></b>드랙의 기본은 이 볼을 빼고 생각할 수 없다. 1869년에 시작됐다고 했다. 사진과 1930년대 신문 기사로만 남아 있고, 참가자는 흑인보다 백인이 많았다고 했다. 기사 속 묘사는 호기심 어린 시선과 "정상에서 벗어난 존재"라는 조롱이 섞여 있다. <span class="tag t-warn">시작 연도는 기사와 어긋남 (아래 "확인 필요" 참조)</span></div></li>
+    <li><div><b>백인 "관광"과 우리만의 공간 <span class="tag t-ok">녹취</span></b>1920~30년대 백인 중산층이 놀고 싶어도 자기 동네에서는 못 하니 할렘으로 왔다. 비유로 서울의 이태원을 들었다. Cotton Club은 흑인 악단이 연주해도 백인만 입장했다(Jim Crow의 분리와 반대 방향). 흑인들은 아파트 엘리베이터 등에 카드를 붙여 rent party를 열어 자기들만의 공간을 만들었다. Hughes는 그 카드를 자서전에 실었는데, 교수는 이 카드 자체가 문학 텍스트가 아닐까 하는 질문을 던졌다. 9/9의 "Cat and the Saxophone" 제목처럼 "우리만 아는 이름"이라는 점도 연결했다.</div></li>
+    <li><div><b>남장 여성과 통제 <span class="tag t-ok">녹취</span></b>여장 남성뿐 아니라 남장 여성(드랙 킹)도 있었다. 신문 기사에서 "나는 다시 여자가 되었다"는 식으로 이성애 중심으로 재편입시키는 서술이 보이고, 이것이 정말 당사자의 목소리인지 의심해 보라고 했다. 단속과 통제의 역사도 꽤 길다고 했다(9/9의 "Café: 3 a.m." 단속 장면과 연결).</div></li>
+    <li><div><b>대중문화로의 확산 <span class="tag t-ok">녹취</span></b>RuPaul's Drag Race(2009 시작, 아직 방영 중), 한국의 드랙퀸 "김치"라는 이름(이름이 왜 김치인지 비판적으로 읽을 수 있다), 넷플릭스에서 본 쇼 Pose를 언급했다. <span class="tag t-warn">"김치"는 받아쓰기 기준</span></div></li>
+    <li><div><b>문화 차이 일화 두 가지 <span class="tag t-ok">녹취</span></b>교수는 일반화할 수 없는 개인 경험이라고 전제했다.
+      <ul>
+        <li>친구 셋이 만나기로 했을 때 새 사람을 부르겠느냐는 질문. 한국은 깊고 좁은 관계, 미국은 넓고 얕은 관계에 가깝다는 인상이라고 했다. rent party가 "아무나 오는" 파티였다는 점과 연결했다.</li>
+        <li>2015년 한국에서 퀴어 퍼레이드에 갔을 때 외국 대사들이 축사를 했는데 한국 유명인은 없었다는 이야기. 한국 사회가 규범 중심임을 보여 주는 사례로 들었다. 지금은 달라졌을지 모른다고 덧붙였다.</li>
+      </ul></div></li>
+    <li><div><b>Madonna "Vogue"와 Paris Is Burning <span class="tag t-ok">녹취</span></b>드랙 볼 문화가 Madonna의 "Vogue"(1990년대)로 대중화됐다고 했다. 이는 흑인·유색인 문화의 상품화로 비판할 수 있다. 유명 다큐멘터리에서는 대회를 열고 "하우스"라는 가족(엄마, 아빠, 아이들)을 만든다. 원가족에게서 버림받은 사람들이 스스로 가족을 구성하는 가능성이다. 이 다큐도 감독이 백인이라 널리 알린 공과 이용이라는 비판이 함께 있다. 교수는 이를 양가성이라고 불렀다(9/7 냄새 지도의 끌림과 혐오와 같은 구조).</div></li>
+    <li><div><b>보깅·왁킹 영상과 K-pop <span class="tag t-ok">녹취</span></b>보깅은 뉴욕 대회에서 유색인종이 주로 하던 양식이다. 앞서 틀었던 K-pop 영상이 왜 중요한지 연결된다. 대중문화라서 "그냥 소비"라고 비판하기 쉽지만, 오랜 맥락(규범 일탈을 통한 자유와 개성 표현)이 지워진 채 소비된다는 점이 비판의 핵심이다.</div></li>
+    <li><div><b>수행성 정리와 de Certeau <span class="tag t-ok">녹취</span></b>아래 "핵심 개념" 참조.</div></li>
+    <li><div><b>마무리 <span class="tag t-ok">녹취</span></b>Halloween 해석, 한국 사회의 규범 강요, 미국의 규제와 정치적 의도 문제. 마지막으로 Discussion 1 점수 안내. 아래 해당 항목 참조.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>발표 내용 요약 <small>학생 조, 이름 생략</small></h2>
+  <div class="grid">
+    <div class="card"><h3>문제의식 <span class="tag t-ok">녹취</span></h3><p>드랙이 정말 세상을 바꿀 수 있는가를 의심하고, 바꾸려면 어떻게 해야 하는가를 묻는다. 한국 퀴어 다큐멘터리의 예고편 한 문장을 인용해, 남성도 여성도 아닌 사람은 사회가 인정하는 삶의 기회가 아예 사라진다고 짚었다. 규범은 어떤 삶은 인정하고 어떤 삶은 배제한다.</p></div>
+    <div class="card"><h3>Butler 정리 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>Lacan 비판: 남근을 모두가 욕망해야 하는 중심으로 놓으면 남성/여성 틀에 안 맞는 몸과 욕망은 주변화된다(남근로고스중심주의).</li>
+      <li>질문의 전환: "남성은 왜 중심인가"에서 "욕망을 설명하려고 왜 하나의 자연적 질서를 전제하는가"로.</li>
+      <li>젠더는 본질이 아니라 규범의 반복에서 나온다. 수행문("나는 남성이다"라는 소개)은 이후의 옷, 서류, 체크 칸 같은 반복을 낳는다. 권력은 억압만이 아니라 생산적이다.</li>
+      <li>드랙은 젠더를 패러디해 규범이 자연이 아니라 반복으로 유지됨을 드러낸다.</li>
+    </ul></div>
+    <div class="card"><h3>비판과 확장 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>드랙은 대중문화에서 상품화·정형화될 수 있다. Butler도 드랙이 "기껏해야 양가성의 장소"라고 했다고 소개했다(받아쓰기 문장 기준).</li>
+      <li>그래서 "누구의 드랙이 어떻게 소비되고, 어떤 퀴어가 여전히 탈락하는가"를 묻자고 했다.</li>
+      <li>변화 가능성을 공연자가 아니라 관객에게서 찾는다. de Certeau는 소비자를 지배 문화가 준 공간을 자기 방식으로 바꾸는 존재로 보았고, 발표는 "가발 쓰기"라는 전술을 소개했다.</li>
+      <li>"여성 되기"(becoming)를 이상화된 여성을 모방하는 것이 아니라 이분법을 흔들며 차이를 만드는 과정으로 읽었다. <span class="tag t-warn">개념 출처(받아쓰기상 "대비")는 미확인</span></li>
+    </ul></div>
+    <div class="card"><h3>질문과 답 <span class="tag t-ok">녹취</span></h3><p>Q. "드랙은 기껏해야 양가성의 장소"는 무슨 뜻인가. A. 새로운 것을 만들면서도 구조에 속박될 위험을 항상 지닌다는 뜻이다. 이 말 이후 비판받았고, 정형화되지 않도록 계속 쇄신해야 전복할 수 있다는 식으로 쓰인 것으로 안다.</p></div>
+    <div class="card"><h3>발표 외 일반 지식 <span class="tag t-note">녹취 밖</span></h3><ul>
+      <li>de Certeau의 소비 전술은 "la perruque"(직장에서 일을 하는 척하며 자기 일을 하는 것)로 알려져 있다. 녹취의 "가발 쓰기"는 이 단어의 직역으로 보이며, 발표자가 노동자의 딴짓을 예로 든 것과 맞는다. <span class="tag t-warn">확인 필요</span></li>
+      <li>"becoming-woman"은 Deleuze·Guattari의 개념으로 알려져 있다. 녹취만으로는 확정할 수 없다. <span class="tag t-warn">확인 필요</span></li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>핵심 개념 <small>7개</small></h2>
+  <div class="grid">
+    <div class="card"><h3>수행성: 행위가 곧 존재 방식</h3><p>"내가 남성이어서 남성처럼 행동한다"가 아니라 "남성으로 인정되는 행위를 반복해서 남성이 된다". 명사가 아니라 동사에 가깝다. 교수는 "P(Performing)는 Being"이라고 칠판에 쓰라고 했다. 이 부분은 시험에 안 나오지만 대학 지식인으로서 알았으면 한다고 했다.</p></div>
+    <div class="card"><h3>권력의 생산성</h3><p>권력은 "너는 남자니까 이렇게 행동하면 안 돼"라는 금지를 만들고, 동시에 "너는 남자니까 이렇게 해야 해"라는 요구도 만든다. 즉 억압뿐 아니라 계속 무엇인가를 생산한다.</p></div>
+    <div class="card"><h3>드랙의 장점과 단점</h3><ul>
+      <li>장점: 보이는 성과 행위의 불일치를 드러내 "성은 정해진 것이 아니다"를 보여 준다. 생각된 남성의 실체가 허물어진다.</li>
+      <li>단점: 전형적 여성 역할을 반복하면 스테레오타입을 강화하고, 소비된다.</li>
+      <li>그래서 Butler도 "양가성의 장소"라고 했고, 비판을 받더라도 가능성을 읽고 싶어 한다.</li>
+    </ul></div>
+    <div class="card"><h3>agency와 de Certeau</h3><p>도시 계획이 정한 길로만 걷는다면 수동적이다. 그러나 걷다가 되돌아가기도 하는 작은 능동성을 찾을 수 있다. 게임의 규칙에 따르면서도 일부러 이상한 행동을 하는 식이다. 드랙이 소비되더라도 관객이 문제점이나 가능성을 읽어 내는 것이 관객의 역할이다.</p></div>
+    <div class="card"><h3>양가성 (끌림과 혐오)</h3><p>흑인·유색인 문화에 끌리면서(소비, 관광) 동시에 비판받는 구조다. 9/7의 슬러밍, 냄새 지도와 같은 구조로 볼 수 있다. 교수는 "세상에 하나만 가는 것은 없다"고 했다.</p></div>
+    <div class="card"><h3>다른 삶의 가능성</h3><p>드랙의 정치성은 올바른 여성성을 보여 주는 것이 아니라, 이전에는 가능하지 않았던 삶의 방식을 열어젖히는 상상력이다. "공부해서 서울대, 결혼, 출산" 같은 정해진 틀에서 어긋나 자기 방식으로 살아 볼 가능성과 연결했다.</p></div>
+    <div class="card"><h3>Halloween의 의미</h3><p>하루만큼은 내가 되고 싶은 존재가 되어도 이상하지 않은 날이다. 교수는 자신은 별로 좋아하지 않지만, 다르게 존재할 가능성을 제시한다는 점에서 가치를 인정할 수 있다고 했다.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>9/9 시와의 연결 <small>교수 언급</small></h2>
+  <div class="box">
+    <ul class="plain" style="font-size:15px">
+      <li><span class="tag t-ok">녹취</span> "Café: 3 a.m."의 단속 장면: 신문 기사에서 남장·여장을 한 사람을 잡아내는 통제의 역사와 이어진다.</li>
+      <li><span class="tag t-ok">녹취</span> 마지막 질문("경찰인가 레즈비언인가"): 단속하는 쪽에도 있다고 확정하지 않고 "있을 수도 있다"고 되묻는 불확정성이 드랙의 문학성이라고 했다.</li>
+      <li><span class="tag t-ok">녹취</span> "Cat and the Saxophone": 우리만 아는 이름(닉네임)으로 자기들의 공간을 만든다는 점이 rent party 카드와 이어진다.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>한국 사회와 연결한 대목 <small>교수 의견</small></h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 한국은 규범과 정상성을 강하게 요구하는 사회라고 했다. 일본만 가도 남들이 신경 쓰지 않는다는 개인 경험을 들었다. (교수의 개인 견해이며 통계 근거는 없다)</li>
+    <li><span class="tag t-ok">녹취</span> 2026년 학회(밴쿠버)에서 젠더 중립 화장실 표지를 보았다고 했다. 한국이라면 폐해 때문에 전부 없애자는 쪽이 중심이 되겠지만, 미국은 그럼에도 정치적 메시지가 더 중요하다고 보는 경우가 있다. 맞다/틀리다가 아니라 다르다는 설명이었다.</li>
+    <li><span class="tag t-ok">녹취</span> 법 공부를 하는 지인에게 들은 말로, 미국은 땅이 커서 "at your own risk(너의 위험은 네가 감수)"가 더 용인되는 사회라고 소개했다. <span class="tag t-warn">교수가 전해 들은 설명이며 일반 지식으로 확인하지 않음</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>공지·평가 관련</h2>
+  <div class="box">
+    <ul class="plain" style="font-size:15px">
+      <li><span class="tag t-ok">녹취</span> Discussion 1은 점수가 들어갔을 것이다. 못 받았어도 좌절할 필요 없다. 첫 번째는 성적이 안 들어갔고, 한 번 빠져도 된다고 했다.</li>
+      <li><span class="tag t-ok">녹취</span> 발표 형식은 자유다. 이렇게 해도 되고 다르게 해도 된다.</li>
+      <li><span class="tag t-ok">녹취</span> Butler 부분은 시험에 안 나오지만 알았으면 하는 내용이라고 했다. 공식 시험 범위는 별도 PDF를 확인해야 한다.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <div class="box">
+    <p style="font-size:15px">교수는 Butler 수행성이 "시험에 안 나온다"고 했다. 따라서 시험 대비는 9/9의 Hughes, Campbell, Lawrence와 이날 다룬 Hamilton Lodge Ball 자료를 중심으로 하는 편이 안전하다. 아래는 이날 수업에서 만든 연습 문항이며 교수 출제와는 무관하다. <span class="tag t-note">해석</span></p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>Hamilton Lodge Ball을 백인 중산층 "관광"과 함께 읽으면 무엇이 보이는가?</summary><p>드랙 볼은 규범 밖에서 자유를 누리는 공간이면서, 동시에 외부 시선에 의해 구경거리가 되고 "정상에서 벗어난 존재"로 묘사되었다. 같은 시기 할렘 나이트클럽에 백인이 관광을 온 구조와 같아, 끌림과 혐오의 양가성으로 읽을 수 있다.</p></details>
+    <details><summary>rent party 카드를 문학 텍스트로 읽는다면?</summary><p>흑인이 백인 중심 공간에서 배제되자 자기들끼리 아는 방식으로 모임을 알리는 글이다. 우리만의 공간을 만드는 언어라는 점에서 9/9 "Cat and the Saxophone"의 비밀스러운 이름과 이어진다.</p></details>
+    <details><summary>드랙이 상품화되는 것을 어떻게 평가할 수 있는가?</summary><p>정형화, 스테레오타입 강화, 흑인·유색인 문화의 상품화라는 비판이 가능하다. 동시에 관객이 소비하면서도 다른 삶의 가능성을 읽어 낼 수 있다는 de Certeau식 읽기가 있다. 한쪽으로 단정하지 않고 양가성을 짚는 답이 수업의 방향과 맞는다.</p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>녹취</th><th>다른 자료</th></tr></thead>
+    <tbody>
+      <tr><td>Hamilton Lodge Ball 시작 연도</td><td>교수는 1869년이라고 말한 것으로 받아쓰임</td><td>HISTORY 기사는 1936년 대회를 "첫 대회로부터 69년 뒤"로 서술해 1867년으로 계산된다. 두 수치가 다르므로 인용 전에 원문 확인 필요.</td></tr>
+      <tr><td>드랙 용어의 첫 사용(OED)</td><td>연도가 받아쓰기에서 뒤엉킴</td><td>OED 원문 확인 필요</td></tr>
+      <tr><td>첫 번째 영상의 그룹명, 한국 드랙퀸 이름</td><td>받아쓰기 기준 "르세라핌", "김치"</td><td>확인 필요</td></tr>
+      <tr><td>de Certeau "가발 쓰기"</td><td>발표자의 용어</td><td>la perruque로 보이나 확인 필요</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 9/14 녹취(자동 받아쓰기)를 정리한 것이다. 학생 이름은 적지 않았고, 영상·인물·연도는 받아쓰기 오류 가능성이 있다. 발표 부분은 학생의 설명이며 Butler 원문과 다를 수 있다.</p>
+  <p><b>범위 한계</b> 수업 슬라이드의 이미지(사진, 신문 기사, 카드)는 보지 못했고 교수의 구두 설명만 정리했다.</p>
+</footer>
+</div>
+</body></html>
