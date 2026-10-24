@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9월 7일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+/* Layout: single reading column, section headings as left-aligned labels, concept grid and a small nationality-map legend as the one subject-specific visual. */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --accent-soft:#f3e7cf; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --red:#b4372e; --yellow:#c9a21a; --green:#2f7d4f;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --accent-soft:#2c2414; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636;
+  --red:#e0675d; --yellow:#e0bd4a; --green:#58b27d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --accent-soft:#2c2414; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636;
+  --red:#e0675d; --yellow:#e0bd4a; --green:#58b27d; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.map{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:6px;font-size:13px}
+.sw i{width:14px;height:14px;border-radius:3px;display:inline-block}
+.quote{border-left:3px solid var(--line);padding:2px 0 2px 14px;color:var(--muted);font-size:14.5px;margin-top:8px}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>1주차 · 9월 7일(월)</span><span>근거: 수업 녹취 (자동 받아쓰기)</span></div>
+  <h1>도금시대의 이민자와 리스의 시선</h1>
+  <p class="lead">리스(Riis)가 개혁가로서 한 일은 인정하되, 그가 이민자를 환경의 산물로 보고(결정론) 사진과 지도로 묘사한 방식(상품화, 일반화)을 비판적으로 읽는 수업이었다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식 (녹취 밖)</span><span class="tag t-warn">미확인</span></div>
+</header>
+
+<section>
+  <h2>읽은 텍스트</h2>
+  <ul class="reads">
+    <li>Jacob A. Riis, <i>How the Other Half Lives</i> (번역서 『세상의 절반은 어떻게 사는가』 발췌)</li>
+    <li>Lewis Hine의 사진, 각종 잡지 표지</li>
+  </ul>
+  <p style="margin-top:10px;font-size:14px;color:var(--muted)">9/2(강의 소개)는 녹음이 없어 포함하지 않았다.</p>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>도금시대(The Gilded Age) <span class="tag t-note">일반 지식</span></b>마크 트웨인이 붙인 이름이다. 겉은 금빛이지만 속은 썩었다는 비판이다. 1870년대~1900년경, 산업 발달과 이민자 대량 유입의 시기다.</div></li>
+    <li><div><b>세 가지 질문 <span class="tag t-ok">녹취</span></b>다른 사람을 어떻게 볼 것인가, 어떻게 묘사할 것인가, 그것을 어떻게 읽을 것인가. 교수는 "이해했는가"보다 "어떻게 느꼈는가"가 중요하다고 했다.</div></li>
+    <li><div><b>리스의 사진과 글 <span class="tag t-ok">녹취</span></b>포토저널리스트이자 사회개혁가다. 뉴욕 테너먼트(공동주택)의 참상을 사진으로 고발했고 아동노동 개선에 기여했다.</div></li>
+    <li><div><b>비판적 읽기 <span class="tag t-ok">녹취</span></b>교수가 던진 질문:
+      <ul>
+        <li>사진 촬영에 당사자의 동의가 있었는가? 의도가 수단을 정당화하는가?</li>
+        <li>가난의 상품화인가? (수강생이 "가난 포르노"라고 표현)</li>
+        <li>"그림 같다"는 뜻의 picturesque 표현이 반복된다.</li>
+        <li>야구를 하며 노는 이민자 사진도 있어, 이민자를 평면적 피해자로만 그리지는 않는다.</li>
+      </ul></div></li>
+    <li><div><b>결정론적 시각(자연주의) <span class="tag t-ok">녹취</span></b>서문에 인용된 뉴욕 교도소협회 총무의 발언(범죄의 상당수가 가정 없는 개인이 저지른다는 취지)을 읽고, 환경이 사람을 만든다는 전제를 검토했다.</div></li>
+    <li><div><b>시각화의 문제 <span class="tag t-ok">녹취</span></b>국적별 색칠 지도, "냄새 지도", 통계와 도표를 다뤘다.</div></li>
+    <li><div><b>여성과 아이 중심 묘사 <span class="tag t-ok">녹취</span></b>위협이 되는 남성 대신 여성과 아이를 보여주는 이유를 다뤘다.</div></li>
+    <li><div><b>백인성(whiteness) <span class="tag t-ok">녹취</span></b>이탈리아계와 아일랜드계는 당시에 아직 "백인"이 아니었다.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>핵심 개념 <small>8개</small></h2>
+  <div class="grid">
+    <div class="card"><h3>자연주의 vs 리얼리즘</h3><p>자연주의는 환경이 사람을 만들며 개인은 벗어날 수 없다고 본다. 리얼리즘은 개인이 사회를 바꾸는 주체(agency)라고 본다. 리스는 결정론적 시각을 드러낸다.</p></div>
+    <div class="card"><h3>결정론적 시각</h3><p>"여기 살면 범죄자가 된다"는 식으로 개인의 가능성을 부정한다. 교수의 비유: 가난하게 컸으니 서울대에 못 간다고 말하는 것과 같다.</p></div>
+    <div class="card"><h3>개혁의 주체</h3><p>개혁은 "백인 미국인"이 하고 이민자는 개선의 대상이다. 덴마크 출신인 리스도 이미 "미국인" 편에서 말한다.</p></div>
+    <div class="card"><h3>인종 지도(mapping)</h3><p>국적을 색으로 칠해 구분했다. 수강생이 "출신지가 중요하다는 뜻"이라고 짚었고, 교수는 이를 스테레오타입, 본질론과 연결했다. 개인은 사라지고 집단만 남는다.</p>
+      <div class="map"><span class="sw"><i style="background:var(--red)"></i>이탈리아</span><span class="sw"><i style="background:var(--yellow)"></i>중국</span><span class="sw"><i style="background:var(--green)"></i>아일랜드</span></div></div>
+    <div class="card"><h3>같은 시기 다른 지도</h3><p>시카고 국적 지도(1895)와 Du Bois의 필라델피아 연구(1899). Du Bois에게는 엘리트주의 비판이 있었다.</p></div>
+    <div class="card"><h3>슬러밍(slumming)</h3><p>끌림과 혐오가 동시에 일어난다. 냄새 지도가 그 예이며, 빈민가를 구경하는 행위가 슬러밍이다.</p></div>
+    <div class="card"><h3>여성과 아이의 묘사</h3><p>동정을 사고 "편입"을 쉽게 하려는 전략이다. 교수의 비유: 냉전기에 일본을 우방으로 만들 때 원폭 피해 여성과 아이를 부각했다.</p></div>
+    <div class="card"><h3>백인성의 획득</h3><p>이탈리아계와 아일랜드계는 1920년대 무렵에야 백인으로 인정받았다. 인종은 사회가 만든 범주라는 예다.</p>
+      <div class="quote">교수가 보여준 1876년경 삽화는 "흑인 한 표 = 아일랜드계 한 표" 구도였다. 삽화의 출처는 녹취에서 확인되지 않았다. <span class="tag t-warn">미확인</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>교수가 강조한 점</h2>
+  <ul class="plain">
+    <li>개혁 의지는 인정하되 전제와 방법은 따로 비판할 수 있다. 둘 중 하나만 선택할 필요가 없다.</li>
+    <li>2026년 한국에서 읽는 이유: 한국도 다양해지고 있고(단일민족은 신화), 우리도 해외에서는 소수자가 된다.</li>
+    <li>다음 시간(9/9)은 시를 읽는다. 뜻을 찾아보지 말고 AI도 쓰지 않은 채 5분 투자해서 그냥 읽어 오는 것이 목표다.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <div class="box">
+    <p style="font-size:15px">Riis는 중간고사 범위 텍스트 목록(공식 PDF)에 들어 있다. 문항 2는 인용문의 뜻을 3문장 이내로 쓰는 형식이다. 아래 문제로 연습할 수 있다.</p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>리스의 시각은 왜 "결정론적"이라고 비판받는가?</summary><p>범죄와 가난을 개인이 아니라 사는 환경의 결과로 설명하기 때문이다. 이 시각에서는 이민자가 환경을 바꾸는 주체가 되지 못하고 개선의 대상이 된다. (녹취의 자연주의 vs 리얼리즘 설명을 정리)</p></details>
+    <details><summary>국적별 색칠 지도는 무엇이 문제인가?</summary><p>국적을 색으로 구분하면 개인이 사라지고 출신지가 곧 성격이라는 본질론이 강화된다. 수강생이 "출신지가 중요하다는 뜻"이라고 지적했다.</p></details>
+    <details><summary>리스가 여성과 아이를 중심에 둔 이유는?</summary><p>동정을 얻고 이민자를 사회에 "편입"시키기 쉽게 하는 전략으로 읽을 수 있다. 위협적인 성인 남성의 이미지를 피한다.</p></details>
+    <details><summary>이탈리아계·아일랜드계 이민자의 사례는 인종에 대해 무엇을 보여주는가?</summary><p>이들은 당시에 "백인"으로 취급되지 않다가 1920년대 무렵에야 인정받았다. 인종은 고정된 실체가 아니라 사회가 정하는 범주라는 뜻이다.</p></details>
+  </div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 9/7 녹취(자동 받아쓰기)를 정리한 것이다. 인명과 일부 수치는 받아쓰기 오류 가능성이 있다.</p>
+  <p><b>보충 (녹취 밖, 일반 지식)</b> 리스의 책은 1890년 출간이다. 녹취에서 교수가 "막스 베버"의 거미집 비유(인간은 자기가 짠 의미의 그물에 매달린 존재)를 소개했는데, 이 표현은 흔히 Clifford Geertz가 베버를 인용하며 쓴 문장으로 알려져 있다. 시험 답안에서는 교수가 말한 맥락(결정론과 주체성의 대비)만 살리면 된다.</p>
+</footer>
+</div>
+
+</body></html>
