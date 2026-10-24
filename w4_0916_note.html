@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9월 16일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>4주차 · 9월 16일(수)</span><span>근거: 수업 녹취 (자동 받아쓰기, 약 1시간 1분. 끝부분은 잘린 듯)</span></div>
+  <h1>한국인이 본 미국: 제국, agency, 그리고 "재미없는 글"</h1>
+  <p class="lead">이날은 학생 한 명이 하와이 왕국 장(신문수)과 『사진신부 이야기』(노선희)를 발표했고, 교수는 이를 받아 세 가지를 짚었다. 미국을 제국으로 보는 관점, 사진신부를 읽는 열쇠어 agency, 그리고 "왜 재미없었을까"로 시작한 글쓰기·읽기 방식의 차이이다. 마지막은 다음 주제인 혼혈로 넘어가며 끝난다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이날의 자료</h2>
+  <ul class="reads">
+    <li>신문수, 『시간의 노상에서 2』 6장 "제국주의의 희생양 하와이 왕국" (pp.193–219; 수업에서 p.196, p.219를 직접 인용) <span class="tag t-note">교재 요약에 정리</span></li>
+    <li>노선희, 『사진신부 이야기: 한인여성 디아스포라』 (2023) <span class="tag t-note">교재 요약에 정리</span></li>
+    <li>다음 주 예고: 한국 속 미국의 현존으로서 "혼혈"을 다룬 단편 <span class="tag t-warn">작가·연도는 받아쓰기 기준 "주요섭, 1949"로 들림</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>이 수업을 이렇게 설계한 이유 <span class="tag t-ok">녹취</span></b>
+      <ul>
+        <li>예전 수업은 청교도와 미국 정치 위주로, 사실상 백인 중심 담론이었다고 했다. 중요하지만, 아시아가 부상한 지금 우리를 주변화하는 교육이 맞는가를 물었다. <span class="tag t-warn">"20년 수업"이 2020년인지 불확실</span></li>
+        <li>해외에서 아리랑이 불리는 경험을 BTS와 연결해 말했다. <span class="tag t-warn">장소(스페인으로 들림)는 받아쓰기 기준</span></li>
+        <li>그래서 "한국인이 겪은 미국"을 보려 했다. 미국 문학을 공부한 사람의 여행기(하와이)와 100년 전 한인 여성의 경험(사진신부)을 골랐다.</li>
+        <li>영어 텍스트만 있으면 "영어 제국주의"의 위계만 남는다고 했다. 한국에서 공부하는 사람이 미국에 어떻게 접근할지를 묻고 싶었다고 했다.</li>
+        <li>이런 구성은 다음 학기에 한 번 더 하고 한동안 안 할 것 같다고 했다.</li>
+      </ul></div></li>
+    <li><div><b>다음 주 읽기 변경 <span class="tag t-ok">녹취</span></b>원래는 한국 작가의 장편소설 일부(사진신부 장면이 절절하게 나오는 부분)를 읽으려 했으나 만족스럽지 않아, 한국 속 미국의 현존으로서 혼혈을 다룬 단편으로 바꿨다고 했다. 이 소설 속 사진신부 장면은 아래 agency 대목에서 한 번 인용된다.</div></li>
+    <li><div><b>학생 발표와 질문 <span class="tag t-ok">녹취</span></b>아래 "발표 내용 요약" 참조. 교수는 청중에게 격려 질문(moral support)을 한두 개 부탁했고, 한 학생이 "요즘도 외모만 보고 결혼하는 사람이 있는데 사진결혼이 그렇게 이상한가"라고 물었다.</div></li>
+    <li><div><b>발표 총평 <span class="tag t-ok">녹취</span></b>내용 요약에 그치지 않고 "이랬다면 어땠을까"를 묻는 접근이 좋고, 균형 잡혀 있다고 했다. 발표자가 "글이 반박하기 어렵게 쓰여 있었다"고 한 점도 짚었다.</div></li>
+    <li><div><b>"재미없지 않았나요?" <span class="tag t-ok">녹취</span></b>교수가 일부러 도발적으로 물었고, 학생 반응이 이어졌다.
+      <ul>
+        <li>발표자: 반대 입장까지 다 써 주어 잘 쓴 글이라고 느꼈다.</li>
+        <li>한 학생: 필자가 관광객 입장에서 쓴 글이다. 당사자나 관련된 사람의 입장이라면 더 사실적이지만 더 편향될 수도 있겠다. 교수는 그것이 구술사 연구라고 연결했다.</li>
+        <li>발표자: 안내인이 하와이 사람이라 소개하는데 외모는 백인에 가까워, 필자도 의아해하는 대목이 있다. 교수는 이를 "하와이성의 상품화"로 읽을 수 있다고 했다. <span class="tag t-note">책 본문 근거는 교재 요약 참조</span></li>
+        <li>한 학생: 역사를 다루는 글에서 자기 생각을 말하기는 조심스럽다. 실화 바탕 영화처럼 어디까지가 사실인지 모호해지니 건조해지는 것이다.</li>
+        <li>교수: 이 책은 교육용이다. 관광지로만 아는 곳의 역사를 알려 주려는 목적이고 연재되었던 글이라고 했다. 이 학생 말에 힘을 실었다.</li>
+      </ul></div></li>
+    <li><div><b>이 글을 읽힌 이유 <span class="tag t-ok">녹취</span></b>"나쁜 놈들이네"라고 한 번쯤 생각해 보기를 바랐다고 했다. 관광지로 아는 하와이를 제국주의의 현장으로 다시 보게 하려는 의도다. 왕 이름은 기억하면 좋지만 몰라도 된다고 했다.</div></li>
+    <li><div><b>생각해 볼 것 1: 제국 <span class="tag t-ok">녹취</span></b>미국이 "오래된 제국"이라는 점을 생각해 보자고 했다. 한국인에게는 일본 제국도 있었다. 사진신부는 두 제국 사이에 있던 존재이고, "그때 태어났다면 여러분일 수도 있었다"고 했다.</div></li>
+    <li><div><b>생각해 볼 것 2: agency <span class="tag t-ok">녹취</span></b>아래 "핵심 개념" 참조.</div></li>
+    <li><div><b>한국식 글쓰기와 미국식 글쓰기 <span class="tag t-ok">녹취</span></b>아래 "핵심 개념" 참조.</div></li>
+    <li><div><b>문학을 읽는 이유 <span class="tag t-ok">녹취</span></b>"agency가 있었다"로 끝나지 않고, 소설은 실제 삶의 복잡성을 보여 준다고 했다. 소설 속 사진신부가 사진과 다른 신랑을 보고 실망하는 장면을 예로 들었고, 사진은 가장 좋을 때 가장 좋은 옷으로 찍으니 속고 속이는 일도 있었다고 했다.</div></li>
+    <li><div><b>현대와 연결: 결혼·waste·시 <span class="tag t-ok">녹취</span></b>아래 "현대와 연결한 대목" 참조.</div></li>
+    <li><div><b>구절 고르기 연습 <span class="tag t-ok">녹취</span></b>인상 깊은 구절 한두 개를 골라 이유를 말하는 활동이었다. 아래 "구절 고르기" 참조.</div></li>
+    <li><div><b>문화 차이 일화 <span class="tag t-ok">녹취</span></b>"미국의 미국다움"과 연결해 두 가지를 말했다. 아래 해당 항목 참조.</div></li>
+    <li><div><b>다음 주제 예고 <span class="tag t-ok">녹취</span></b>미국의 이미지와 실제의 간극을 생각하게 하고, 한국에 남은 미국으로서 혼혈 문제를 다루겠다고 하며 끝났다. 받아쓰기가 이 지점에서 끊긴다.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>발표 내용 요약 <small>학생 한 명, 이름 생략</small></h2>
+  <div class="grid">
+    <div class="card"><h3>1부 하와이: 비용 가정 <span class="tag t-ok">녹취</span></h3><p>왕궁에 큰 비용을 쓴 것이 백인 과두 집단에게 왕권 제한의 명분이 되었다는 서술에서 출발해, 만약 보수 수준의 적은 비용만 썼다면 어땠을지 가정했다. 총검헌법은 늦춰졌을 수 있으나, 책이 묘사한 백인 집단의 힘으로 볼 때 비용 자체가 원인은 아니며 왕권 몰락은 결국 일어났을 것이라고 결론지었다. 가정이 억지스럽다는 자각도 말했다.</p></div>
+    <div class="card"><h3>1부 하와이: 관세 대응 <span class="tag t-ok">녹취</span></h3><p>즉위 초에는 미국까지 가서 무관세 혜택을 얻어낸 왕이 관세가 부과될 때는 미온적으로 대응했다. 발표자는 두 대안을 검토했다. (1) 백인 집단과 적극 협력하면 총검헌법이 늦춰질 수 있다. (2) 협력하되 자기 권한도 챙긴다. 그러나 이것도 뻔한 가정 같다고 했다. 조선이 일제에 넘어가는 것처럼 이미 예고된 수순으로 느껴졌고, 당시 기준에서는 왕의 판단이 합리적이었다고 보았다.</p></div>
+    <div class="card"><h3>2부 사진신부: 첫인상과 변화 <span class="tag t-ok">녹취</span></h3><p>처음에는 사진만 보고 결혼한다는 것이 이해되지 않았다. 그러나 조선 시대 혼인이 자유로운 선택이 아니었던 점을 떠올리면, 자기 인생에서 선택하는 기회가 열린 것으로 읽혔다. 건강검사와 이민 심사가 길고 고된 것을 보며 안 가는 편이 편했을 수도 있겠다고 생각했다.</p></div>
+    <div class="card"><h3>결론과 질문 답변 <span class="tag t-ok">녹취</span></h3><p>여성을 속이는 제도이기도 했지만, 더 나은 삶을 찾으려는 당시 여성들의 선택이기도 했다고 정리했다. "요즘도 외모로 결혼하지 않느냐"는 질문에는 랜선 연애에 가깝다고 공감하면서도, 사진과 편지만으로는 실제 결혼 과정에 비해 정보가 부족했을 것이라고 답했다.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>핵심 개념 <small>4개</small></h2>
+  <div class="grid">
+    <div class="card"><h3>agency (행위주체성)</h3><p>"대리인"이 아니라, 내가 주체가 되어 무엇인가를 하는 것이다. 교수는 번역이 어려워 그냥 "에이전시"로 쓰는 편이 낫다고 했다. 사진신부는 가부장제 속에서 남편도 못 고르던 사람들인데, 이 제도 자체가 좋지 않더라도 "선택을 할 수 있었다"는 점이 선택을 못 하는 것과 큰 차이라는 설명이다.</p></div>
+    <div class="card"><h3>agency의 이면: 만들어진 선택인가</h3><p>교수는 agency를 읽어 내는 동시에 "과연 선택인가, 사회가 만든 선택인가"를 물을 수 있어야 한다고 했다. 사진을 보고 사람을 고르는 것이 이상하다고 의심하는 것도 가능하다. 현대의 결혼정보회사가 나이와 직업으로 등급을 나누는 것과 비교해 보라는 제안도 있었다. 비교하는 것이지 같다는 주장은 아니라고 했다.</p></div>
+    <div class="card"><h3>제국과 두 제국 사이</h3><p>미국의 하와이 합병을 제국주의로 읽고, 한국인은 일본 제국 아래에서 두 제국 사이에 놓인 존재였다는 관점이다. 사진신부는 일본 여권과 미국 비자를 모두 통과해야 했다. <span class="tag t-note">이 사실은 교재 요약 참조 (노선희 p.121–125)</span></p></div>
+    <div class="card"><h3>사실 중심 글쓰기와 주장 중심 글쓰기</h3><ul>
+      <li>교수의 일반화: 한국식은 "몇 년 몇 월에 무슨 일이 있었다"는 사실 나열로 시작하고, 미국식은 주장(예: "한국전쟁은 냉전의 대리전이다")으로 시작해 사실로 뒷받침한다. 교수 본인도 일반화의 한계를 인정했다. <span class="tag t-warn">교수 개인 견해, 근거 자료 없음</span></li>
+      <li>예: 같은 대학에서 "20세기 미국에서 죽음은 A, B, C"로 나눠 발표한 사례. 차라리 자신이 느끼는 죽음의 감정을 이야기하는 편이 재미있었겠다고 했다. 피아노를 처음부터 끝까지 "나 잘 쳐"로만 치면 지친다는 비유도 썼다.</li>
+      <li>결론: 전통을 습득하는 일은 필요하지만, 습득에서 끝나지 않고 내 생각으로 텍스트를 읽는 능력을 키우는 것이 대학에서 중요하다. 한두 구절만 읽고도 말할 수 있는 능력이다.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>현대와 연결한 대목 <small>교수 의견</small></h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 결혼: 한국 결혼도 조건 중심의 면이 있다고 하며, 자신의 선 경험을 사적 일화로 들었다(세부는 생략). 현대인이 사랑을 안 하는 이유로는 선택의 폭이 너무 넓어졌다는 점을 들었다.</li>
+    <li><span class="tag t-ok">녹취</span> waste: 연애는 싸우고 연락이 끊기고 기다리는 시간이 있는 일인데, 현대인은 생산적이지 않은 시간을 용인하지 않는다고 했다. 철학자의 말을 인용했으나 이름이 받아쓰기에서 불분명하다. <span class="tag t-warn">인용한 철학자 확인 필요</span></li>
+    <li><span class="tag t-ok">녹취</span> 9/9 시와의 연결: "먹고 떠들고 노는" 시를 노동·생산·성과 중심 삶에 대한 저항 담론으로 읽을 수 있다고 했다.</li>
+    <li><span class="tag t-ok">녹취</span> 현대의 agency: 생존 때문에 선택한다면 그것도 제한된 agency가 아닌가 하고 되물었다.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>구절 고르기 <small>학생 응답</small></h2>
+  <div class="grid">
+    <div class="card"><h3>한 학생: 하와이 합병 과정 <span class="tag t-ok">녹취</span></h3><p>합병을 망설이던 미국이 결국 팽창하는 과정이 인상적이었다. 미국의 부정적 면, 그리고 한국인이 싫어하는 일본과 닮은 면이 보인다는 점을 이유로 들었다. 현재 미국 정치 상황과도 연결해 말했다.</p></div>
+    <div class="card"><h3>다른 학생: 두 구절 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>p.196: 열등한 유색 인종을 시민으로 받아들이면 미국의 우수한 혈통이 오염될 수 있다는 합병 반대 논리. <span class="tag t-ok">원문 대조 완료</span></li>
+      <li>p.219 마지막 문장: 이런 모순을 모순으로 느끼지 않는 것이 미국의 미국다움인지도 모른다. <span class="tag t-ok">원문 대조 완료</span></li>
+      <li>이유: 자유와 평등의 나라로 여겨지는데, 그 이면의 모순이 변화로 이어지지 않고 미국의 특성으로 수용되는 점이 흥미로웠다.</li>
+    </ul></div>
+    <div class="card"><h3>교수의 해설 <span class="tag t-ok">녹취</span></h3><p>인종이 섞이는 것에 대한 불안은 미국에 늘 있었고, 그 자체가 백인 순혈주의·백인 중심주의다. p.219는 클린턴의 사과와 의회 결의에도 정치적으로 바뀐 것이 없었다는 맥락이며, 정치적 실천 없는 윤리적 반성은 미국사에서 반복된 제스처라는 필자의 판단이다. 교수는 이것이 팩트 나열이 아닌 필자의 주장이 드러난 대목이라고 했다.</p></div>
+    <div class="card"><h3>교수가 전한 하와이 일화 <span class="tag t-ok">녹취</span></h3><p>미국에서 동양 남성은 차별을 받는데, 하와이는 다르다는 말을 들었다. 동양계가 많고 백인이 소수라 힘을 발휘할 수 있는 공간이라는 설명이다. <span class="tag t-warn">전해 들은 이야기로 보이며 일반 지식으로 확인하지 않음</span></p></div>
+  </div>
+</section>
+
+<section>
+  <h2>문화 차이 일화 <small>교수 개인 경험</small></h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 사과: 미국에서는 10분 늦어도 미안하다고 하지 않는 경우를 많이 겪었다. 일반화할 수 없고, 쉽게 사과하는 사람도 있으며 그런 사과는 피상적일 수도 있다고 덧붙였다. 학생이 캐나다 경험은 다르다고 반론하자, 경험과 시대와 만난 사람이 다르다고 인정했다.</li>
+    <li><span class="tag t-ok">녹취</span> 자기중심성: 짜장면을 하나 시켜 나눠 먹기보다 각자 따로 주문하는 식의 차이를 예로 들었다.</li>
+    <li><span class="tag t-ok">녹취</span> entitlement(특권의식): 특히 백인 중에 자기 실수를 실수로 받아들이지 않으려는 태도가 있다고 했다. 사과와 직접 연결할 수는 없고, 뒤에서 다시 다루겠다고 했다.</li>
+    <li><span class="tag t-ok">녹취</span> 요점: 있다 없다가 아니라 우리와 "다르다"는 것만 기억하라고 했다. 자유와 평등의 나라라는 이미지와 실제의 간극을 현재 미국 정치와 이어 생각해 볼 수 있다고 했다.</li>
+    <li><span class="tag t-warn">주의</span> 위 내용은 교수의 개인 경험담이며 통계나 연구 근거는 제시되지 않았다. 시험 내용으로 외우기보다 "서로 다른 문화적 전제"를 보는 예로 이해하는 편이 안전하다. <span class="tag t-note">해석</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <div class="box">
+    <p style="font-size:15px">이날은 시험 범위에 대한 직접 언급이 녹취에 없다. 아래는 수업에서 다룬 개념으로 만든 연습 문항이며 교수 출제와는 무관하다. 공식 범위는 별도 공지를 확인해야 한다. <span class="tag t-note">해석</span></p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>사진신부를 "속이는 제도"와 "선택"의 양쪽에서 읽으면?</summary><p>중개인이 미국과 교육의 기회를 내세워 어린 여성을 유인한 점과 강제혼에서 벗어나려는 여성의 자기 결정이 함께 있었다. 한쪽으로 단정하지 않고 agency와 "만들어진 선택"을 동시에 짚는 답이 수업의 방향과 맞는다.</p></details>
+    <details><summary>미국의 하와이 합병이 미국 정체성과 어떻게 충돌했는가?</summary><p>자유·평등을 내세운 나라가 식민지를 가지는 모순이다. 팽창주의자는 "문명권" 논리와 "땅은 통합하되 사람은 분리"라는 논리로 반대를 눌렀다. 필자는 이후의 사과도 정치적 실천이 없는 수사에 그쳤다고 본다. 교재 요약의 쪽수를 참조하라.</p></details>
+    <details><summary>"모순을 모순으로 느끼지 않는 것이 미국다움"이라는 말을 어떻게 이해하는가?</summary><p>미국사가 자유·평등의 이념과 인종차별·침탈을 함께 가져온 점, 사과가 있어도 구조가 바뀌지 않은 점을 가리킨다. 필자의 평가이므로 하나의 해석으로 제시하는 것이 안전하다.</p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>녹취</th><th>다른 자료</th></tr></thead>
+    <tbody>
+      <tr><td>"20년 수업"</td><td>연도 불명확</td><td>2020년 수업인지 확인 필요</td></tr>
+      <tr><td>다음 주 읽기 작가와 연도</td><td>"주요섭, 1949"로 들림</td><td>폴더에 주요섭 「혼혈」 PDF가 있으나 발표 연도는 원문 확인 필요</td></tr>
+      <tr><td>생산성 비판을 인용한 철학자</td><td>이름 불명확</td><td>확인 필요</td></tr>
+      <tr><td>"관광지가 된 것은 일본의 역할이 컸다"로 들리는 발언</td><td>문맥이 끊겨 의미 불명확</td><td>하와이 관광 형성사와 관련된 발언으로 보이나 확인 필요</td></tr>
+      <tr><td>하와이는 동양 남성에게 다르다는 일화</td><td>전해 들은 이야기</td><td>일반 지식으로 확인하지 않음</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 9/16 녹취(자동 받아쓰기)를 정리한 것이다. 학생 이름은 적지 않았고, 인물·연도·고유명사는 받아쓰기 오류 가능성이 있다. 발표 부분은 학생의 설명이며 책 원문과 다를 수 있어, 책 내용은 교재 요약에서 원문과 대조했다.</p>
+  <p><b>범위 한계</b> 수업 슬라이드는 보지 못했고, 녹취가 끝부분에서 끊겨 다음 주 안내와 공지는 일부만 반영했다.</p>
+</footer>
+</div>
+</body></html>

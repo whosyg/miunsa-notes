@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9월 16일 교재 요약 · 신문수, 노선희</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>4주차 · 9월 16일(수) 교재 요약</span><span>근거: 지정 읽기 PDF 2종 (쪽수는 책 쪽수)</span></div>
+  <h1>하와이 왕국의 전복과 사진신부의 길</h1>
+  <p class="lead">신문수는 하와이 왕국이 미국에 병합된 과정을 이올라니 궁 답사와 함께 서술하고, 노선희는 한인 사진신부를 "민족의식의 주체"보다 "정착과 생존을 위해 자기를 보호한 이주 여성"으로 읽는다. 두 글 모두 미국의 인종·제국 문제를 한국인의 시선으로 다룬다.</p>
+  <div class="legend"><span class="tag t-ok">원문 근거</span><span class="tag t-note">일반 지식·해석 (원문 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이번 요약의 범위</h2>
+  <div class="box">
+    <ul class="plain" style="font-size:15px">
+      <li><span class="tag t-ok">원문</span> 신문수 6장 pp.193–219. 책머리·목차 포함. 이어지는 "훌라춤"(p.220~)은 이번 요약에서 읽지 못했다.</li>
+      <li><span class="tag t-ok">원문</span> 노선희: 책을 펴내며, 머리말 일부, II부 끝(이민법 요약), III부 전체(pp.89–135). IV부(농장 생활, 도시 이주, 자기보호)는 읽지 못했다.</li>
+      <li>PDF는 OCR 텍스트라 일부 숫자가 깨져 있다. 깨진 곳은 해당 항목에 표시했다.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>신문수 「제국주의의 희생양 하와이 왕국」</h2>
+  <ol class="flow">
+    <li><div><b>문제 제기 (p.193–194) <span class="tag t-ok">원문</span></b>관광지 이미지 뒤에 "총칼 앞에 주권을 빼앗긴" 역사가 있다고 말한다. 1893년 백인 과두집단이 왕정을 전복했고, 1898년 미서전쟁 이후 합병이 급물살을 탔으며 1900년 속령이 되었다. 필자는 이를 미국 제국주의적 팽창의 "첫 걸음"이자 서구와 다른 "미국적 예외성"의 사례로 본다.</div></li>
+    <li><div><b>미국이 망설인 세 이유 (p.196) <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>제국주의는 자유·평등이라는 국시와 어긋난다.</li>
+        <li>열등한 유색 인종을 받아들이면 미국의 우수한 혈통을 오염시킬 수 있다.</li>
+        <li>값싼 식민지 노동력이 경제를 교란할 수 있다.</li>
+      </ul></div></li>
+    <li><div><b>팽창주의자의 반박 (pp.196–197) <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>1840년대의 "명백한 운명"을 "문명권" 논리로 바꾸었다. 존 버제스(콜럼비아대 교수)는 문명 종족만 자유·평등을 누리며 문명국이 질서를 세우는 것은 권리이자 의무라고 했다.</li>
+        <li>맥킨리는 이를 "의무가 운명을 결정한다"로 요약했다.</li>
+        <li>인종 문제는 "땅은 통합하되 사람은 분리"로 답했다. 필자는 찬반 모두 인종차별적 사고에 젖어 있었고 짐 크로우 시대 배경이라고 본다.</li>
+        <li>경제는 과잉 생산 해소를 위한 해외 시장 논리로 답했다.</li>
+      </ul></div></li>
+    <li><div><b>이올라니 궁 (pp.198–205) <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>1879년 착공, 1882년 완공, 비용 35만 달러. 수세식 화장실과 욕실 4개, 궁 안 전화, 1886년 전등으로, 필자는 버킹엄궁·백악관보다 앞섰다고 서술한다. <span class="tag t-warn">비교의 사실성은 필자 서술이며 독립 확인 안 함</span></li>
+        <li>1883년 대관식에서 칼라카우아는 직접 왕관을 썼다. 필자는 이런 지출이 의회와 갈등을 낳았고 백인 지도층이 왕권을 제한하는 빌미가 되었다고 서술한다. 궁 신축이 왕권 약화로 이어진 아이러니다.</li>
+        <li>1887년 "총검헌법": 하와이 동맹이 무장 병력으로 압박해 왕의 각료·상원 임명권과 헌법 발의권을 빼앗고 권력을 내각에 두었다.</li>
+        <li>관광 안내책자는 "미국 내 유일한 왕궁"이라고 소개하는데, 필자는 왕궁을 잃게 된 역사가 빠진 "역사적 무신경"이라고 비판한다. 안내인은 하와이 피가 섞인 사람이지만 겉모습은 백인에 가까웠다고 적었다(p.200).</li>
+      </ul></div></li>
+    <li><div><b>왕국의 연표 (pp.201–202) <span class="tag t-ok">원문</span></b>카메하메하 1세가 1810년 군도를 통일했다. 3세는 1839년 권리장전과 종교 자유를 선포하고 1848년 토지개혁(Great Mahele)으로 토지 사유를 허용했다. 이 때문에 외국인이 헐값에 토지를 사서 플랜테이션이 본격화되었다. 1873년 루나릴로가 선출되고 그가 단명한 뒤 칼라카우아가 선출되었다.</div></li>
+    <li><div><b>설탕과 정치 (pp.206–209) <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>1873년 칼라카우아는 미국을 방문해 하와이산 설탕의 무관세 수입을 얻었고, 대가로 미국은 진주만 관련 권리를 얻었다고 서술한다. <span class="tag t-warn">OCR 일부 깨짐. 조약 체결 연도는 일반적으로 1875년으로 알려져 원문과 다름, 확인 필요</span></li>
+        <li>스프레켈스(독일계, 샌프란시스코 정제업자)가 마우이에서 대규모 관개 농장을 만들어 5대 회사의 독과점에 맞섰다. 수출량은 1875년 연 2천만 파운드에서 1890년경 2억 5천만 파운드로 늘었다.</li>
+        <li>노동력 부족으로 중국, 일본, 한국, 필리핀, 포르투갈 노동자가 들어와 하와이가 다인종 사회가 되었다.</li>
+        <li>왕이 스프레켈스를 활용해 백인 지배층을 견제하자 갈등이 깊어졌고, 남부 설탕업자의 압력으로 관세 논의가 일었다. 5대 회사는 관세가 붙으면 파산할 수 있어 왕의 적극 대응을 원했으나 왕은 미온적이었다. 이것이 수업 발표의 "관세 대응" 부분의 근거다.</li>
+        <li>1890년 1월 20일 칼라카우아가 샌프란시스코에서 54세로 사망했다.</li>
+      </ul></div></li>
+    <li><div><b>1893년 쿠데타 (pp.209–211) <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>릴리우오칼라니가 즉위하자 미국은 무관세 특혜를 폐지했다. 백인 집단은 합병 클럽을 만들었다.</li>
+        <li>여왕은 비토권과 아시아계·원주민 참정권 회복을 담은 새 헌법을 구상했으나 내각이 공포 유예를 건의했다.</li>
+        <li>합병파는 13인 공안위원회를 만들고 미국 공사 스티븐스에게 군사 지원을 요청했다. 1월 17일 중무장한 미군 162명이 출동했고, 샌포드 돌이 임시정부 수반이 되었다.</li>
+        <li>여왕은 유혈을 피하려고 "일시적으로" 퇴위하며 미국 정부의 시정을 기대한다고 밝혔다.</li>
+      </ul></div></li>
+    <li><div><b>이후의 전개 (pp.212–216) <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>클리블랜드 대통령은 블라운트를 보내 조사하게 했고, 1893년 12월 의회 연설에서 쿠데타를 비난했다. 그러나 임시정부는 복위 요구를 거부했고 1894년 7월 4일 하와이 공화국을 선포했다.</li>
+        <li>1895년 왕정파 봉기가 실패해 여왕이 체포되었고 이올라니 궁에 감금되었다. 반역죄 판결(5년 강제 노역, 벌금 5천 달러)은 집행되지 않았으나 1896년 11월까지 유폐되었다.</li>
+        <li>여왕은 유폐 중 「알로하 오에」 등을 작곡하고 회고록 집필을 시작했다고 서술한다. 1917년 79세로 사망했다.</li>
+        <li>1898년 초 합병안은 부결되었으나 미서전쟁 후 말에 상원 42 대 21, 하원 209 대 91로 가결되었다. 1900년 하와이 조직법으로 속령이 되었고 돌이 초대 총독이 되었다.</li>
+        <li>필자는 이 과정을 구한말 한국의 국권 상실과 비교한다(p.205).</li>
+      </ul></div></li>
+    <li><div><b>이후와 사과 (pp.217–219) <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>1959년 주 승격(알래스카 다음, 50번째). 1978년 하와이어가 영어와 함께 공식 언어가 되었고, 1976년 전통 항해 카누가 타히티까지 항해했다.</li>
+        <li>1900년 초 인구: 원주민 3만, 혼혈 1만, 백인 0.9만, 포르투갈인 1.8만, 중국인 2.6만, 일본인 6.1만. <span class="tag t-warn">OCR 상태로 수치 재확인 필요</span></li>
+        <li>1993년 의회 결의와 클린턴의 사과가 있었으나 "정치적으로 변화된 것은 아무것도 없었고", 원주민의 독립 열망을 유예시키는 "정치적 수사"였다고 평가한다. 마지막 문장이 수업에서 인용된 "모순을 모순으로 느끼지 않는 것이 미국의 미국다움인지도 모른다"이다.</li>
+      </ul></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>노선희 『사진신부 이야기』</h2>
+  <div class="grid">
+    <div class="card"><h3>책의 입장 <span class="tag t-ok">원문 (책을 펴내며, 머리말)</span></h3><p>기존 연구가 사진신부를 민족의식에 기반한 능동적 행위자로 강조한 것과 달리, 이 책은 이주국에서의 안정적 정착과 생존이 이들에게 중요했다고 본다. 가부장제와의 타협, 주변화된 노동시장에서의 경쟁, 인정받으려는 노력을 "자기보호적 실천"으로 설명한다. 인종, 민족, 젠더의 교차가 틀이다.</p></div>
+    <div class="card"><h3>이민법과 제도 <span class="tag t-ok">원문 (II부 끝)</span></h3><p>1875년 페이지법과 1882년 중국인 차별법으로 동아시아 여성 이주가 제한되었고, 1908년 미일 신사협정으로 일본인 사진신부가 허용되었다. 1917년 개정 이민법에서도 일본 국적 여성의 이주는 이어졌고, 1924년 이민법으로 끊겼다. 필자는 이 제도가 아시아인에 대한 위계적·차별적 성격을 지녔다고 본다.</p></div>
+    <div class="card"><h3>이주 동기 <span class="tag t-ok">원문 (III-1)</span></h3><ul>
+      <li>강제혼과 시집살이를 피하려는 열망이 가장 큰 동기라는 것이 필자의 해석이다. 이 주장은 구술 자료를 근거로 하되 "생각한다"는 표현이 많다.</li>
+      <li>경제적 이유: "미국은 황금으로 된 나라"라는 인식.</li>
+      <li>교육: 사진신부 49명 조사에서 무학 14명(29%), 1~3년 22명(45%), 4~6년 8명(16%), 7~9년 4명(8%), 10~12년 1명(2%). 식민지 조선 여성 문맹률은 약 80%로 인용된다.</li>
+      <li>교육 목적 사진결혼: 구술자 18명 중 9명이 영어와 미국 교육을 이유로 들었으나 실제 교육을 받은 사람은 4명(22%)이었다. <span class="tag t-warn">각주에 "47%"와 "50%"가 함께 나와 수치가 불일치하며, 9/18은 50%</span></li>
+    </ul></div>
+    <div class="card"><h3>인물거간꾼과 사진 <span class="tag t-ok">원문 (III-2)</span></h3><ul>
+      <li>초기에는 지인·목사 등 인적 네트워크, 이후에는 중개인이 맡았다. 한 중개인은 신랑 한 명당 50달러(100엔)를 받았고 사진 촬영비 20달러를 빼면 수수료는 30달러였다.</li>
+      <li>중개인은 학교, 영어, 시집살이 없음, 친정에 돈 송금 같은 말로 어린 여성을 유인했고 신문은 이를 부정적으로 보도했다(조선일보 1921). 필자는 중개인이 동경과 반발심을 이용했다고 본다.</li>
+      <li>매일신보 1915년 3월 6일자는 마산에서 3년간 17명이 사진결혼으로 하와이로 갔고, 중개는 목사가 많이 했으며 "계집을 교환 또는 넘기는 풍습"이 있어 주의하라고 경고했다.</li>
+      <li>미주 한인사회는 신한민보 1915년 3월 25일자에서 사진혼인을 "부득이"하나 가하다고 옹호했다. 혼인할 한인 여성이 부족했기 때문이다.</li>
+      <li>구술: 사진신부는 몰래 사진을 찍었고, 낯선 남성의 사진을 처음 본 긴장과 흥미를 말했다. 편지를 연애편지처럼 느꼈고, 신랑은 보통 100달러가량(운임 50달러 포함)을 보냈다.</li>
+    </ul></div>
+    <div class="card"><h3>입국까지의 단계 <span class="tag t-ok">원문 (III-2)</span></h3><ul>
+      <li>사진 촬영 → 사진 교환 → 서신 → 가족 반대 → 해결 → 민적 등록 → 여권 → 민적 등본 → 미국 비자 → 건강검진 → 이민 심사.</li>
+      <li>김순년 사례: 여권 1918년 6월 28일, 민적 7월 5일, 비자 7월 26일. 혼인신고 이후 1년 넘게 걸렸다. <span class="tag t-warn">혼인신고일이 본문에 7월 10일과 7월 16일로 달리 나옴</span></li>
+      <li>십이지장충·트라코마 검사는 각각 2주 1회, 주 1회였고 여권 유효기간은 6개월이었다. 배가 부족하면 제비뽑기를 했다. 이동은 하와이 약 2주, 미 본토 약 3~4주.</li>
+      <li>1917년 이민법 강화로 문맹 테스트가 추가되었고, 도착 후 이민국에서 신랑이 올 때까지 기다리며 통역관과 신랑에게 의존했다.</li>
+      <li>1919년 3·1운동 이후 여권 발급이 더 어려워졌다는 구술이 있다. 일부는 상하이를 거쳐 중국옷을 입고 밀항했고 이민국에서 난민 지위를 인정받았다. 도항면허장이 없어 일본 경찰에 붙잡혀 돌아온 사례도 있었다(매일신보 1917.11.28).</li>
+    </ul></div>
+    <div class="card"><h3>숫자 <span class="tag t-ok">원문</span></h3><ul>
+      <li>1903–1905 노동 이주 7,226명. 1910–1924 사진신부 1,115명(표 2). 독립운동가·유학생 541명. <span class="tag t-warn">표가 OCR로 깨져 열 대응이 불확실</span></li>
+      <li>1910–1924 입국 한인 여성 총 1,552명, 14~44세로 제한하면 약 842명으로 계산하며, 사진신부 전체는 1천 명을 넘지 않았을 것이라 한다.</li>
+      <li>기존 연구는 약 1천 명(하와이 900여 명, 본토 100여 명), 홍윤정은 약 600명으로 주장하며, 최근 연구는 600~1,000명으로 소개한다. <span class="tag t-warn">표의 1,115명과 본문 추정치가 서로 다름</span></li>
+    </ul></div>
+    <div class="card"><h3>III부의 결론 <span class="tag t-ok">원문 (p.134)</span></h3><p>사진신부는 여권, 이민 심사, 문맹 테스트, 혼인 확인 과정에서 남편과 통역관 같은 한인 남성에게 의존했다. 조선에서 보호자가 가부장이었다면 미국 이주 초기에는 신랑과 한인사회가 인종차별로부터 보호해 줄 새 보호자였다. 독립하려면 도시로의 이주라는 전환기가 필요했다고 하며 IV부로 넘어간다.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>수업 설명과 원문 대조</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>수업에서 나온 말</th><th>원문 확인</th></tr></thead>
+    <tbody>
+      <tr><td>백인 집단이 왕궁 비용을 빌미로 왕권 제한 (발표)</td><td>pp.199, 206: 원문과 일치. 필자는 비용이 갈등의 계기였다고 서술한다.</td></tr>
+      <tr><td>즉위 초 무관세를 얻었으나 관세 때 미온적 (발표)</td><td>pp.206–208: 일치. 왕이 그것을 왕권과 원주민 권익을 강화할 기회로 보았다고 서술.</td></tr>
+      <tr><td>"열등한 유색 인종… 우수한 혈통 오염" (p.196)</td><td>일치.</td></tr>
+      <tr><td>"모순을 모순으로 느끼지 않는 것이 미국다움" (p.219)</td><td>일치.</td></tr>
+      <tr><td>안내인이 백인처럼 보였다 (발표·토론)</td><td>p.200에 서술되어 있음. 필자가 이를 상품화로 해석한 것은 아니며, 교수의 해석이다.</td></tr>
+      <tr><td>사진신부가 두 제국 사이에 있었다 (교수)</td><td>III부: 일본 여권·미국 비자 이중 관문 서술과 맞음. 책의 용어는 아니다.</td></tr>
+      <tr><td>속고 속이는 일 (교수)</td><td>중개인의 유인 서술과 맞음. 신랑 사진과 실제가 달랐다는 부분은 소설 장면이며 이 책에서는 읽지 못했다.</td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <h2>시험 대비</h2>
+  <div class="box">
+    <p style="font-size:15px">아래는 연습 문항이며 교수 출제와는 무관하다. <span class="tag t-note">해석</span></p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>미국이 하와이 합병을 망설인 이유 세 가지와 팽창주의자의 반박은?</summary><p>이유: 자유·평등 이념과 모순, 유색 인종 편입이 혈통을 오염시킴, 값싼 노동력의 경제 교란. 반박: "문명권"과 "의무가 운명을 결정한다", 땅은 통합하되 사람은 분리, 해외 시장. (신문수 pp.196–197)</p></details>
+    <details><summary>설탕 산업은 하와이의 정치에 어떻게 작용했는가?</summary><p>1848년 토지개혁 이후 플랜테이션이 커졌고 5대 회사가 독과점했다. 미국의 관세 정책이 바뀌자 백인 지도층은 합병을 추구했고 왕과 갈등했다. 노동력 수입으로 다인종 사회가 되었다. (pp.201–209)</p></details>
+    <details><summary>노선희는 사진신부를 어떻게 해석하는가?</summary><p>민족의식 중심의 능동성 대신 이주국에서의 정착과 생존을 위한 자기보호적 선택으로 본다. 중개인의 유인과 제도적 제약이 있었고, 미국 도착 후에는 남편과 한인사회에 의존했다는 점도 함께 본다.</p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>원문 상태</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>릴리우오칼라니 유폐 기간</td><td>p.205에는 "8개월", p.214에는 "22개월"</td><td>1895년 1월~1896년 11월이면 22개월 가까이. 원문 내 불일치이며 어느 쪽이 맞는지 확인 필요</td></tr>
+      <tr><td>1873년 무관세 조약 시기</td><td>1873년 방문으로 서술</td><td>조약 연도는 일반적으로 1875년으로 알려져 있음 <span class="tag t-note">일반 지식</span></td></tr>
+      <tr><td>1900년 인구 수치</td><td>OCR 상태</td><td>원문 재확인 필요</td></tr>
+      <tr><td>사진신부 수 (1,115 / 842 / 600~1,000)</td><td>책 안에서 서로 다름</td><td>책에서도 정확한 수는 논의 중이라고 함</td></tr>
+      <tr><td>교육 목적 사진결혼 비율 47% / 50%</td><td>각주 불일치</td><td>9/18이면 50%</td></tr>
+      <tr><td>김순년 혼인신고일</td><td>7월 10일과 7월 16일 혼재</td><td>원문 확인 필요</td></tr>
+      <tr><td>훌라춤 절(p.220~)과 노선희 IV부</td><td>이번에 읽지 못함</td><td>필요하면 추가로 요약</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 PDF 본문(OCR) 기준 요약이며, 필자의 평가와 서술은 필자의 것으로 구분해 적었다. 쪽수는 OCR이 읽은 쪽 표기를 따랐고 일부 어긋날 수 있다.</p>
+  <p><b>범위 한계</b> 위 "확인 필요" 표의 항목 외에도 고유명사 표기(OCR)는 원문과 다를 수 있다. 일반 지식으로 보충한 항목은 따로 표시했다.</p>
+</footer>
+</div>
+</body></html>
