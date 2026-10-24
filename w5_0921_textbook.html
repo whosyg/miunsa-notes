@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9월 21일 교재 요약 · 주요섭 「혼혈」</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>5주차 · 9월 21일(월) 교재 요약</span><span>근거: 지정 읽기 PDF 「혼혈」 (쪽수는 OCR 표기 기준)</span></div>
+  <h1>주요섭 「혼혈」 (1949)</h1>
+  <p class="lead">청계천 빨래터의 가십으로 시작해, 남편을 잃은 김 소사가 미군 물자로 가족을 부양하다 혼혈아를 낳고 아이가 외할머니에게 죽임을 당하는 이야기다. 후반부는 서술자가 직접 나서서 혈통과 순혈 관념을 논박한다. 소설과 에세이가 합쳐진 형식이다.</p>
+  <div class="legend"><span class="tag t-ok">원문 근거</span><span class="tag t-note">일반 지식·해석 (원문 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이번 요약의 범위</h2>
+  <div class="box">
+    <ul class="plain" style="font-size:15px">
+      <li><span class="tag t-ok">원문</span> 작품 전체(pp.243–257 안팎, 각주 포함). 끝에 "(1949)"라고 표기되어 있다.</li>
+      <li>원문에는 인종 비하 표현이 반복되어 나온다. 아래 요약은 그 표현을 옮기지 않고 "비하 표현"이라고만 적었다. 성폭력 서술은 사건 사실만 적었다.</li>
+      <li>OCR 상태가 좋지 않은 숫자와 고유명사는 해당 항목에 표시했다.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>줄거리와 구조</h2>
+  <ol class="flow">
+    <li><div><b>1절 빨래터의 가십 <span class="tag t-ok">원문</span></b>청계천은 여인들의 무료 세탁소이자 가십의 중심지다. 한 새댁이 친정 마을에서 들은 비밀을 이웃에게 전하려 애쓴다. 내용은 젊은 과부 김 소사가 아이를 낳자 그 어머니가 밤에 아이를 싸서 나가 버렸다는 것이다. 사건 자체보다 "말하고 싶어 안달 난" 공동체의 태도가 먼저 제시된다.</div></li>
+    <li><div><b>2절 김 소사의 처지 <span class="tag t-ok">원문</span></b>남편은 해방 후의 혼란 속에서 비명횡사해 화장터에서 연기가 되었다. 서술자는 일제 말 징용·징병과 해방 후 치안 불안을 장황하게 나열한다. 남은 네 식구(어머니, 남매)를 먹이려고 김 소사는 소개받은 "코리안 PX" 물건(미군 창고에서 빼낸 물건)을 몰래 팔러 다닌다.</div></li>
+    <li><div><b>3절 첫 사건과 이후 <span class="tag t-ok">원문</span></b>어느 저녁 골목에서 흑인 미군에게 붙잡혀 강압적 성관계를 겪는다. 서술은 꿈과 현실을 흐리며, "오랜만의 쾌감"과 "성적 만족"이 언급된다. 아침에 어머니는 위로 대신 돈도 안 주고 갔다고 중얼거린다. 이튿날 같은 곳에서 다시 붙잡히고, 이번에는 "자포자기"로 응한다. 어머니는 미군이 가져온 설탕, 초콜릿, 껌을 보며 한시름 놓았다고 기뻐하고, 김 소사도 물건이 반가웠다고 서술된다.</div></li>
+    <li><div><b>4절 반년과 임신 <span class="tag t-ok">원문</span></b>김 소사는 반년 동안 "유한마담"처럼 지내며 화장품과 파마를 한다. 아이들은 껌과 사탕을 나눠 주며 으스대고, 동네 부모들은 "양갈보 새끼"라며 자기 아이들을 못 놀게 때린다. 어머니는 미군이 오면 자리를 피한다. 이후 김 소사는 임신하고 열 달 후 아이를 낳으며, 외할머니는 산모의 뜻을 묻지 않고 아이를 죽여 묻는다. 빨래터의 이야기가 이 대목이다. 서두에서는 "내버렸는지 강물에 띄웠는지 묻었는지 알 도리가 없다"고 했으나 여기서는 죽여 묻었다고 서술되어 어긋난다.</div></li>
+    <li><div><b>5절 서술자의 해설 <span class="tag t-ok">원문</span></b>
+      <ul>
+        <li>멘델의 법칙을 들어, 아이가 어머니를 닮았다면 외할머니가 키웠을지도 모르고, 설령 아버지의 형질이 숨어 있다가 후대에 나타나면 그 후손이 "누명"을 쓸 수 있다고 설명한다.</li>
+        <li>미국 미시시피 사례: 1차대전에 참전한 백인 해군 청년이 귀향해 결혼했으나 아이가 검은 피부로 태어났고, 법정이 족보를 조사해 증조모가 흑인 여종이었음이 드러났다. 이 청년은 흑인과 백인의 결혼을 금한 주법 위반으로 징역 5년을 받고 복역 중이며 1953년에 만기 출소한다고 서술한다. <span class="tag t-warn">사건의 실재성은 서술자의 주장이며 독립 확인 안 함</span></li>
+        <li>우리 민족도 순수하다고 믿지만 청·만주·일본·슬라브족의 피가 섞여 있고, 해방 후 외국인 아이를 낳은 여성이 한둘이 아니며 앞으로도 늘 것이라고 한다.</li>
+        <li>히틀러가 유대인의 피가 아주 조금 섞인 사람까지 학살한 것을 "비과학적 편견"이라고 비판하고, 미시시피의 봉건적 법령을 본받지 말자고 한다. <span class="tag t-warn">히틀러 대목의 분수(OCR "22분지 1")는 원문 확인 필요</span></li>
+        <li>결론: 아무리 복잡한 혼혈이라도 이 땅에서 나서 자라 "국가에 대하여 유용한 봉사를 하는 한" 차별 없이 평등한 기회를 주는 아량을 갖자.</li>
+      </ul></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>원문의 각주와 용어</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>원문 각주·서술</th></tr></thead>
+    <tbody>
+      <tr><td>PX, MP</td><td>미군 부대 매점(Post Exchange), 헌병(Military Police)</td></tr>
+      <tr><td>다이아진, DDT</td><td>해방 후 들어온 서양 약과 살충제로 소개된다. 서술자는 미국 약 덕분에 살게 된 사람도 많다고 쓴다.</td></tr>
+      <tr><td>홍제원</td><td>지금의 홍제동, 옛 화장터 이름</td></tr>
+      <tr><td>멘델 법칙</td><td>형질 유전의 법칙. 서술자는 이 지식으로 혼혈을 논의한다.</td></tr>
+      <tr><td>"악아"</td><td>원래 시부모가 며느리를 부르는 말인데 여기서는 친정어머니가 딸을 부른다는 각주가 달려 있다.</td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <h2>수업 설명과 원문 대조</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>수업에서 나온 말</th><th>원문 확인</th></tr></thead>
+    <tbody>
+      <tr><td>청계천 빨래터에서 가십으로 시작 (발표)</td><td>1절과 일치.</td></tr>
+      <tr><td>강압적 관계, 성적 만족 서술 (발표)</td><td>3절과 일치. 서술이 꿈과 현실을 흐리며, 두 번째에는 자포자기로 응하는 것으로 나온다.</td></tr>
+      <tr><td>김 소사는 선택하지 못하는 인물 (발표)</td><td>"에라 될 대로 되어라"라는 서술, 어머니의 반응에 끌려가는 장면 등과 맞는다.</td></tr>
+      <tr><td>감정은 간접적으로만 서술 (발표)</td><td>"소리 없이 울고 있었다"와 "이 울음의 참뜻을 이해할 사람은 없을 것이다"가 대표적이다. 다만 서술자가 감정과 심리를 직접 설명하는 대목도 적지 않아 "직접 서술이 전혀 없다"는 아니다.</td></tr>
+      <tr><td>"모든 인간은 피가 섞였다"는 논리 (발표)</td><td>5절과 일치.</td></tr>
+      <tr><td>"국가에 유용한 봉사를 하는 한 평등" (발표·교수)</td><td>마지막 문단과 일치.</td></tr>
+      <tr><td>동물과 물건처럼 묘사 (교수)</td><td>원문에서 "도깨비", 강아지에 빗댄 표현 등이 보인다. "물건" 묘사는 받아쓰기가 흐려 확인하지 못했다.</td></tr>
+      <tr><td>미군이 청계천까지 왔을까 (교수)</td><td>원문에는 배경이 청계천 빨래터와 마포강변이고, 사건이 벌어진 곳은 김 소사의 집 근처 골목이다. 청계천 사진은 발표자가 넣은 자료다.</td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <h2>시험 대비</h2>
+  <div class="box">
+    <p style="font-size:15px">아래는 연습 문항이며 교수 출제와는 무관하다. <span class="tag t-note">해석</span></p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>작품 전반부와 후반부는 형식과 기능이 어떻게 다른가?</summary><p>전반부는 가십이라는 소문의 틀 안에서 김 소사의 생계와 관계를 서사로 보여 준다. 후반부는 서술자가 직접 유전학과 역사를 끌어와 순혈 관념을 논박한다. 가십으로 소비되는 이야기가 계몽적 주장으로 바뀌는 형식이다.</p></details>
+    <details><summary>작품의 결론이 지닌 한계는?</summary><p>혼혈인에게 평등을 주는 조건이 "국가에 유용한 봉사"라서 평등이 기여의 대가가 된다. 또 "모두 섞였다"는 논리는 혈통으로 사람을 가르는 관점 자체는 유지한다. 수업 발표에서 지적된 한계다.</p></details>
+    <details><summary>미군 물자는 작품에서 어떤 기능을 하는가?</summary><p>생계를 해결하고 어머니와 아이들을 기쁘게 하는 한편, 김 소사에게는 정조를 판 대가로 읽히기도 한다. 폭력과 원조가 겹친 제국의 양가성을 보여 주는 장치다.</p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>원문 상태</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>아이의 최후</td><td>서두는 "알 도리가 없다", 4절은 "죽여서 묻었다"</td><td>원문 안의 불일치. 가십 전달 과정의 불확실성으로 읽을 수도 있으나 해석이다.</td></tr>
+      <tr><td>히틀러 대목의 혈통 분수</td><td>OCR로 "22분지 1", "64분지 1"</td><td>원문 확인 필요</td></tr>
+      <tr><td>미시시피 사건</td><td>서술자의 주장</td><td>실재 여부는 확인하지 않음</td></tr>
+      <tr><td>쪽수</td><td>OCR 표기 243~257</td><td>일부 어긋날 수 있음</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 PDF 본문(OCR) 기준 요약이며, 원문의 표현은 인용하지 않고 요약했다. 서술자의 주장과 줄거리는 구분해 적었다.</p>
+  <p><b>범위 한계</b> 작가 약력이나 발표 당시 문학사적 평가는 읽지 않았고 일반 지식으로도 보충하지 않았다.</p>
+</footer>
+</div>
+</body></html>

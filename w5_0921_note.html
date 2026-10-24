@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9월 21일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>5주차 · 9월 21일(월)</span><span>근거: 수업 녹취 (자동 받아쓰기, 약 1시간 15분. 앞부분 약 4분은 녹음 없음)</span></div>
+  <h1>혼혈: 한국 속에 남은 미국의 흔적</h1>
+  <p class="lead">이날은 학생 두 명이 주요섭의 단편 「혼혈」을 발표했다. 교수는 이 작품을 "제국이 한국에 남긴 흔적"으로 읽게 하며, 가난과 성·인종 위계, 공동체의 시선, 그리고 인종차별을 고발하려는 글이 정형화를 되풀이하는 딜레마를 짚었다. 추석 연휴 과제(희곡 Dutchman, 영화 Get Out)도 안내했다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이날의 자료</h2>
+  <ul class="reads">
+    <li>주요섭, 단편 「혼혈」 (1949) <span class="tag t-note">교재 요약에 정리</span></li>
+    <li>발표 슬라이드: 1949년 4월 청계천 사진 (수업 중 설명)</li>
+    <li>다음 읽기·시청: 희곡 Dutchman (번역본 없음, 영어 원문), 영화 Get Out <span class="tag t-warn">작가·연도는 녹취에 없음</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>안내와 추석 일정 <span class="tag t-ok">녹취</span></b>
+      <ul>
+        <li>이날 결석이 많았다고 했다. 오늘은 발표와 단편 이야기, 간단한 연습으로 구성한다.</li>
+        <li>추석 연휴 읽기: 희곡 Dutchman. 번역본이 없고 짧다. 유튜브에 영화판(약 60분)이 있어 권장하되 안 봐도 된다.</li>
+        <li>Get Out은 반드시 볼 것. 다음 수요일(9/30)에는 1시간 내내 영화 이야기만 한다고 했다.</li>
+        <li>추석 다음 월요일은 수업이 없다. 그동안 밀린 읽기를 하라고 했다.</li>
+      </ul></div></li>
+    <li><div><b>학생 발표 (2인) <span class="tag t-ok">녹취</span></b>아래 "발표 내용 요약" 참조.</div></li>
+    <li><div><b>질문과 답변 <span class="tag t-ok">녹취</span></b>청중 두 명이 질문했다. 아래 "질의 요지" 참조.</div></li>
+    <li><div><b>교수 총평과 읽기 방식 <span class="tag t-ok">녹취</span></b>원래는 같은 작가의 장편(20대 초에 미국에 간 사람의 이야기)을 읽히려 했으나 조각 읽기가 되어 단편으로 바꿨다고 했다. 지난 시간에 미국을 제국으로 읽었으니, 이번에는 "제국의 흔적으로서 한국에 남은 것"으로 접근했다. 제국이라는 틀이 불편하면 "미국이 남기고 간 흔적과 영향"이라고 읽어도 된다. 교수 의견에 동의할 필요는 없고 반박해도 된다고 했다.</div></li>
+    <li><div><b>작가와 시대 <span class="tag t-ok">녹취</span></b>작가가 실제로 미국에서 산 경험이 있다는 점이 의미 있다고 했다. <span class="tag t-note">작가의 대표작이 「사랑손님과 어머니」라는 점은 교수가 언급했으나 받아쓰기가 흐려 일반 지식으로 보충</span></div></li>
+    <li><div><b>청계천 사진 <span class="tag t-ok">녹취</span></b>발표자에게 사진의 이유를 물었다. 발표자는 텍스트를 줄이니 아래가 허전해 인터넷의 1949년 4월 사진을 넣었다고 답했다. 교수는 이를 "해방기 서울에서 가장 가난한 곳"의 상징으로 읽었다. 용산 기지에서 청계천까지 흑인 미군이 실제로 왔을지는 개연성이 낮아 보인다고 했으나(교수의 추측), 작가가 일부러 가난의 공간을 고른 점이 중요하다고 했다.</div></li>
+    <li><div><b>제국의 양가성 <span class="tag t-ok">녹취</span></b>미군은 폭력적인 존재이면서 동시에 물건을 가져다주어 가족을 먹여 살리는 존재다. 제국에 기대어 사는 구조가 양가적이라고 했다. 이 양가성은 앞선 수업(9/7, 9/14)의 "끌림과 혐오"와 같은 구조다.</div></li>
+    <li><div><b>기지촌과 여성 <span class="tag t-ok">녹취</span></b>이 작품이 가난한 여성의 문제를 다루므로 기지촌 성매매 이야기로 이어질 수 있다고 했다. 교수는 70~80년대에 국가가 이를 방조하면서도 여성을 혐오하는 쪽으로 갔다고 설명했다. <span class="tag t-warn">교수의 발언이며 근거 자료는 제시되지 않음</span></div></li>
+    <li><div><b>폭력 묘사에 대한 사과 <span class="tag t-ok">녹취</span></b>교수는 읽기 전에 폭력적 장면이 있다고 미리 알리지 못해 미안하다고 했다. 불편하면 "왜 대비 없이 읽히느냐"고 따질 수 있어야 하고, 그 불편함도 판단의 근거가 된다고 했다.</div></li>
+    <li><div><b>토론 연습: 아이가 살았다면 <span class="tag t-ok">녹취</span></b>교수가 "이 비극의 책임은 누구에게 있는가"를 묻고 책임 소재를 확장했다. 이어 짧은 활동을 했다. 아래 "토론 연습" 참조.</div></li>
+    <li><div><b>마무리 <span class="tag t-ok">녹취</span></b>Dutchman 영어 원문이 어려우면 번역기나 AI를 써서라도 읽어라. 원문을 읽는 편이 낫다. 교수가 번역 가능한 PDF를 못 찾았으니 구하면 공유해 달라고 했다.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>발표 내용 요약 <small>학생 두 명, 이름 생략</small></h2>
+  <div class="grid">
+    <div class="card"><h3>발표 1: 배경과 원인 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>작가 소개: 1949년 작품이고, 작가는 미국 유학과 강사 경험이 있다고 했다. <span class="tag t-warn">유학 연도(1928)는 받아쓰기 기준</span></li>
+      <li>줄거리 요약: 청계천 빨래터 가십에서 시작해, 남편을 잃은 김 소사가 생계를 위해 흑인 미군과 관계를 맺고 혼혈아를 낳으며, 아이는 외할머니에게 버려진다.</li>
+      <li>비극의 원인: 식민지 30년과 이어진 빈곤, 미군과 가난한 한국 여성 사이의 권력 관계, 비극을 가십으로 소비하는 공동체, 피부색에 대한 혈통 인식(비하 표현). 원인은 "피가 섞인 것"이 아니라 이에 대한 사회적 반응이라고 보았다.</li>
+      <li>서술: 김 소사가 선택 없이 끌려가는 인물이라 주체성이 약하고, 감정이 직접 서술되지 않고 "울고 있었다" 식으로 간접 처리된다.</li>
+    </ul></div>
+    <div class="card"><h3>발표 2: 구성과 한계 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>구성: 초반 빨래터 가십, 중반 부양과 강압적 관계, 결말에서 미국의 인종차별과 한국의 혈통 인식을 비판하며 사건이 개인의 일이 아니라 사회적 차별과 연결됨을 보여 준다.</li>
+      <li>오늘의 관점에서의 한계 네 가지: (1) 흑인을 괴물처럼 묘사해 편견을 강화할 수 있다. (2) 강압적 관계 뒤 성적 만족을 강조해 폭력성을 흐릴 수 있다. (3) 국가에 유용한 봉사를 하면 평등하다는 결말은 평등을 기여의 대가로 만든다. (4) "모든 인간은 피가 섞였다"는 논리는 순혈 신화는 흔들지만 사람을 혈통으로 구분하는 언어는 유지한다.</li>
+    </ul></div>
+    <div class="card"><h3>질의 요지 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>질문 1: 감정을 직접 쓰지 않는 서술이 오히려 복합적인 감정을 느끼게 한다. 흑인 타자화 묘사도 당시 사람들의 시선을 서술한 것이고, 뒤에서 작가가 반박하는데 작가가 타자화했다고 볼 수 있는가. 발표 2는 동의하면서도 당시에 괴물 이미지와 연결하면 인식이 굳을 위험이 있다고 답했다. 발표 1은 간접 서술을 긍정하며, 문제 제기를 한 것이지 작가를 비난한 것은 아니라고 했다.</li>
+      <li>질문 2: "모든 사람이 섞였다"는 논리가 현재의 차별을 정상화하지는 않는다. 발표 1은 "순혈이 낫지만 우리도 순수하지 않으니 받아주자"로 읽힐 여지가 있다고 답했다.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>핵심 개념 <small>5개</small></h2>
+  <div class="grid">
+    <div class="card"><h3>제국의 흔적과 양가성</h3><p>미국을 "제국"으로 보는 틀이 불편하면 "미국이 남긴 흔적과 영향"으로 읽을 수 있다. 미군은 폭력적 존재이자 생계를 주는 존재이며, 이 이중성이 작품의 핵심이라고 했다. 교수는 1945~48년 군정과 이후의 주둔, 문화적 제국주의(영어 발음 열등감 등)까지 이어진다고 했다.</p></div>
+    <div class="card"><h3>책임의 확장</h3><p>할머니, 어머니, 미군 중 누구의 잘못인가를 묻는 데서 멈추지 않고, 남녀의 불평등, 미군과 한국인의 불평등, 그리고 가십으로 소비하는 사회 구조로 넓혀 보라고 했다. "그냥 흑인이 나빠, 혹은 김 소사가 나빠"로 읽으면 쉽게 넘어간다고 했다.</p></div>
+    <div class="card"><h3>열린 읽기와 문학성</h3><p>쾌락을 나쁘지만은 않게 묘사한 것을 어떻게 믿을 것인가에는 정답이 없다. 남성의 시각이라고 비판할 수도, 삶의 복잡성이라고 볼 수도 있다. 도덕적 올바름을 가르치는 텍스트는 재미가 없고, 해석의 여지를 두는 쪽이 문학적이다. 다만 시대를 앞선 작품이어도 문학성이 떨어진다는 비판은 가능하다고 했다.</p></div>
+    <div class="card"><h3>차별 고발의 딜레마</h3><p>차별을 고발하려면 폭력을 묘사해야 하는데, 반복되면 독자가 무뎌지고 정형화가 퍼지며 원래 의도가 약해진다. 교수는 19세기 노예제 서사를 예로 들었다(학자 이름은 받아쓰기 불분명). 해법은 단정하지 않았고, 폭력적이지 않아 보이는 곳에서 폭력을 읽어 내려는 접근도 있다고 했다. <span class="tag t-warn">학자 확인 필요</span></p></div>
+    <div class="card"><h3>혈통과 행복 이데올로기</h3><p>혈통을 따지는 이유는 대개 기득권이 기득권을 지속하려는 것이라고 했다. 교수는 "타자를 배제해야 우리가 행복하다"는 행복의 이데올로기라고 불렀고, 이민자 배제를 내세우는 현재의 정치를 예로 들었다. "다문화"라는 말도 문화가 구별 가능하다는 전제를 깔고 있다는 비판을 소개했다.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>토론 연습: 아이가 살았다면 <small>학생 응답</small></h2>
+  <div class="grid">
+    <div class="card"><h3>학생 응답 <span class="tag t-ok">녹취</span></h3><p>한국 사회에서 배척을 너무 받아 한국인 정체성을 버리고 미군 사회에 녹아들려 했을 것이다. 그러나 거기서도 아시아적 외모 때문에 차별받아 어느 쪽이든 힘들었을 것이다. 다른 응답은 피부색 때문에 취업이 어려웠을 것이라는 취지였다(받아쓰기 불분명).</p></div>
+    <div class="card"><h3>교수 해설 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>당시 한국 지식인들은 19세기 말부터 사회진화론을 통해 흑인의 존재와 인종 위계를 알고 있었다고 했다. 일반 사람은 잘 몰랐거나 놀랐을 것이고, 반흑인 정서는 한국에서 꽤 오래되었다고 했다. <span class="tag t-warn">교수의 설명이며 자료 제시 없음</span></li>
+      <li>60~70년대에는 미국화를 강조하는 한편 흑인 혼혈에게는 스포츠나 노래 같은 정형화된 길을 권하거나 이민을 권하는 방향이었을 것이라고 상상했다. 피 한 방울이라도 섞이면 흑인으로 분류되는 미국의 기준도 언급했다.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>교수 의견·비유 <small>시험보다는 맥락</small></h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 읽기 방식: 교수 채용 심사에서 지원서를 세 문단만 읽고 판단하는 일이 있다고 했다. 뻔한 이야기를 하지 말고 전통을 익히되 새롭게 비껴가는 접근을 하라는 조언이다.</li>
+    <li><span class="tag t-ok">녹취</span> 평등: 작품이 평등을 국가 기여 조건으로 둔 점을 지적했다. 한국 사회도 공부와 성실함, 학벌에 가치를 매기는 데 익숙하다고 했다. 가수 신해철의 "살아 있으면 됐지"라는 취지의 말을 예로 들며, 존재 자체를 기본권으로 인정하는 관점과 대비했다. <span class="tag t-warn">발언 출처는 받아쓰기 기준</span></li>
+    <li><span class="tag t-ok">녹취</span> 한국 사회: 한국에서 외국인이 많아진 현실과 범죄에 대한 인식을 어떻게 볼 것인지 질문으로 던졌다. 답은 주지 않았다.</li>
+    <li><span class="tag t-ok">녹취</span> 흑인 묘사: 동물과 물건 두 방향으로 묘사된다는 취지로 말했으나 받아쓰기가 흐리다. 박완서 작품을 언급했으나 작품명은 불분명하다. <span class="tag t-warn">확인 필요</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <div class="box">
+    <p style="font-size:15px">이날은 시험 범위에 대한 직접 언급이 녹취에 없다. 아래는 연습 문항이며 교수 출제와는 무관하다. 공식 범위는 별도 공지를 확인해야 한다. <span class="tag t-note">해석</span></p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>「혼혈」의 비극 원인을 어떻게 설명할 수 있는가?</summary><p>혈통 자체가 아니라 가난, 미군과 한국 여성의 불평등한 권력 관계, 비극을 가십으로 소비하는 공동체, 피부색에 대한 혈통 인식이 겹친 결과로 읽을 수 있다. 책임을 개인(할머니, 어머니)에게만 묻지 않고 구조로 확장하는 답이 수업의 방향과 맞는다.</p></details>
+    <details><summary>이 작품의 한계로 지적된 점은?</summary><p>흑인의 괴물 같은 묘사, 강압적 관계 뒤 쾌락의 서술이 폭력성을 흐릴 위험, 국가 기여를 전제로 한 평등, 혼혈 논리가 혈통 분류를 유지하는 점. 동시에 작가의 시대적 문제의식은 평가받는다. 어느 쪽으로도 단정하지 않는 것이 요점이다.</p></details>
+    <details><summary>제국이 한국에 남긴 흔적을 이 작품에서 어떻게 읽을 수 있는가?</summary><p>미군은 폭력적 존재이면서 생계 물자를 주는 존재다. 해방기 빈곤과 군정 아래의 권력 관계가 개인의 선택을 제약하는 구조를 보여 주며, 이 양가성이 핵심이다.</p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>녹취</th><th>다른 자료</th></tr></thead>
+    <tbody>
+      <tr><td>작가의 미국 유학 연도와 활동</td><td>받아쓰기로 "1928년 유학, 강사"</td><td>작가 연보 확인 필요</td></tr>
+      <tr><td>Dutchman, Get Out의 작가·연도</td><td>녹취에 없음 (희곡은 60년대 작품이라 언급)</td><td>일반적으로 Amiri Baraka 희곡(1964), Jordan Peele 영화(2017)로 알려져 있으나 수업 자료로 확인 필요 <span class="tag t-note">일반 지식</span></td></tr>
+      <tr><td>차별 고발 딜레마를 정리한 학자</td><td>이름 불명확</td><td>확인 필요</td></tr>
+      <tr><td>신해철 일화, 박완서 작품명</td><td>받아쓰기 흐림</td><td>확인 필요</td></tr>
+      <tr><td>교수의 70~80년대 기지촌 정책 설명</td><td>구두 설명만</td><td>일반 지식으로 확인하지 않음</td></tr>
+      <tr><td>"피 한 방울" 원칙의 구체적 비율</td><td>교수는 "16분의 1"을 언급한 것으로 들림</td><td>미국 주별로 달랐던 것으로 알려져 있어 확인 필요 <span class="tag t-note">일반 지식</span></td></tr>
+    </tbody></table></div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 9/21 녹취(자동 받아쓰기)를 정리한 것이다. 학생 이름은 적지 않았고, 인물·작품·연도는 받아쓰기 오류 가능성이 있다. 발표 부분은 학생의 설명이며 작품 원문과 다를 수 있어, 원문 대조는 교재 요약에 있다.</p>
+  <p><b>범위 한계</b> 녹취 앞부분 약 4분은 기록이 없고, 연습 시간(약 5분) 중의 대화는 녹음되지 않았다. 슬라이드는 교수의 구두 설명으로만 확인했다.</p>
+</footer>
+</div>
+</body></html>
