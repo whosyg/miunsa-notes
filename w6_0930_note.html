@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9월 30일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>6주차 · 9월 30일(수)</span><span>근거: 수업 녹취 (자동 받아쓰기)</span></div>
+  <h1>Get Out: 호러로 읽는 미국의 인종 구조</h1>
+  <p class="lead">이날은 학생 두 명이 영화 Get Out을 발표했고, 교수는 영화 속 장치(색, 사물, 장면)를 하나씩 짚으며 "디테일이 분석의 힘"이라고 강조했다. 핵심 주제는 백인 진보주의자의 위선, 흑인의 몸을 탐하는 시선, 대체 가능한 몸, 인종 프로파일링과 결말의 의미, 그리고 "왜 하필 공포 영화인가"였다. 다음 시간 읽기(희곡)와 시험 일정도 안내했다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이날의 자료</h2>
+  <ul class="reads">
+    <li>영화 Get Out (교수가 필수 시청으로 안내) <span class="tag t-note">감독 Jordan Peele, 2017은 일반 지식</span></li>
+    <li>희곡 Dutchman (Amiri Baraka) <span class="tag t-note">교재 요약에 정리. 이번 수업에서는 결말 비교로만 언급</span></li>
+    <li>다음 읽기: 희곡 한 편을 수요일 전까지 읽어 올 것 <span class="tag t-warn">날짜와 제목은 받아쓰기가 흐림</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>공지 <span class="tag t-ok">녹취</span></b>
+      <ul>
+        <li>연휴 읽기는 세 가지이고 둘은 길다. 한 편은 한국어 글로 짧다고 했다. <span class="tag t-warn">구체적 목록은 받아쓰기 불분명</span></li>
+        <li>시험은 10/12 또는 10/19 무렵으로 들린다. 답안은 한국어로 써도 되고, 문항 수는 적게, 예시 문제는 미리 준다고 했다. <span class="tag t-warn">날짜 확인 필요</span></li>
+        <li>"모든 텍스트를 다 읽으려 하지 말고, 핵심 텍스트에 대해 할 말이 있게 준비하라"는 취지였다.</li>
+      </ul></div></li>
+    <li><div><b>학생 발표 (2인) <span class="tag t-ok">녹취</span></b>아래 "발표 내용 요약" 참조.</div></li>
+    <li><div><b>질의응답 <span class="tag t-ok">녹취</span></b>고정관념 강화인가 비판인가, 남성 피해자라는 젠더 독해, 두 질문이 나왔다.</div></li>
+    <li><div><b>교수 해설: 영화의 장치 <span class="tag t-ok">녹취</span></b>"디테일을 말해야 점수가 나온다"며 장면별로 짚었다. 아래 "장치와 디테일" 참조.</div></li>
+    <li><div><b>백인 진보주의자와 위선 <span class="tag t-ok">녹취</span></b>부모의 과장된 친절을 읽는 대목이다. 아래 "핵심 개념" 참조.</div></li>
+    <li><div><b>흑인의 몸을 탐하는 시선 <span class="tag t-ok">녹취</span></b>운동능력, 사진작가의 눈, "소모되는 몸"과 대체 가능성(fungibility). 아래 참조.</div></li>
+    <li><div><b>결말 토론 <span class="tag t-ok">녹취</span></b>인종 프로파일링, 경찰 폭력, 원래 결말과 바뀐 결말, 희곡 Dutchman의 결말과의 비교.</div></li>
+    <li><div><b>"왜 호러인가" <span class="tag t-ok">녹취</span></b>학생 여럿이 답하고 교수가 정리했다. 아래 참조.</div></li>
+    <li><div><b>다음 시간 안내 <span class="tag t-ok">녹취</span></b>희곡 한 편을 읽고 올 것. 날짜와 "다른 희곡"의 제목은 받아쓰기가 불분명하다.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>발표 내용 요약 <small>학생 두 명, 이름 생략</small></h2>
+  <div class="grid">
+    <div class="card"><h3>발표 요지 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>주인공 Chris를 "흑인 정체성"을 가진 인물로 읽는다. 겉으로는 친절한 차별, 즉 미묘한 인종차별을 보여 준다고 했다.</li>
+      <li>관객이 "해롭지 않다"고 여긴 인물(Rose의 할머니, Georgina, Jim Hudson)이 뒤집히는 구조를 짚었다.</li>
+      <li>한계: "흑인의 몸을 탐낸다"는 설정이 오히려 고정관념을 되풀이할 위험이 있다고 했다.</li>
+      <li>결말: 원래 구상은 Chris가 체포되는 결말이었는데, 개봉판은 친구 Rod가 구해 주는 결말이다. <span class="tag t-warn">원래 결말 정보는 발표자의 설명</span></li>
+      <li>정당방위 법적 분석: Rose를 제압하는 장면은 해석 여지가 있다고 했다.</li>
+    </ul></div>
+    <div class="card"><h3>질의 요지 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>질문 1: 이 영화는 고정관념을 강화하는가, 비판하는가.</li>
+      <li>질문 2: 피해자가 남성이라는 점을 젠더 측면에서 어떻게 읽을 것인가.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>장치와 디테일 <small>교수가 짚은 것</small></h2>
+  <div class="scroll"><table>
+    <thead><tr><th>장치</th><th>교수의 독해</th><th>표시</th></tr></thead>
+    <tbody>
+      <tr><td>색 대비</td><td>백인 인물은 붉은색, Chris는 푸른색으로 대비된다.</td><td><span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>시리얼과 우유</td><td>섞이지 않는 모습이 인종의 분리를 상징한다.</td><td><span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>면도, 당근 케이크, 토끼</td><td>토끼와 "Run Rabbit Run"을 사냥감의 이미지로 연결했다. <span class="tag t-warn">곡명은 받아쓰기 기준</span></td><td><span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>첫 장면</td><td>흑인이 밤길에서 느끼는 공포를 뒤집어 보여 주는 장면으로 읽었다.</td><td><span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>사냥 이미지(사슴)</td><td>인간이 사냥감이 되는 구도와 연결했다.</td><td><span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>아시아계 인물 (일본인)</td><td>제국주의와 "명예 백인" 개념으로 읽을 수 있다. 경매 장면은 노예 시장을 떠올리게 한다.</td><td><span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>카메라 플래시</td><td>플래시 하나까지 의미를 부여하는 것은 과잉 해석일 수 있다고 했다.</td><td><span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>Georgina 장면, 세대 간 말투</td><td>세대별 말투 차이를 활용한 장면을 언급했다. <span class="tag t-warn">구체적 의미는 받아쓰기 불분명</span></td><td><span class="tag t-ok">녹취</span></td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <h2>핵심 개념 <small>5개</small></h2>
+  <div class="grid">
+    <div class="card"><h3>백인 진보주의자 (white liberal)</h3><p>부모의 과장된 친절("오바마를 세 번째 임기에도 뽑았을 것"이라는 취지의 말)은 믿음과 행동의 간극을 보여 준다. 노골적인 인종주의자보다 이 간극이 있는 쪽이 더 위험하다고 했다. 교수는 자신의 경험(백인 동료 "David"의 일화)을 곁들였다. <span class="tag t-warn">오바마 대사는 받아쓰기 기준</span></p></div>
+    <div class="card"><h3>피상적 친절</h3><p>미국인의 친절이 겉치레일 수 있다는 점을 교수가 일반화해서 말했다. 교수 본인의 인상이며 근거 자료는 없다. <span class="tag t-warn">교수의 일반화</span></p></div>
+    <div class="card"><h3>흑인의 몸을 탐하는 시선</h3><p>운동능력, 그리고 사진작가가 Chris의 눈을 원하는 장면이 예다. 사람이 아니라 부위와 기능이 가치가 되는 구조다. 교수는 흑인 신체를 선망하면서 동시에 사람으로 대하지는 않는 모순이라고 읽었다.</p></div>
+    <div class="card"><h3>소모되는 몸과 대체 가능성</h3><p>"소모되는 몸(disposable body)"과 "fungibility(대체 가능성)" 개념을 소개했다. 한 사람이 사라져도 다른 사람이 채우는 구조이며, 교수는 K-pop 연습생·아이돌의 대체 가능성을 비유로 들었다.</p></div>
+    <div class="card"><h3>Black Like Me</h3><p>백인 기자가 피부를 어둡게 하고 흑인으로 살아 본 기록을 언급했고, 그 과정에서 성적인 질문을 받았다는 점을 소개했다. <span class="tag t-warn">책 제목과 세부는 받아쓰기 기준, 일반 지식으로도 확인하지 않음</span></p></div>
+  </div>
+</section>
+
+<section>
+  <h2>결말과 인종 프로파일링</h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 결말의 핵심은 경찰 차량이 등장하는 순간의 공포다. 교수는 인종 프로파일링, 경찰 폭력, BLM과 George Floyd 사건을 언급했다.</li>
+    <li><span class="tag t-ok">녹취</span> 교수의 국경 일화: 버팔로에서 토론토로 가는 길의 검문 경험을 이야기했다. <span class="tag t-warn">세부 내용은 받아쓰기 기준</span></li>
+    <li><span class="tag t-ok">녹취</span> 바뀐 결말은 "유토피아적"이라고 했다. 원래 결말이 너무 비극적이어서 바꿨다는 취지다. 구해 주는 사람이 경찰이 아니라 TSA 직원인 Rod라는 점에 주목했다. <span class="tag t-warn">제작 의도는 교수의 설명이며 자료 확인 안 함</span></li>
+    <li><span class="tag t-ok">녹취</span> 희곡 Dutchman의 결말과 비교: 그쪽은 흑인 남성이 죽는다. 비교의 취지는 "같은 문제를 20세기 중반 연극과 21세기 영화가 다르게 끝낸다"는 점이다. <span class="tag t-warn">비교 범위는 받아쓰기 기준</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>왜 호러인가 <small>학생 답변과 교수 정리</small></h2>
+  <div class="grid">
+    <div class="card"><h3>학생 답변 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>정보보다 정서에 호소한다.</li>
+      <li>역사적·일상적 공포를 담는다.</li>
+      <li>관객은 두 시간 동안 공포를 느끼고, 코미디는 잊힌다.</li>
+      <li>호러는 관객의 배경을 넘나든다(아시아계 관객도 공감).</li>
+      <li>백인 관객을 위한 영화다.</li>
+    </ul></div>
+    <div class="card"><h3>교수 정리 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>린치의 역사가 호러의 소재가 된다.</li>
+      <li>일상의 공포를 실감 나게 만든다.</li>
+      <li>잔상이 오래 남는다.</li>
+      <li>코미디였다면 웃어넘겼을 것이다.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <div class="box">
+    <p style="font-size:15px">시험은 10/12 또는 10/19 무렵이라는 취지의 안내가 있었다. 아래는 연습 문항이며 교수 출제와는 무관하다. <span class="tag t-note">해석</span></p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>Get Out의 "백인 진보주의자" 비판은 어떤 장면으로 뒷받침되는가?</summary><p>부모의 과장된 친절과 "오바마" 대사, 해롭지 않아 보이던 인물들의 반전이 근거다. 믿음과 행동의 간극이 노골적 인종주의보다 위험하다는 것이 수업의 요점이다.</p></details>
+    <details><summary>"흑인의 몸을 탐한다"는 설정은 어떻게 읽을 수 있는가?</summary><p>운동능력과 사진작가의 눈 같은 부위·기능이 가치가 되고, 사람은 대체 가능한 몸으로 취급된다. "소모되는 몸", fungibility 개념과 연결한다. 동시에 이 설정이 고정관념을 되풀이한다는 비판도 같이 언급한다.</p></details>
+    <details><summary>왜 이 주제를 호러 장르로 만들었다고 볼 수 있는가?</summary><p>린치의 역사와 일상의 공포를 정서로 전달하고, 잔상이 길게 남는다. 코미디는 웃고 잊히기 쉽다는 점이 대비된다.</p></details>
+    <details><summary>결말을 바꾼 것을 어떻게 평가할 것인가?</summary><p>원래 결말은 비극이고, 바뀐 결말은 "유토피아적"이다. 경찰 폭력의 현실과 거리가 있다는 지적과 관객이 감당할 수 있는 형태로 바뀌었다는 설명이 함께 가능하다.</p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>녹취</th><th>다른 자료</th></tr></thead>
+    <tbody>
+      <tr><td>시험 날짜</td><td>10/12 또는 10/19로 들림</td><td>공식 공지 확인</td></tr>
+      <tr><td>다음 시간 읽기(희곡 제목, 날짜)</td><td>받아쓰기 불분명</td><td>강의 계획서 확인</td></tr>
+      <tr><td>"버츠맨" 언급</td><td>받아쓰기 불분명</td><td>확인 필요</td></tr>
+      <tr><td>Dutchman 관련 발언(룰라가 클레이를…)</td><td>받아쓰기 깨짐</td><td>교재 요약의 희곡 줄거리와 대조</td></tr>
+      <tr><td>Black Like Me 제목과 내용</td><td>받아쓰기 기준</td><td>확인 필요</td></tr>
+      <tr><td>오바마 대사</td><td>받아쓰기 기준</td><td>영화 대사 확인 필요</td></tr>
+      <tr><td>Get Out의 감독·연도(Jordan Peele, 2017)</td><td>녹취에 없음</td><td>일반 지식 <span class="tag t-note">일반 지식</span></td></tr>
+      <tr><td>원래 결말(체포)과 제작 의도</td><td>발표·교수의 설명</td><td>공식 자료로 확인하지 않음</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 9/30 녹취(자동 받아쓰기)를 정리한 것이다. 학생 이름은 적지 않았고, 인물·작품·연도는 받아쓰기 오류 가능성이 있다. 교수의 일화와 일반화는 근거 자료가 제시되지 않았다.</p>
+  <p><b>범위 한계</b> 영화 자체는 보지 못했으므로 장면 설명은 발표와 교수 설명에만 근거한다.</p>
+</footer>
+</div>
+</body></html>
