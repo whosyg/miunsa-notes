@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10월 14일 교재 요약 · The Yellow Negro</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>10주차 · 10월 14일(수) 교재 요약 (쉬운 버전)</span><span>근거: 읽기 PDF 원문(전문 확인)과 수업 녹취</span></div>
+  <h1>Joe Wood, 「The Yellow Negro」, 쉽게 읽기</h1>
+  <p class="lead"><i>Transition</i> 73호(1997), pp.40–66. 흑인 미국인 필자가 도쿄에 가서 피부를 검게 하고 흑인 문화를 흉내 내는 일본 청년들(blackfacers)을 만나는 취재 에세이다. 필자는 이것이 모욕인지 동경인지 끝내 한 쪽으로 정하지 못하고, 일본 안의 소수자(부락민, 재일 한국인)와 자신의 경험을 겹쳐 본다. 제목은 1957년 Norman Mailer의 「The White Negro」를 비튼 것이다.</p>
+  <div class="legend"><span class="tag t-ok">원문·수업 확인</span><span class="tag t-note">일반 지식·해석</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+<section><h2>3줄 요약</h2><div class="box"><ol class="plain" style="margin:0;padding-left:20px;display:grid;gap:8px"><li><b>현상</b>: 일본의 일부 청년은 태닝으로 피부를 어둡게 하고 힙합 패션을 입는다. 이유를 물으면 "멋있으니까"라고 답한다. 필자는 "내 얼굴을 쓰기로 한 이 사람들은 누구인가"를 묻는다.</li><li><b>모순</b>: 일본은 흑인 음악과 스타일은 좋아하면서도 흑인 개인에게는 무관심하거나 두려워한다. 같은 사회가 "일본인은 모두 같다"는 환상(단일민족)도 갖고 있다.</li><li><b>결론</b>: 필자는 이것이 일본 사회가 변하는 신호일 수도, 문화가 상품이 되는 세계화의 일부일 수도 있다고 본다. 그러나 흑인에게 인종은 쉽게 벗을 수 없고, 세계화가 와도 인종은 계속 중요할 것이라고 쓴다.</li></ol></div></section>
+<section><h2>어려운 말, 쉽게 <small>용어 풀이</small></h2><div class="scroll"><table><thead><tr><th>용어</th><th>쉬운 뜻</th></tr></thead><tbody><tr><td><b>blackface</b></td><td>얼굴을 검게 칠하는 분장. 19세기 미국 민스트럴 쇼에서 백인이 흑인을 조롱하려고 썼다. 이 글에서는 일본 청년이 "흑인이 되고 싶어서" 하는 것이라 뜻이 다르다.</td></tr><tr><td><b>The White Negro</b></td><td>Norman Mailer가 1957년에 쓴 에세이. 백인 비트족이 흑인 문화의 "야성"에 끌려 흉내 내는 현상. Wood는 일본 청년이 비슷하게 중산층의 답답함에서 흑인성을 빌린다고 본다.</td></tr><tr><td><b>kokujin / gaijin</b></td><td>일본어로 흑인 / 외국인. 필자는 둘 다로 불린다.</td></tr><tr><td><b>burapan</b></td><td>블랙페이스를 포함해 "흑인 따라 하기" 패션 전반을 부르는 말(Mikako의 설명).</td></tr><tr><td><b>minstrelsy</b></td><td>백인 배우가 흑인 분장을 하고 흑인을 희화화한 19세기 대중 공연.</td></tr><tr><td><b>burakumin(부락민)</b></td><td>일본에서 예전에 "천한 일"로 취급받던 직업과 엮여 차별받던 집단. 겉모습은 다른 일본인과 똑같아 숨기고 사는 경우가 많다.</td></tr><tr><td><b>Yamato race</b></td><td>일본 군국주의가 내세운 "순수한 일본 민족" 개념. 한국 병합(1910)과 중국 침략을 정당화하는 데 쓰였다.</td></tr><tr><td><b>Ellisonian invisible man</b></td><td>Ralph Ellison의 소설 <i>Invisible Man</i>처럼 눈에 보이는데도 사람으로 보이지 않는 상태. John Russell이 일본 생활을 이렇게 설명했다.</td></tr></tbody></table></div></section>
+<section><h2>쉽게 따라가기</h2><ol class="flow"><li><div><b>1. 도착</b>도쿄에 도착한 필자는 공항 직원은 친절한데 거리에서는 모두가 자신을 못 본 척한다고 느낀다. 신주쿠에서는 사람들의 눈에서 "추한 호기심"을 읽었다고 생각한다. 이것이 자신이 겪는 인종 차별인지, 외국인이라서 느끼는 외로움인지 확신하지 못한다.</div></li><li><div><b>2. 이중성</b>일본은 흑인을 겨냥한 인종 비하 캐리커처를 오래 써 왔고, 1990년 법무장관이 흑인을 비하하는 말을 한 일도 있다. 동시에 일본에는 재즈, 힙합 등 흑인 음악이 어디서나 흐른다. 필자는 이 모순을 확인하러 간다.</div></li><li><div><b>3. 클럽에서 Miho를 만남</b>필자는 흑인 클럽에서 19세 일본 여성 Miho를 만난다. 피부를 어둡게 하고 곱슬 머리에 짙은 립스틱을 했고, "Black Women Are the Salt of the Earth" 티셔츠를 입었다. 왜 이렇게 하냐고 묻자 "멋있어서(cool)"라고 한다. 학교 친구들은 어떻게 보냐고 하자 "안 좋게 보지만 상관없다"고 답한다.</div></li><li><div><b>4. 힙합 팬들도 싫어한다</b>"진짜 힙합 팬"은 블랙페이스를 가짜라고 무시한다. 그들은 피부색이 아니라 그래피티, 브레이크댄스, 헐렁한 옷 문화에 참여하려는 것이다. 필자는 1950년대 미국 비트족과 1980년대 일본 청년이 비슷하다고 본다. 둘 다 풍요로운 사회의 중산층 자녀가 순응적인 사회에 반항하며 흑인성을 빌렸다는 점에서다.</div></li><li><div><b>5. Mikako와 Hiroshi</b>24세 Mikako와 26세 Hiroshi는 친절하고 똑똑한 일본 청년이다. Mikako는 흑인이 Roppongi에서는 무섭지만 일반적으로 일본인은 흑인에 대해 별 생각이 없고, Michael Jordan과 흑인 음악은 좋아한다고 한다. 필자가 minstrel을 설명하자 Hiroshi는 처음 들었다는 반응을 보인다.</div></li><li><div><b>6. 일본의 역사</b>1853년 Perry가 일본을 열 때 미국 민스트럴 단원도 함께 갔다고 한다. 일본은 근대화하며 서구의 인종 위계도 받아들였다. 1905년 러일전쟁 승리는 아시아와 유색인종에게 희망으로 읽혔고, Booker T. Washington, Du Bois, Marcus Garvey 모두 일본을 "유색인 진보의 모델"로 보았다고 필자는 쓴다.</div></li><li><div><b>7. 전쟁 이후</b>일본 군국주의는 "순수 일본 민족"을 내세워 한국 병합과 중국 학살을 정당화했다. 패전과 미국 점령 이후 일본은 서구에 대한 열등감을 새로 갖게 되었고, 학자 John Russell은 반흑인 인종주의를 받아들인 것이 백인 미국인과 같은 쪽에 서려는 시도라고 본다. 1986년 나카소네 전 총리가 미국의 낮은 경쟁력을 흑인과 히스패닉 탓으로 돌린 발언도 예로 든다.</div></li><li><div><b>8. 일본 안의 흑인 사회</b>Roppongi의 흑인은 미군, 일자리를 잃은 연예인, 직장인과 학생으로 나뉜다. 클럽의 음악은 단골 손님의 인종에 따라 다르다. 아프리카 출신들이 클럽을 소유하고, 미군 흑인은 블랙페이스 청년보다 이 아프리카 사람들과의 경쟁에 더 신경 쓴다. 문제는 누가 "진짜 흑인"이냐(authenticity)라는 것이다.</div></li><li><div><b>9. John Russell과 Reginald Kearney</b>흑인 학자 Russell은 일본인이 자신을 "투명인간"처럼 대한다고 한다. 일본인이 스스로를 백인처럼 본다고 필자는 의심한다. 반면 Kearney는 일본의 차별은 외국인 전체에게 똑같고 흑인만 특별히 겨냥하지 않는다고 본다. 미국인 Anne은 일본에서 처음으로 소외를 겪고 "흑인의 마음을 알겠다"고 하지만, 흑인 사업가 Lance는 그 비유가 틀렸다고 말한다.</div></li><li><div><b>10. 단일민족의 허상</b>Hiroshi는 "일본인은 인종에 관심이 없다, 모두 같다고 느낀다"고 한다. 필자는 아이누, 오키나와, 재일 한국인, 부락민을 꺼낸다. 부락민 해방연맹의 대표는 부락민이 몇 명인지는 아무도 모르고, 일본인 모두가 부락민 후손이라는 추정도 있다고 말한다. 재일 한국인 목사는 흑인이 미국에서 겪는 운명과 자신들의 처지가 사회적으로 거의 같다고 한다.</div></li><li><div><b>11. 마르크스주의자 친구</b>필자는 출국 전 한 친구에게서 "흑인은 사라질 것이다. 문화는 상품일 뿐이고, 승리는 흑인도 미국도 아닌 자본의 것이다. 모두가 소비자가 된다"는 말을 들었다. 필자는 일부 동의하지만 "세계화가 와도 인종은 계속 중요할 것"이라고 반박한다.</div></li><li><div><b>12. JJ와 클럽</b>필자는 래퍼를 꿈꾸는 흑인 JJ를 만난다. JJ는 Crips 조직 출신이고 감옥 경험도 있다. 일본 청년들은 필자보다 JJ에게 더 "진짜 흑인"을 느낀다. 필자는 자신이 JJ가 되기는 쉬워도 JJ가 필자가 되기는 어렵다고 느끼고, 블랙페이스 청년들에 대한 화가 누그러진다.</div></li><li><div><b>13. 목욕탕(sento)</b>마지막 날 필자는 일본의 대중목욕탕에 간다. 이전에 한 지인은 흑인이 탕에 들어가자 모두가 나갔다고 했다. 필자는 한 일본 남성이 자신을 "검고, 더럽고, 미국적"으로 볼 것이라고 상상하며 그를 미워했다가 뜨거운 물 속에서 풀린다. 잠시 자신이 흑인이라는 사실을 잊었다가, 자신은 일본인이 아니고 그 남성은 흑인이 아니라는 사실을 떠올린다.</div></li></ol></section>
+<section><h2>수업 설명과 원문, 어디가 다른가</h2><div class="scroll"><table><thead><tr><th>수업에서 나온 말</th><th>교재에서는</th></tr></thead><tbody><tr><td>작품이 쓰인 때: "2000년 즈음" (교수)</td><td>PDF에는 <i>Transition</i> 73호, 1997년으로 나온다.</td></tr><tr><td>"미호(미카코)가 모두 비슷한 말을 했다" (발표)</td><td>원문에서 Miho는 블랙페이스 여성이고, Mikako는 도쿄의 친구다. "흑인은 무섭지만 Michael Jordan은 좋아한다"는 말은 Mikako가 한다.</td></tr><tr><td>마르크스주의 친구는 "세계화가 인종을 없애지 않는다"고 했다 (발표)</td><td>원문에서 그 친구는 오히려 인종이 사라질 것이라고 주장한다. 인종이 계속 중요하다는 반박은 필자의 말이다. 인용구는 친구의 말이다.</td></tr><tr><td>목욕탕에서 일본 남성이 필자를 "검고 젊고 미국적"으로 인식 (발표)</td><td>원문에서는 필자가 그 남성의 생각을 상상한 것이다. 실제 시선이 아니라 필자의 상상이라는 점이 중요하다.</td></tr><tr><td>"일본인들이 한국을 식민지로 만든 것이 낫다고 Du Bois가 말했다" (교수)</td><td>원문에는 없다. 원문은 Du Bois가 일본을 유색인 진보의 모델로 보았다고만 쓴다. 한국 관련 발언은 별도 출처가 필요하다.</td></tr><tr><td><i>Love and Theft</i> (교수)</td><td>원문에 없다. 수업의 추가 설명.</td></tr></tbody></table></div></section>
+<section><h2>시험 대비 <small>쉬운 답안, 연습 문항(교수 출제와 무관)</small></h2><div><details><summary>이 글에서 필자가 확실히 말하는 것은?</summary><p>일본의 블랙페이스는 단순한 조롱도, 단순한 동경도 아니다. 인종 위계와 자본과 단일민족 환상이 얽혀 있다는 것이다. 필자 스스로도 끝내 결론을 내리지 않는다.</p></details><details><summary>필자가 왜 비트족(The White Negro)을 끌어오나?</summary><p>풍요로운 사회의 중산층 자녀가 순응에 반항하려고 흑인성을 빌리는 구조가 비슷하기 때문이다. 그러나 이 빌림은 흑인에 대한 앎이 없다는 점에서 한계가 있다.</p></details><details><summary>필자가 마지막에 조심스럽게 거는 기대와 불안은?</summary><p>기대: 블랙페이스가 일본의 "같음"이라는 가면을 흔드는 첫 신호일 수 있다. 불안: 흑인이 흉내의 대상이 되면 일본 안의 다른 소수(한국인, 부락민)도 곧 "패션"이 될 수 있다.</p></details><details><summary>"The triumph has a black American face, but the triumph isn't black or American. It's capital."은 무슨 뜻인가?</summary><p>흑인 문화가 세계에서 유행하는 것은 흑인의 승리처럼 보이지만 실제로 이득을 보는 것은 자본이라는 주장이다. 이는 필자의 말이 아니라 마르크스주의자 친구의 말이며, 필자는 이에 일부만 동의한다.</p></details></div></section>
+<section><h2>확인 필요</h2><div class="scroll"><table><thead><tr><th>항목</th><th>상태</th></tr></thead><tbody><tr><td>쪽수 세부</td><td>PDF 40–66쪽 기준. 인용 위치는 필요 시 재확인</td></tr><tr><td>일부 사실 주장</td><td>1853년 Perry와 민스트럴 단원, 1986년 나카소네 발언 등은 필자가 쓴 내용. 별도 검증은 하지 않았다.</td></tr><tr><td>필자 약력</td><td>교재 PDF에 없어 생략. 수업 발표에서는 "흑인 문화 비평가, 저널리스트"로 소개됨</td></tr></tbody></table></div></section>
+<footer><p><b>확실도</b> 높음. 원문 전문을 읽고 정리했다. 문장은 인용하지 않고 풀어 썼으며 인종 비하 표현은 옮기지 않았다. PDF의 2단 편집 때문에 일부 단어가 깨져 있어 세부 표현은 문맥으로 판단했다.</p><p><b>범위 한계</b> 책이 아니라 학술지 글이므로 앞뒤 맥락은 없다. 발표 슬라이드와 그림은 포함하지 않았다.</p></footer></div></body></html>

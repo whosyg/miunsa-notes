@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10월 19일 교재 요약 · 한국 힙합의 형성</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>11주차 · 10월 19일(월) 교재 요약 (쉬운 버전)</span><span>근거: 이규탁 논문 PDF 원문(전문 확인). 두 다큐멘터리는 원문 미확인</span></div>
+  <h1>이규탁, 「한국 힙합 음악 장르의 형성」, 쉽게 읽기</h1>
+  <p class="lead"><i>한국학연구</i> 36(2011), pp.59–84. 힙합이 미국의 빈민 흑인 음악에서 한국의 중산층 청소년 문화로 바뀐 과정을 설명하며, 세계화가 문화를 똑같이 만드는지(동질화), 섞어서 새로 만드는지(혼종화)를 묻는다. 결론은 "둘 다 동시에 일어나며, 토착화는 아직 진행 중이고 중심부와 주변부의 불평등은 남아 있다"이다.</p>
+  <div class="legend"><span class="tag t-ok">원문·수업 확인</span><span class="tag t-note">일반 지식·해석</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+<section><h2>3줄 요약</h2><div class="box"><ol class="plain" style="margin:0;padding-left:20px;display:grid;gap:8px"><li><b>이론</b>: 세계화가 문화를 미국식으로 똑같이 만든다는 시각(동질화)과, 각 지역이 받아들여 섞고 바꾼다는 시각(혼종화)이 있다. 저자는 둘이 동시에 일어난다고 본다.</li><li><b>한국의 힙합</b>: 한국에서는 대도시 중산층 청소년이 비싼 값을 치르고 먼저 접했고, 인종과 계층 갈등은 빠지고 사랑, 입시, 군대, 취업 같은 한국 청년의 이야기가 들어갔다. 힙합은 "세련됨과 세계화의 상징"이 되었다.</li><li><b>결론</b>: 토착화는 끝나지 않았다. 문화 양식을 먼저 정해 세계에 퍼뜨리는 쪽(미국, 유럽)과 받아들이는 쪽 사이의 불평등은 그대로라서, 한국의 창조적 변형은 의미 있지만 "이기기 어려운 싸움"이다.</li></ol></div></section>
+<section><h2>어려운 말, 쉽게 <small>용어 풀이</small></h2><div class="scroll"><table><thead><tr><th>용어</th><th>쉬운 뜻</th></tr></thead><tbody><tr><td><b>동질화(homogenization)</b></td><td>문화가 점점 미국식으로 똑같아지는 것.</td></tr><tr><td><b>혼종화(hybridization)</b></td><td>지역 문화가 외래 문화와 섞여 새로운 것이 되는 것.</td></tr><tr><td><b>토착화(indigenization)</b></td><td>외래 문화를 자기 사회에 맞게 바꿔 "비슷하지만 다른" 것으로 정착시키는 과정.</td></tr><tr><td><b>중심부, 주변부</b></td><td>문화 양식을 만들어 퍼뜨리는 쪽(미국, 서유럽)과 받아들이는 쪽(그 밖의 지역). 저자는 한국을 주변부 또는 준주변부로 다룬다.</td></tr><tr><td><b>침투 경향, 성숙 경향</b></td><td>Hannerz의 용어. 침투는 외래 문화에 노출되어 닮아 가는 것, 성숙은 지역 특성이 반발하며 변용하는 것. 둘이 동시에 일어난다.</td></tr><tr><td><b>샘플링</b></td><td>기존 음악의 일부를 잘라 가져와 새 음악에 붙이는 힙합의 제작 기법.</td></tr><tr><td><b>진정성(authenticity)</b></td><td>"진짜 힙합"으로 인정받는 기준. 옷차림, 태도, 사회 비판까지 포함된다.</td></tr><tr><td><b>사전 심의</b></td><td>1996년까지 한국에서 음반 가사를 발매 전에 검열하던 제도.</td></tr><tr><td><b>보따리상</b></td><td>정식 수입이 아니라 소량씩 들여와 파는 개인 상인.</td></tr></tbody></table></div></section>
+<section><h2>쉽게 따라가기</h2><ol class="flow"><li><div><b>1. 문제 제기</b>세계화로 문화가 미국식으로 똑같아진다는 걱정이 있었지만, 요즘은 지역 문화가 섞여 오히려 다양해진다는 시각도 힘을 얻는다. 저자는 대중음악, 그중 힙합이 이 두 모습이 가장 잘 보이는 사례라고 본다.</div></li><li><div><b>2. 두 가지 시나리오</b>Hannerz에 따르면 첫째는 중심부 문화가 힘으로 주변부를 닮게 만드는 "동질화", 둘째는 주변부가 받아들이며 자기 맥락에 맞게 바꾸는 "변형"이다. 예를 들어 한국과 멕시코의 록은 둘 다 미국에서 왔지만 서로 다르고, 미국 록과도 다르다. 저자는 이 둘이 대립하는 것이 아니라 토착화 과정에서 동시에 일어난다고 본다.</div></li><li><div><b>3. 힙합이 퍼지기 쉬운 이유 (기술)</b>힙합은 샘플링, 믹싱, 잘라 붙이기 같은 디지털 기술로 만든다. 악기 연주 능력이 필요 없고 제작비가 적게 든다. 1990년대 초 디지털 장비 가격이 내려가 가난한 나라에서도 접근하기 쉬워졌다. 미국에서는 인종과 계층 이야기에 묻혔지만 비서구권에서는 "기술적으로 앞선 음악"이라는 점이 강조되었다.</div></li><li><div><b>4. 힙합이 퍼지기 쉬운 이유 (미학)</b>힙합은 이미 있는 음악을 가져와 변형하고 이어 붙여 새 음악을 만든다. 예컨대 Kanye West의 「Gold Digger」(2005)는 Ray Charles의 곡에서 가져온 소리로 만들어졌다. 이 방식이 주변부가 서구 문화를 받아들여 자기 것으로 바꾸는 방식과 닮아서 받아들이기 쉬웠다.</div></li><li><div><b>5. 힙합이 퍼지기 쉬운 이유 (문화)</b>힙합은 음악만이 아니라 옷, 머리, 춤, 말투, 정치적 태도까지 이어진 하위문화다. 세계적 유행에 민감한 주변부 청소년에게 힙합을 즐기는 것은 "세계화된 사람"이라는 표시였다.</div></li><li><div><b>6. 한국에서는 누가 먼저 접했나</b>1990년대 초 미국 힙합 음반은 가사의 욕설과 폭력, 선정적 표지 때문에 사전 심의를 통과하기 어려워 한국에서 거의 발매되지 않았다. 팬들은 보따리상이 들여온 비공식 음반(정식 음반의 1.5~2배 가격)이나 위성 음악 채널(Channel V)로 접했다. 위성 수신기는 비쌌고, 이런 음반을 파는 가게는 압구정동과 대치동에 있었다. 그래서 대도시 중산층 청소년이 먼저 접했다.</div></li><li><div><b>7. 세련됨과 세계화의 표시</b>한국 정부는 1990년대 "세계 속의 한국"을 내세웠다. 비공식 힙합 소비는 거의 제재받지 않았고, 힙합을 즐긴다는 것은 세련됨, 세계화, 그리고 부유함의 표시가 되었다. 패밀리 레스토랑 TGI Friday's에서 식사하는 것과 같은 의미였다고 저자는 비유한다.</div></li><li><div><b>8. 인종과 계층이 빠졌다</b>미국과 서구에서는 식민지 출신 빈민 청년이 힙합의 인종적, 계층적 분노에 공감했다. 한국에서는 인종과 계층이 겹치지 않았고, 힙합은 중산층 청소년과 재미교포 2세를 통해 들어왔기 때문에 인종 갈등, 마약과 폭력의 미화, 클럽 문화 같은 요소는 호소력이 약했다. 빈민층은 오히려 이 유행에서 배제되어 있었다.</div></li><li><div><b>9. 한국식으로 바뀐 힙합</b>제작 방식(샘플링, 리듬 패턴, 랩)은 미국과 거의 같았다. 그러나 묵직한 저음보다 멜로디를 강조하고, 가사는 사랑 이야기를 중심으로 왕따, 입시, 군대, 취업 같은 한국 청소년과 청년의 문제를 다뤘다. 사회 비판도 특정 대상을 욕하기보다 사회 전반을 향했다. 한국 힙합은 "최신 세계 유행이면서 가장 친근하고 현실적인 음악"으로 자리 잡았다.</div></li><li><div><b>10. 높은 위상</b>한국의 힙합 음악인은 중산층과 재미교포 2세 출신이 많아 하층 계급과 거리가 있었다. 그래서 분노를 직접 드러내기보다 부드럽게 표현하고, 한글 가사의 운율과 기술에 집중했다. 힙합을 듣는 것은 아이돌, 트로트, 발라드를 듣는 사람보다 "음악을 제대로 아는 사람"이라는 위상을 주었다. 미국에는 없던 위상이다.</div></li><li><div><b>11. 결론</b>이제 위성 방송은 전국 97% 이상 가구가 보는 케이블로 바뀌었고, 음반은 인터넷으로 바로 살 수 있다. 한국 래퍼가 만든 음반도 주류 차트에 오른다. 그러나 토착화는 현재 진행형이다. 새 양식을 정해 퍼뜨리는 쪽과 받아들이는 쪽의 불평등은 해결되지 않았으므로, 토착화는 이 불평등에 대한 끊임없는 저항이지만 완벽하게 이기기는 어려운 싸움이다.</div></li></ol></section>
+<section><h2>수업 설명과 논문, 어디가 다른가</h2><div class="scroll"><table><thead><tr><th>수업에서 나온 말</th><th>교재에서는</th></tr></thead><tbody><tr><td>"논문의 결론은 서구 중심이 계속된다" (교수)</td><td>논문 결론과 같은 방향이다. 저자는 중심부와 주변부의 불평등이 해결되지 않았다고 쓴다.</td></tr><tr><td>"대문자 A agency는 미국, 소문자 a는 한국" (교수)</td><td>논문에 이런 표현은 없다. 교수의 풀이 방식이다.</td></tr><tr><td>쇼미더머니, 사투리 랩, 스트리밍 (발표, 교수)</td><td>2011년 논문에는 나오지 않는다. 논문의 분석을 오늘날에 연결한 수업의 확장이다.</td></tr><tr><td>"15년 전 글이라 지금은 많이 바뀌었다" (교수)</td><td>맞다. 논문 안에도 2011년 기준 케이블 보급률 97% 같은 수치가 나온다.</td></tr><tr><td>압구정 친구의 "힙합은 패션" (교수)</td><td>논문의 "압구정동, 대치동에 위성 안테나와 음반 가게가 몰려 있었다"와 맥락이 같다. 일화 자체는 교수의 전언이다.</td></tr></tbody></table></div></section>
+<section><h2>시험 대비 <small>쉬운 답안, 연습 문항(교수 출제와 무관)</small></h2><div><details><summary>한국 힙합에서 인종 이야기가 사라진 이유는?</summary><p>한국에는 미국식 인종, 계층의 일치가 없었고, 중산층과 재미교포가 먼저 받아들였기 때문이다. 그 자리에 입시, 군대, 취업이 들어갔다.</p></details><details><summary>동질화와 혼종화를 한국 힙합으로 설명하면?</summary><p>제작 방식과 패션은 미국과 같다(동질화). 멜로디 강조, 한글 가사, 한국 청년의 이야기는 한국의 변형이다(혼종화). 이 둘이 쌓여 "한국만의 힙합"이 되는 과정이 토착화다.</p></details><details><summary>이 논문이 말하는 한계는?</summary><p>창조적으로 바꿔도 문화 양식을 먼저 정하는 쪽은 미국과 유럽이라는 불평등이 남아 있다. 토착화는 끝나지 않는다.</p></details><details><summary>이 논문을 시험 3번(한국의 미국 문화 수용)에 쓰려면?</summary><p>"수용자는 무엇을 가져오고 무엇을 지웠는가, 왜 지워졌는가"를 쓰고 동질화, 혼종화, 토착화로 설명하면 된다. 교수가 강조한 "왜, 어떻게"에 맞는다. 단 사례와 무관한 내용은 점수를 받기 어렵다.</p></details></div></section>
+<section><h2>확인 필요</h2><div class="scroll"><table><thead><tr><th>항목</th><th>상태</th></tr></thead><tbody><tr><td>아리랑 TV 『코리아 힙합』</td><td>원문 미확인. 발표에 따르면 현대의 한국 힙합을 다룬다.</td></tr><tr><td>KBS 『현장르포 제3지대 – 너희가 힙합을 아느냐!』</td><td>원문 미확인. 발표에 따르면 1990년대 힙합 정착기를 다룬다. 제목의 질문은 발표자가 "오히려 미국 흑인이 한국에 던질 질문"으로 뒤집었다.</td></tr><tr><td>쪽수 세부</td><td>pp.59–84는 PDF 헤더 기준. 인용 위치는 필요 시 재확인</td></tr></tbody></table></div></section>
+<footer><p><b>확실도</b> 높음(논문). 원문 전문을 읽고 정리했다. 다큐멘터리 두 편은 원문을 보지 못해 요약하지 않았다. 문장은 인용하지 않고 풀어 썼다.</p><p><b>범위 한계</b> 논문 한 편만 정리했고 영상 자료와 발표 슬라이드는 포함하지 않았다. 이후 변화(쇼미더머니, 스트리밍)는 수업 설명에 근거한다.</p></footer></div></body></html>

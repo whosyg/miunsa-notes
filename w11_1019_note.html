@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10월 19일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>11주차 · 10월 19일(월)</span><span>근거: 수업 녹취 (자동 받아쓰기, 약 1시간 4분. 일부 단어가 깨짐)</span></div>
+  <h1>힙합은 한국에서 무엇이 되었나: 동질화, 혼종화, 토착화</h1>
+  <p class="lead">지난 시간 전유와 감상 논의의 연장으로 시작해, 학생 발표자들이 한국의 힙합 수용을 다뤘다. 핵심은 미국에서는 빈민 흑인의 저항 음악이던 힙합이 한국에서는 중산층 청소년의 세련된 유행으로 들어와 인종과 계층의 맥락이 지워지고 한국 청년의 이야기로 바뀌었다는 점이다. 교수는 "왜 지워졌는가"를 묻고, 한국은 이제 문화를 생산하는 쪽이라는 점을 짚었다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이날의 자료</h2>
+  <ul class="reads">
+    <li>이규탁, 「한국 힙합 음악 장르의 형성을 통해 본 대중문화의 세계화와 토착화」, <i>한국학연구</i> 36 (2011), pp.59–84 <span class="tag t-note">11주차 교재 요약에 정리</span></li>
+    <li>아리랑 TV, 『코리아 힙합』 (다큐멘터리) <span class="tag t-warn">원문 미확인. 발표 설명만 있음</span></li>
+    <li>KBS TV, 『현장르포 제3지대 – 너희가 힙합을 아느냐!』 <span class="tag t-warn">원문 미확인. 발표 설명만 있음</span></li>
+    <li>발표 슬라이드 (학생 제작, 이름 생략)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>지난 시간 복습과 질문 <span class="tag t-ok">녹취</span></b>지난 수업 후 한 학생이 "흑인 머리 모양(땋은 머리)을 해 왔는데 어떡하죠"라고 물었다는 일화로 시작했다. 교수는 정답이 없고, 문제의식을 갖는 것부터가 중요하다고 했다.</div></li>
+    <li><div><b>학생 한 명의 반응 <span class="tag t-ok">녹취</span></b>"한국에서는 그런 인식이 적고, 불안해할 바엔 그냥 하는 게 낫지 않나"라는 의견. 교수는 이런 반응도 답이 될 수 있지만, 그것이 가능한 것은 한국에서 문화 권력이 있기 때문일 수도 있다고 짚었다.</div></li>
+    <li><div><b>힙합 발표 <span class="tag t-ok">녹취</span></b>약 14분~25분. 동질화, 혼종화, 토착화 틀로 한국의 힙합 수용을 분석. 아래 "발표 내용" 참조.</div></li>
+    <li><div><b>질의응답 <span class="tag t-ok">녹취</span></b>두 학생이 질문했다. 아래 참조.</div></li>
+    <li><div><b>교수 해설 <span class="tag t-ok">녹취</span></b>약 28분~50분. 자신의 90년대 경험, 자유와 규범, 도덕적 마인드, 한국이 소비국에서 생산국이 되었다는 점. 아래 참조.</div></li>
+    <li><div><b>연습 활동 <span class="tag t-ok">녹취</span></b>반대로 한국 문화가 서구 중심부에서 받아들여진 구체적 사례 찾기. 없다는 답도 가능. 아래 참조.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>지난 시간 연결: 대표성과 문화 권력</h2>
+  <div class="grid">
+    <div class="card"><h3>문화 권력과 전유 <span class="tag t-ok">녹취</span></h3><ul><li>교수는 전유 문제를 문화 권력과 문화 자본에서 떼어 생각할 수 없다고 했다.</li><li>일본이나 한국에서는 다수에 속해 마음대로 해볼 수 있지만, 소수가 되는 곳에서는 같은 행동이 위험할 수 있다.</li></ul></div>
+    <div class="card"><h3>대표성(재현의 빈도) <span class="tag t-ok">녹취</span></h3><ul><li><i>Get Out</i>에 동양인 한 명이 나오는 것이 왜 문제인지에 대한 답: 재현이 적으면 한 사람의 행동이 집단 전체의 이미지가 되기 쉽다.</li><li>백인은 개인 한 명이 "백인은 저렇다"로 연결되지 않는다. 소수 집단은 쉽게 전형화된다.</li><li>반대로 미국인은 남에게 큰 관심이 없어서 개인이 한 행동이 별로 기억되지 않을 수도 있다.</li></ul></div>
+    <div class="card"><h3>"당사자가 괜찮다고 하면?" <span class="tag t-ok">녹취</span></h3><ul><li>한국 래퍼가 흑인을 흉내 내 논란이 되었는데 당사자가 "문화적 실험으로 보겠다"고 했다면 문제가 끝날까? 교수는 사례별로 보아야 한다고 했다.</li><li>표절과 오마주로 비유: 피해자가 오마주로 봐 준다고 해서 표절 문제가 없어지는 것은 아니라는 취지.</li></ul></div>
+    <div class="card"><h3>교과서적 답 vs 현실 <span class="tag t-ok">녹취</span></h3><ul><li>교과서적 답: 문화의 역사와 정체성을 이해하고 받아들여야 한다. 그러나 현실에서는 그렇게 하는 경우가 드물고, 어디까지 알아야 하는지도 불분명하다.</li><li>현실적인 답: 문제의식을 갖는 것부터 시작한다. 시험에서는 전유 문제를 문화 권력으로 연결하면 좋다.</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>발표 내용 요약 <small>학생 발표, 이름 생략</small></h2>
+  <div class="grid">
+    <div class="card"><h3>자료와 틀 <span class="tag t-ok">녹취</span></h3><ul><li>KBS 프로그램은 1990년대 힙합이 한국에 정착하던 때의 사회를, 아리랑 TV 프로그램은 현대의 한국 힙합을, 논문은 힙합을 대중문화 세계화로 넓혀 보게 한다고 소개했다.</li><li>틀: 동질화(미국 방식을 받아들임), 혼종화(한국어 랩, 한국 청소년의 경험), 토착화(미국과 이어지면서도 구별되는 한국만의 힙합, 사투리 랩 등).</li></ul></div>
+    <div class="card"><h3>누가 소비했나 <span class="tag t-ok">녹취</span></h3><ul><li>원래 힙합은 1970년대 뉴욕 등 대도시 빈민 흑인의 음악이고, 영국과 프랑스에서도 옛 식민지 출신 빈민이 수용했다.</li><li>한국에서는 대도시 중산층 청소년이 먼저 소비했다. 비공식 수입 음반이 정식 음반의 1.5~2배 가격이었다. <span class="tag t-note">이규탁 논문 원문과 일치</span></li><li>발표자의 아이러니: 미국에서는 생존과 저항의 언어였는데 한국에서는 세련된 최신 유행이 되었다.</li></ul></div>
+    <div class="card"><h3>어떻게 수용했나 <span class="tag t-ok">녹취</span></h3><ul><li>겉(패션, 디스전 같은 형식)은 그대로 왔지만 속은 바뀌었다. 인종적 분노 대신 입시, 취업 등 한국 청년의 현실과 솔직한 자기 표현이 들어갔다.</li><li>다큐의 인상적인 구절로 "양복을 입어도 도덕적인 마인드로 진실을 살면 그게 힙합"을 소개했다. <span class="tag t-warn">어느 다큐의 구절인지 녹취로는 불명확</span></li><li>쇼미더머니 이후 두 갈래: 자본주의적 성공 서사와 자기 목소리 표현. 대중화의 부작용으로 욕설과 디스전이 자극적으로 소비되는 문제를 꼽았다.</li></ul></div>
+    <div class="card"><h3>결론 <span class="tag t-ok">녹취</span></h3><ul><li>같은 문화도 받아들이는 사회에 따라 다른 의미가 된다. 긍정: 한국어 운율과 사투리 활용, 한국 청년의 현실 반영. 불평등: 중심부와 주변부의 격차는 여전하고 토착화는 끝나지 않는 대응이다.</li><li>현실적 제안: 탄생 배경을 모두 배우기는 어려우므로, 외래 문화를 받아들일 때 무시하려는 의도가 있는지 존중하려는 의도가 있는지 생각하는 태도가 중요하다.</li></ul></div>
+    <div class="card"><h3>마무리 질문 <span class="tag t-ok">녹취</span></h3><ul><li>다큐의 제목 "너희가 힙합을 아느냐"는 오히려 미국 흑인이 한국에 던질 수 있는 질문이 아닌가? 인종차별 주제가 사라진 것은 진정성을 잃은 것인가, 한국식으로 변한 것인가?</li></ul></div>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>질문</th><th>발표자 답변</th></tr></thead>
+    <tbody>
+      <tr><td>오늘날은 스트리밍 덕분에 진입 장벽이 낮은데도 힙합이 과시와 유행 소비의 성격을 유지하는가? <span class="tag t-ok">녹취</span></td><td>계층적 이미지가 사라졌다기보다 전체가 상향 평준화되었다. 가사에 부와 자본주의적 성공을 표현하는 내용이 많아 과시 성격은 이어지고 있다.</td></tr>
+      <tr><td>쇼미더머니 같은 방송이 경쟁과 상업성 위주로 대중화한 것이 긍정적인가? <span class="tag t-ok">녹취</span></td><td>부작용(디스전, 힙합이 좋지 않은 문화로 비치는 시선)은 있었지만 진솔한 자기 표현을 하는 래퍼가 존재하고 다양한 음악으로 발전했다. 부작용을 선례로 고민하는 태도가 중요하다.</td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <h2>교수 해설</h2>
+  <div class="grid">
+    <div class="card"><h3>90년대의 힙합 = 패션 <span class="tag t-ok">녹취</span></h3><ul><li>교수는 압구정동 중학교와 고등학교를 나온 친구에게 전화해 물었더니 "힙합은 패션이었다"고 했다는 일화를 소개했다. <span class="tag t-warn">교수의 개인 전언</span></li><li>자신은 강북에서 학교를 다녀 힙합이 멀리 있었다고 했다. 청계천의 큰 레코드점에 몇 번 가 봤다고 한다.</li><li>논문과 발표처럼, 처음에는 돈이 있어야 향유할 수 있는 문화였다.</li></ul></div>
+    <div class="card"><h3>동질화에서 토착화로 <span class="tag t-ok">녹취</span></h3><ul><li>머리 모양도 마찬가지로 처음에는 흑인 스타일을 따라 하다가 "나는 이 부분을 바꾸고 싶다"가 되면 혼종화가 일어나고, 스타일을 완전히 바꾸는 토착화로 간다.</li><li>누가 "너 힙합 알아? 정통은 이렇다"고 하면 "우리 힙합이 있다"고 하는 것이 토착화의 모습이다.</li></ul></div>
+    <div class="card"><h3>인종은 사라지고 계층은 남았나 <span class="tag t-ok">녹취</span></h3><ul><li>한국 힙합은 인종 이야기는 거의 없고 계층 이야기는 한다. 다만 가난한 어린 시절 이야기는 잘 안 믿는다는 취지의 농담도 했다.</li><li>미국의 인종 문제가 한국에서는 교육, 입시, 삶의 어려움 문제로 바뀌었다는 것이 논문의 요지.</li></ul></div>
+    <div class="card"><h3>누구나 목소리를 낼 수 있다 <span class="tag t-ok">녹취</span></h3><ul><li>교수가 다큐에서 감동한 것 두 가지: (1) 전문 교육을 받지 않은 사람도 힙합으로 목소리를 낼 수 있다는 점, (2) 사투리로 랩하는 것. <span class="tag t-warn">래퍼 이름은 받아쓰기에서 "MC 메타"로 추정, 확인 필요</span></li><li>사투리 랩은 표준어와 서울 중심 권력을 흔드는 시도라고 보았다. 교수는 한국 힙합이 인종 문제를 더 다루면 가르치고 싶다고 했다(다문화 맥락).</li></ul></div>
+    <div class="card"><h3>자유와 규범 <span class="tag t-ok">녹취</span></h3><ul><li>미국 문학의 핵심 키워드는 자유다. 그래서 수업에서 자유와 자기 표현이 자주 나온다.</li><li>한국 사회는 "그렇게 하면 안 돼"가 많은지, "한번 해 봐"가 많은지 생각해 보라고 했다. 예: 한국 현대시에서 음악을 표면에 드러내는 시를 찾기 어렵고 "그건 시가 아니다"라는 규범성이 있다. <span class="tag t-note">교수의 관찰, 일반화는 주의</span></li></ul></div>
+    <div class="card"><h3>도덕적 마인드 <span class="tag t-ok">녹취</span></h3><ul><li>"양복을 입어도 도덕적으로 살면 힙합"이라는 말이 교수에게는 한국적으로 들린다고 했다. 힙합에서는 도덕을 빼고 보는 경우가 많은데, 한국은 도덕을 중시한다는 점에서 주요섭의 「혼혈」과 이어진다.</li><li>도덕을 부정하는 것이 아니라 한국이 도덕적 삶을 얼마나 강요하고 중요하게 여기는지 생각해 보자는 취지.</li></ul></div>
+    <div class="card"><h3>생산하는 나라 <span class="tag t-ok">녹취</span></h3><ul><li>한국은 이제 소비만 하는 나라가 아니라 생산하는 나라이고 더 이상 문화의 주변부에 있지 않다.</li><li>이규탁 논문은 약 15년 전 글이다(2011). 그 사이 인터넷과 스트리밍으로 해외 음반 구입과 검열 문제가 사라졌다.</li><li>논문 결론은 "서구 중심은 변하지 않는다"로 끝나며, 교수는 이를 대문자 A(미국)와 소문자 a(한국)의 agency라는 식으로 풀었다. <span class="tag t-note">교수의 비유. 논문 원문은 소비, 활용, 전유의 불평등으로 서술</span></li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>연습 활동: 한국 문화가 서구에서 받아들여진 예</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>학생 답변</th><th>교수 반응</th></tr></thead>
+    <tbody>
+      <tr><td>태권도가 올림픽 종목이 되어 외국인이 도복을 입고 하는 것 <span class="tag t-warn">받아쓰기, 정확한 종목 표현 확인 필요</span></td><td>역수출 사례로 제시됨</td></tr>
+      <tr><td>한국식 바비큐, 김치</td><td>음식 사례</td></tr>
+      <tr><td>아이돌 문화 수출. 미국이 직접 시작하기보다 한국 제작 도움으로 콘텐츠 내에 아이돌 문화를 표현</td><td>구체적 예가 중요하다고 강조</td></tr>
+      <tr><td>K-뷰티. 피부과에 외국인이 많았다. 성장 이유가 한국의 외모 지상주의라는 아이러니</td><td>"전파의 명암"이라고 정리. 성형 프로그램으로 박사학위 논문 한 장을 쓴 사례도 소개</td></tr>
+      <tr><td>한국 영화와 드라마가 미국에서 인기</td><td>교수는 <i>Squid Game</i>을 백인 친구의 추천으로 본 일화와, 한국 영화 <i>지구를 지켜라</i>의 미국 리메이크를 언급 <span class="tag t-warn">리메이크 영화 제목은 받아쓰기, 확인 필요</span></td></tr>
+    </tbody></table></div>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 교수의 결론: 한국이 생산할 agency는 있었는데 주변화되어 가려져 있었을 수 있다. 그 전파가 긍정적인지도 생각해 볼 문제.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 3번(한국의 미국 문화 수용): 힙합이나 머리 모양 같은 사례를 교수가 제시할 것이다. 정답이 없으므로 자기 입장을 설득력 있게 쓰면 된다.</li>
+    <li><span class="tag t-ok">녹취</span> 교수는 "맞다/틀리다"보다 "왜 그랬는가, 어떻게 그렇게 되었는가"가 중요하다고 반복했다. 예: 왜 인종은 지워졌는가.</li>
+    <li><span class="tag t-ok">녹취</span> 활용 가능한 틀: 동질화, 혼종화, 토착화 (이규탁 논문), 문화 권력과 대표성, 소비하는 나라에서 생산하는 나라로의 변화.</li>
+  </ul>
+  <div>
+    <details><summary>한국의 힙합 수용을 7문장 안에서 어떻게 설명? (연습)</summary><p>힙합은 미국 빈민 흑인의 음악이었지만 한국에서는 대도시 중산층 청소년이 비싼 비용을 치르고 먼저 접해 세련됨의 상징이 되었다. 그 과정에서 인종과 계층 갈등의 맥락은 지워지고 입시와 취업 같은 한국 청년의 이야기가 들어갔다. 이는 동질화로 시작해 혼종화와 토착화로 이어진 사례다. 다만 중심부가 유행을 정한다는 불평등은 남아 있으므로 수용자는 지우는 것이 무엇인지 물어야 한다. <span class="tag t-note">연습 답안, 교수 출제와 무관</span></p></details>
+    <details><summary>왜 한국에서는 힙합의 인종 문제가 사라졌나? (연습)</summary><p>한국 사회에는 미국식 인종과 계층의 일치가 없었고, 힙합이 중산층 청소년을 통해 들어왔기 때문이다. 대신 입시, 군대, 취업이 주제가 되었다. <span class="tag t-note">이규탁 논문 요지</span></p></details>
+    <details><summary>논문이 "끝나지 않았다"고 하는 이유? (연습)</summary><p>창조적 재해석이 일어나도 새 문화 양식을 정하는 쪽은 여전히 미국과 유럽이라는 불평등이 남아 있기 때문이다. <span class="tag t-note">논문 결론</span></p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>상태</th></tr></thead>
+    <tbody>
+      <tr><td>KBS, 아리랑 TV 프로그램</td><td>원문을 확인하지 못했다. 발표 설명에 근거한 부분은 발표자 해석일 수 있다.</td></tr>
+      <tr><td>도덕적 마인드 구절의 출처</td><td>어느 다큐에서 나온 말인지 녹취로 불명확.</td></tr>
+      <tr><td>래퍼 이름(사투리 랩)</td><td>받아쓰기 "MC 메타"로 추정. 확인 필요.</td></tr>
+      <tr><td>한국 영화 리메이크 제목, 연도</td><td>받아쓰기 기준.</td></tr>
+      <tr><td>교수의 개인 일화</td><td>압구정 친구, 레코드점 등은 교수의 전언이다.</td></tr>
+      <tr><td>시험 날짜</td><td>녹취에 없음.</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer><p><b>확실도</b> 중간~높음. 이규탁 논문 내용은 원문 대조를 마쳤다. 두 다큐멘터리는 원문 없이 발표 설명에만 근거한다. 학생 이름은 생략했다.</p><p><b>범위 한계</b> 수업 녹취와 논문 PDF만 사용했다. 영상 자료와 발표 슬라이드는 확인하지 못했다.</p></footer>
+
+</div></body></html>

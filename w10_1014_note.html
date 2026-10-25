@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10월 14일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>10주차 · 10월 14일(수)</span><span>근거: 수업 녹취 (자동 받아쓰기, 약 1시간 14분. 일부 단어가 깨짐)</span></div>
+  <h1>블랙페이스는 모욕인가 동경인가: 전유와 감상 사이</h1>
+  <p class="lead">이날은 중간고사 형식 설명 후, 학생 발표자들이 Joe Wood의 「The Yellow Negro」(1997)를 발표했다. 일본 청년들이 피부를 검게 하고 흑인 문화를 흉내 내는 현상을 통해 "문화를 사랑한다"와 "문화를 가져다 쓴다(전유)"의 경계를 묻는 글이다. 교수는 정답을 주지 않고 사례를 따져 보는 과정이 중요하다고 했고, 시험 3번(한국의 미국 문화 수용)과 직접 연결된다고 강조했다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이날의 자료</h2>
+  <ul class="reads">
+    <li>Joe Wood, 「The Yellow Negro」, <i>Transition</i> 73호 (1997), pp.40–66 <span class="tag t-note">10주차 교재 요약에 정리</span></li>
+    <li>중간고사 형식 공지 (ETL, 전날 업로드) <span class="tag t-note">PDF 원문 확인</span></li>
+    <li>발표 슬라이드 (학생 제작, 이름 생략)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>중간고사 안내 <span class="tag t-ok">녹취</span></b>수업 첫 17분. 문항 구조, 채점, 시험 요령을 설명했다. 아래 "중간고사 안내" 참조.</div></li>
+    <li><div><b>발표 (3인) <span class="tag t-ok">녹취</span></b>약 18분~35분. 일본의 "블랙페이스" 청년 문화를 다룬 에세이 발표. 아래 "발표 내용" 참조.</div></li>
+    <li><div><b>질의응답 <span class="tag t-ok">녹취</span></b>한 학생이 "목욕탕(sento) 장면에서 화자가 차별을 느낀 근거가 무엇인가"를 물었다. 발표자는 앞부분에서 일본의 단일민족 인식과 배제 장면이 쌓였기 때문이라고 답했다.</div></li>
+    <li><div><b>교수 해설 <span class="tag t-ok">녹취</span></b>약 38분~1시간 9분. 전유(appropriation)와 감상(appreciation), <i>Love and Theft</i>, 한국의 사례, 시험 3번과의 연결. 아래 참조.</div></li>
+    <li><div><b>연습 활동 <span class="tag t-ok">녹취</span></b>한국이 흑인 문화를 가져다 쓴 사례를 3~4분 동안 적어 보기. 옳고 그름을 따질 필요 없이 사례만 적으면 된다. 학생이 개그 프로그램의 사례를 말하는 것으로 녹취가 끝난다. <span class="tag t-warn">녹취가 중간에서 끊김</span></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>중간고사 안내</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td>1번 (6점)</td><td>다섯 주제 중 하나를 고르고 텍스트 하나를 골라 10문장 이내로 논의. 주제는 모두 수업에서 한 번은 다룬 것. <span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>2번 (5점 × 5)</td><td>인용문을 보고 작가 이름(1점)과 작품 제목(1점)을 쓰고, 의미를 3문장 이내로 설명(3점). 작가와 제목은 문항지에 적혀 있어 외울 필요 없음. 수업 내용을 그대로 반복하면 3점 중 최대 2.7점, 자기 생각을 설득력 있게 쓰면 3점. <span class="tag t-ok">녹취</span> <span class="tag t-note">공지 PDF 원문과 일치</span></td></tr>
+      <tr><td>3번 (4점)</td><td>한국의 미국 문화 수용에 관한 문제. 교수가 한 사례를 제시하고 "여러분은 어떻게 생각하는가"를 묻는다. 7문장 이내. 정답이 없고, 사례와 무관한 내용을 쓰면 점수를 줄 수 없다. <span class="tag t-ok">녹취</span> <span class="tag t-warn">녹취의 "202작"은 PDF의 7문장으로 정정</span></td></tr>
+      <tr><td>보너스 (1점)</td><td>안 써도 됨. 만점은 35점으로, 감점이 있어도 보너스로 채울 수 있다. <span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>요령</td><td>2번에서 "A와 B 둘 다 쓰면" 안 되고 하나만 골라야 한다. 1번과 3번부터 쓰고 2번으로 가는 전략을 제안했다. 안 읽은 텍스트 위주로 공부해도 된다. <span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>형식</td><td>연필, 볼펜, 수정테이프 모두 가능. 칸을 약간 넘겨도 감점 없음. 이름은 첫 장에. 한국어로 출제되고 한국어 또는 영어로 답한다. <span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>AI 사용</td><td>준비 과정에서 AI를 도구로 쓰는 것은 무방하다는 입장. <span class="tag t-ok">녹취</span></td></tr>
+      <tr><td>기타</td><td>교수가 시험일에 출장이 있다. 질문은 수업 전후에 하고, 다음 수업(10/19)에도 기회를 준다. 지난 학기에는 30분 만에 끝낸 학생도, 75분을 꽉 채운 학생도 있었고 분량보다 초점이 중요하다고 했다. <span class="tag t-ok">녹취</span> <span class="tag t-warn">시험 날짜는 녹취에 없음</span></td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <h2>발표 내용 요약 <small>학생 발표, 이름 생략</small></h2>
+  <div class="grid">
+    <div class="card"><h3>작가와 제목 <span class="tag t-ok">녹취</span></h3><ul><li>작가는 미국의 흑인 문화 비평가이자 저널리스트로 소개했다 <span class="tag t-warn">받아쓰기 "조우부드"를 Joe Wood로 정정</span>.</li><li>제목 "노란 흑인"은 두 인종 이름을 결합한 도발적 표현이다.</li><li>블랙페이스는 흑인을 희화화하려고 얼굴을 검게 칠하던 19세기 미국 민스트럴 쇼의 분장이다.</li></ul></div>
+    <div class="card"><h3>핵심 모순 <span class="tag t-ok">녹취</span></h3><ul><li>화자는 도쿄에서 외국인에 대한 무관심과 "추악한 호기심"의 시선을 느낀다.</li><li>동시에 일본은 재즈, 록, 힙합 등 흑인 문화를 열렬히 받아들인다.</li><li>문화는 멋있다고 소비하면서 그 문화를 만든 사람은 낯선 존재로 대하는 모순이 글의 중심이라고 짚었다.</li></ul></div>
+    <div class="card"><h3>블랙페이스 여성과 JJ <span class="tag t-ok">녹취</span></h3><ul><li>피부를 어둡게 하고 힙합 패션을 입은 일본 여성에게 이유를 묻자 "멋있으니까"라고 답한다. 화자는 "내 얼굴을 쓰기로 한 이 일본인들은 누구인가"라고 묻는다.</li><li>JJ는 갱과 감옥 경험이 있는 미국 흑인 래퍼 지망생이다. 일본인들은 화자보다 JJ를 더 "진짜 흑인"처럼 본다.</li><li>마르크스주의자 친구의 주장은 "승리는 흑인의 것도 미국의 것도 아닌 자본의 것"이라는 말로 요약된다. <span class="tag t-warn">발표자는 이를 "세계화가 인종을 없애지 않는다"는 취지로 소개했다. 원문 대조는 교재 요약 참조</span></li></ul></div>
+    <div class="card"><h3>전유와 감상 <span class="tag t-ok">녹취</span></h3><ul><li>전유: 문화의 역사와 의미에 대한 배려 없이 가져다 쓰는 행위. 감상: 역사와 의미를 이해하고 출처를 밝히며 존중하는 행위.</li><li>발표자 견해: 일본 청년은 원하면 그만둘 수 있지만 흑인은 피부색에 따른 차별을 벗을 수 없다.</li><li>예시: K-pop과 서구 가수의 땋은 머리 논란, 흑인 머리 모양 때문에 불이익을 받은 사례. <span class="tag t-warn">학생 인용, 받아쓰기가 깨져 세부는 확인 불가</span></li></ul></div>
+    <div class="card"><h3>"대문 없는 집" 비유 <span class="tag t-ok">녹취</span></h3><ul><li>발표자 한 명은 대문이 없는 시골집이 "열려 있다"고 하면서도 외부인은 들어올 수 없다는 점에 빗댔다.</li><li>일본인이 흑인 문화에는 열려 있는 척하지만 흑인이 사회 구성원이 되는 것은 허용하지 않는다는 해석이다.</li></ul></div>
+    <div class="card"><h3>개인과 범주 <span class="tag t-ok">녹취</span></h3><ul><li>보통 편견은 범주(흑인은 이렇다)를 개인에게 씌운다. 그런데 이 글에서는 마이클 조던 같은 구체적 개인이 범주(흑인)의 상징이 된다.</li><li>블랙페이스는 이런 개인의 이미지를 가져다 범주를 정의하는 방식일 수 있다.</li><li>결론: 그렇게 여러 개인의 이미지가 쌓이면 "흑인성"이 넓어져 인종 범주가 무력해질 수도 있고, 새로운 고정관념일 수도 있다. 교수는 이것이 "할 수 있지 않을까"라는 질문이었다고 정리했다.</li></ul></div>
+  </div>
+  <ul class="plain">
+    <li>마무리 질문 <span class="tag t-ok">녹취</span> 다른 문화를 빌려 나만의 정체성을 만드는 것은 자유인가, 상품화된 소비 문화의 일부인가?</li>
+  </ul>
+</section>
+
+<section>
+  <h2>교수 해설</h2>
+  <div class="grid">
+    <div class="card"><h3><i>Love and Theft</i> <span class="tag t-ok">녹취</span></h3><ul><li>블랙페이스 민스트럴 쇼를 다룬 학술서 제목이다. 밥 딜런이 이 제목에 반해 같은 이름의 노래(앨범)를 냈다고 설명했다. <span class="tag t-warn">받아쓰기 "러덴소프트". Eric Lott의 1993년 책으로 추정</span> <span class="tag t-note">일반 지식</span></li><li>"사랑해서 한다(Love)"는 말과 "훔친다(Theft)"는 비판이 한 단어 안에 들어 있다. 이것이 전유와 감상의 긴장이다.</li></ul></div>
+    <div class="card"><h3>왜 노동계급 백인이 했나 <span class="tag t-ok">녹취</span></h3><ul><li>민스트럴 쇼는 하버드 졸업생이 아니라 백인 노동자 계급이 많이 했다.</li><li>이유 1: 경제적 경쟁. 흑인과 일자리를 두고 다투는 노동자가 흑인을 자기 마음대로 "대상화"해 우위를 점하려 했다.</li><li>이유 2: 인종적 위기. 웃기니까 문제 삼기 어렵고, 오히려 코믹해서 더 쉽게 받아들여진다.</li></ul></div>
+    <div class="card"><h3>한국의 블랙페이스 사례 <span class="tag t-ok">녹취</span></h3><ul><li>1990년대 말~2000년대 초 한국 가수들이 흑인을 흉내 낸 분장으로 활동한 사례를 소개했다. <span class="tag t-warn">그룹명은 받아쓰기가 깨짐(교수는 "버블 시스터즈"를 언급). 연도도 교수 기억 기준</span></li><li>당시 한국에서는 문제 삼는 사람이 거의 없었고, 영어를 가르치던 외국인들이 영자 신문에 항의 글을 냈다. 기획사는 "사랑해서 한 것"이라고 해명했다.</li><li>역지사지: 외국인이 우리 얼굴을 흉내 낸다면? 기획사의 마케팅 전략이었을 것이라고 교수는 보았다.</li></ul></div>
+    <div class="card"><h3>왜 "멋있어" 보이나 <span class="tag t-ok">녹취</span></h3><ul><li>일본 사회는 순응을 강조하고, 젊은이들이 반항과 "나는 다르다"를 표현하려고 흑인성을 입는다.</li><li>주로 젊은이, 그중에서도 남성보다 여성이 많았다. 일본 여성과 흑인 남성의 관계를 다룬 소설이 유행한 흐름과 연결된다고 했다. <span class="tag t-warn">소설 제목과 작가는 받아쓰기가 깨짐</span></li><li>교수는 이것을 긍정하지는 않지만 "왜 했는지" 생각해 보자고 했다.</li></ul></div>
+    <div class="card"><h3>두 얼굴의 일본 <span class="tag t-ok">녹취</span></h3><ul><li>19세기 일본은 근대화하며 서구의 인종 위계와 사회진화론을 함께 받아들였다. 힘이 센 쪽이 이긴다는 논리다.</li><li>W. E. B. Du Bois는 일본이 러일전쟁(1904~05)에서 러시아를 이긴 것을 "유색인종의 희망"으로 보았다. 교수는 이것이 일본 제국주의를 읽어내지 못한 시각이라고 비판했다.</li><li>교수는 Du Bois가 한국이 일본의 식민지가 된 것이 백인의 식민지보다 낫다고까지 말했다고 소개했다. <span class="tag t-warn">교재 원문에는 없는 내용이라 별도 출처 확인 필요</span></li><li>한국 지식인들도 일본 유학과 미국을 통해 이런 인종 위계를 들여왔다고 했다(윤치호, 『사진신부 이야기』 언급).</li></ul></div>
+    <div class="card"><h3>교과서적 답과 복잡함 <span class="tag t-ok">녹취</span></h3><ul><li>교과서적 답: 흑인 분장은 문제다. 그러나 끝나지 않는다.</li><li>극단적 예: 흑인이 없는 학교에서 <i>Dutchman</i>의 Clay를 연기하려는 배우가 "분장하면 그 감정을 더 느끼겠다"고 한다면? 지금은 비난받지만 딜레마는 남는다.</li><li>개인의 고유성을 무시하면 안 되지만, 우리는 다른 사람을 볼 때 "한국 사람은 이렇다"처럼 일반화 없이는 접근하기 어렵다.</li></ul></div>
+    <div class="card"><h3>정답이 없는 질문들 <span class="tag t-ok">녹취</span></h3><ul><li>"흑인 문화는 흑인만 해야 하는가?"라고 하면 Rodriguez가 말한 "백인의 자유"에 반대하는 본질론이 될 수 있다.</li><li>한 학생의 질문: 요즘은 백인도 히스패닉 문화를 쓰면 비난받는데, 백인에게도 자유가 없는 것 아닌가? 교수: 개인 하나가 지탄받는 것과 일상에서 누리는 자유는 다르다. 한국 사람에게 "한국말 해"라고 하는 것과 백인에게 "백인인 척해"라고 하는 것 중 어느 쪽이 더 흔한지 생각해 보라고 했다.</li><li>중요한 것은 경계가 어디인가, 왜 그런가를 생각하는 과정이다.</li></ul></div>
+    <div class="card"><h3>시대와 장소 <span class="tag t-ok">녹취</span></h3><ul><li>이 글은 오래된 시기의 이야기이므로 지금과 다를 수 있다. 교수도 최근 일본 대중목욕탕에서 사람들이 잘 쳐다보지 않았다고 했다.</li><li>교수가 정리한 포인트: 선택할 수 있는 흑인성은 일본인과 한국인의 agency를 보여 주지만, 공격받을 수밖에 없는 agency다. 또 "너는 그 차별에서 벗어날 수 있잖아"가 가장 중요한 비판이다.</li></ul></div>
+    <div class="card"><h3>한국과 연결 <span class="tag t-ok">녹취</span></h3><ul><li>"한국성(Koreanness)"도 요즘은 상품으로 팔린다. 한국성을 어떻게 전유하고 어떻게 감상하는가라는 질문으로 돌릴 수 있다.</li><li>교수가 소개한 연구: UCLA의 어느 연구자가 K-pop 뮤직비디오에서 흑인성이 드러나는 방식을 분석한 글. <span class="tag t-warn">받아쓰기 "블랙 케이팝", 저자명 확인 필요</span></li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 3번 대비: 교수가 한국의 사례를 제시하면 "수용"에 대한 자기 생각을 쓴다. 이날 발표(일본의 블랙페이스)와 다음 시간(힙합)이 모두 사례로 쓸 수 있다고 했다.</li>
+    <li><span class="tag t-ok">녹취</span> 교수가 꼭 기억하라고 한 것: 전유와 감상의 차이, 그리고 <i>Love and Theft</i>의 관계를 어떻게 볼 것인가. 옳고 그름이 아니라 어떻게 작동하는지를 생각하라고 했다.</li>
+    <li><span class="tag t-ok">녹취</span> 이 글 전체를 읽지 않아도 위 두 개념만 기억하면 된다고 했다.</li>
+  </ul>
+  <div>
+    <details><summary>전유와 감상을 구분하는 기준을 한 문장으로? (연습)</summary><p>감상은 문화의 역사와 의미를 이해하고 출처를 밝히며 존중하는 것이고, 전유는 그런 배려 없이 자기 필요에 맞게 가져다 쓰는 것이다. 단 경계는 사례마다 흐려질 수 있다. <span class="tag t-note">수업 정리</span></p></details>
+    <details><summary>일본 청년의 블랙페이스를 "자유"로 볼 수 있는가? (연습)</summary><p>반대: 흑인은 피부색에 따른 차별을 벗을 수 없는데 청년은 원할 때 벗을 수 있다. 찬성: 단일민족 환상에 갇힌 사회에서 정체성을 입어 보는 시도이고, 쌓이면 흑인성의 범주를 넓힐 수도 있다. <span class="tag t-note">수업의 두 갈래 정리</span></p></details>
+    <details><summary>이 글에서 "자본"은 무슨 뜻인가? (연습)</summary><p>흑인 문화의 이미지가 상품이 되어 돈을 만드는 동안 그 문화를 만든 사람들에 대한 편견은 남는다는 뜻이다. 문화는 국경을 넘어도 인종 차별은 따라 넘지 않는다. <span class="tag t-note">해석</span></p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>상태</th></tr></thead>
+    <tbody>
+      <tr><td>글의 발표 연도</td><td>교수는 "2000년 즈음"이라고 했으나 PDF 기준 1997년 <i>Transition</i> 73호. 수업 설명이 아니라 PDF를 따른다.</td></tr>
+      <tr><td>인물 이름 혼동</td><td>발표에서는 한 인물이 두 이름으로 섞여 나온다(받아쓰기 "미호", "미카코"). 원문에서는 블랙페이스 여성이 Miho, 도쿄의 친구가 Mikako다. 교재 요약 참조.</td></tr>
+      <tr><td>Du Bois의 한국 관련 발언</td><td>교재 원문에 없음. 교수 설명이므로 출처를 따로 확인해야 한다.</td></tr>
+      <tr><td>한국 가수 사례</td><td>그룹명과 연도가 받아쓰기 기준. 확인 필요.</td></tr>
+      <tr><td>UCLA 연구자와 글</td><td>이름과 정확한 제목이 받아쓰기로 깨짐.</td></tr>
+      <tr><td>연습 활동 결과</td><td>녹취가 끝나 학생 답변의 나머지를 알 수 없음.</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer><p><b>확실도</b> 높음(중간고사 안내는 PDF 원문과 일치). 녹취 해석은 받아쓰기 한계가 있다. 학생 이름은 생략했고 인종 비하 표현은 옮기지 않았다.</p><p><b>범위 한계</b> 수업 녹취와 읽기 PDF만 사용했다. 발표 슬라이드, 시험 날짜, 활동의 마지막 답변은 확인하지 못했다.</p></footer>
+
+</div></body></html>
