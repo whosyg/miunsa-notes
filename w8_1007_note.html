@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10월 7일 수업 노트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>8주차 · 10월 7일(수)</span><span>근거: 수업 녹취 (자동 받아쓰기, 약 43분. 마지막 약 5분 토론은 녹음 없음)</span></div>
+  <h1>Los Vendidos: 팔려 나가는 정체성과 희곡이라는 장르</h1>
+  <p class="lead">이날은 학생 발표자들이 Luis Valdez의 짧은 희곡 「Los Vendidos」(1967)를 발표했고, 교수는 이를 따라가며 토큰 다양성, 고정관념(악당과 피해자), Althusser의 이데올로기적 국가기구, 이름과 정체성의 문제를 짚었다. 수업 앞부분에서는 희곡이라는 장르가 왜 의미 있는지, 치카노라는 말은 무엇을 가리키는지도 설명했다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>이날의 자료</h2>
+  <ul class="reads">
+    <li>Luis Valdez, 「Los Vendidos」 (1967) <span class="tag t-note">교재 요약에 정리</span></li>
+    <li>발표 슬라이드 (학생 제작, 이름 생략): 작품 속 모델 소개와 풍자 포인트를 정리한 자료</li>
+    <li>스페인어 대사의 한글 번역 PDF (수업용 보조 자료)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>수업 흐름</h2>
+  <ol class="flow">
+    <li><div><b>희곡을 읽는 세 가지 방법 <span class="tag t-ok">녹취</span></b>눈으로 읽기, 모여서 대본을 읽는 스테이지 리딩(외울 필요 없음), 실제 공연이다. 연기하면 내가 그 사람이 되어 보는 경험이 생겨 동일시(identification)가 일어나고, 반대로 낯섦(disidentification)도 일어날 수 있다고 했다.</div></li>
+    <li><div><b>희곡과 협업 <span class="tag t-ok">녹취</span></b>희곡은 감독, 연출, 음악, 배우가 함께 만드는 문화적 생산물이라 협업이 필수다. 극작가와 연출은 배우의 의견을 무시하기 어려운데, 배우가 그 인물이 되어 보았기 때문이라고 했다. <span class="tag t-warn">교수의 일반화</span></div></li>
+    <li><div><b>교수의 미국 강의 경험 <span class="tag t-ok">녹취</span></b>은퇴한 교수의 자리를 이어받아 아시아계 미국 연극을 가르쳤고, 공대생과 부동산학과 학생도 많이 들었다. 기말 과제는 5~7분 연기였는데 학생들이 의외로 즐겼다고 했다. 이유 중 하나는 공대에서는 자기 정체성을 토론할 시간이 없기 때문이라고 했다. <span class="tag t-warn">교수의 경험담</span></div></li>
+    <li><div><b>유토피아적 수행성 <span class="tag t-ok">녹취</span></b>공연을 통해 관객이 아주 잠깐이라도 "세상이 바뀔 수 있겠다"고 느끼는 것이 희곡의 힘이라고 했다. <span class="tag t-note">Jill Dolan의 utopian performative (받아쓰기 "질 돌론")는 일반 지식으로 보충</span></div></li>
+    <li><div><b>치카노, 라티노 용어 <span class="tag t-ok">녹취</span></b>아래 "핵심 개념" 참조.</div></li>
+    <li><div><b>발표와 교수 논평 <span class="tag t-ok">녹취</span></b>아래 "발표 내용과 논평" 참조.</div></li>
+    <li><div><b>이름과 정체성 <span class="tag t-ok">녹취</span></b>아래 "이름, 칭찬, 정체성" 참조.</div></li>
+    <li><div><b>아시아계의 고정관념 토론 <span class="tag t-ok">녹취</span></b>학생들에게 미국에서의 한국인·아시아인 이미지를 물었다. 아래 참조.</div></li>
+    <li><div><b>결말과 마무리 <span class="tag t-ok">녹취</span></b>결말의 반전(기계는 모델이 아니라 Sancho)을 다시 짚고, 정체성을 파는 것을 풍자하는 것이 어떤 효과를 내는지 5분간 친구들과 토론하게 했다. 토론 내용은 녹음되지 않았다.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>핵심 개념 <small>5개</small></h2>
+  <div class="grid">
+    <div class="card"><h3>치카노, 치카나, 라티노</h3><p>교수는 치카노를 멕시코계 미국인 중에서 멕시코적 뿌리를 더 강조하는 사람으로 설명했다. 멕시코계 미국인 모두가 치카노는 아니다. 교수가 들은 일화: 채용 회의에서 한 치카나 교수가 자신이 라티나로 불리는 데 강하게 반발했고, 결국 분야를 라틴엑스로 넓히되 치카엑스를 강조하는 쪽으로 정리됐다. 혼동하면 안 된다고 했다. <span class="tag t-warn">일화는 교수의 전언</span></p></div>
+    <div class="card"><h3>Los Vendidos의 제목</h3><p>"팔린 사람들"과 "배신자들(sellouts)" 두 뜻이 있다. 교수는 "자신의 정체성을 판 사람들"로 풀었다. 제목부터 사람들이 반응할 수 있는 단어라고 했다.</p></div>
+    <div class="card"><h3>토큰 다양성</h3><p>주지사 사무실의 비서가 "멕시코 유형"을 사러 오는 설정을 정책 입안자가 특정 집단 사람을 위원회에 일부러 넣어 다양성을 보여 주는 일에 빗댔다. 교수는 명문대도 다양성을 내세우지만 정책은 바뀌지 않는 경우가 있다고 했다. <span class="tag t-warn">교수의 의견이며 사례는 받아쓰기가 깨져 확인 못 함</span></p></div>
+    <div class="card"><h3>악당과 피해자: 두 고정관념</h3><p>유색인은 오래 두 틀로 보였다. 하나는 범죄화하고 위협적인 존재(villain)로, 다른 하나는 불쌍한 존재(victim)로 보는 것이다. 피해자로만 보는 것도 그 사람의 목소리를 지운다고 했다. 한국계 예로 LA 폭동 때 "흑인을 무시한 한국인" 이미지를 들었다. 교수는 이 연극이 villain 쪽을 다룬다고 했다.</p></div>
+    <div class="card"><h3>이데올로기적 국가기구 (ISA)</h3><p>국가가 통제하는 수단은 눈에 보이는 억압(군대, 경찰)과 보이지 않는 이데올로기(학교, 종교 등)로 나뉜다. 사람은 개인이 아니라 가르치는 대로 따르는 주체(subject)가 된다는 것이 요지다. 그러나 이 이론은 사람이 가르치는 대로만 되지는 않는다는 비판을 받는다. 작품 속 모델이 학교에서 배운 말로 비판하는 장면이 그 반례로 읽힌다고 했다. <span class="tag t-note">Louis Althusser (받아쓰기 "알트제")는 일반 지식으로 보충</span></p></div>
+  </div>
+</section>
+
+<section>
+  <h2>발표 내용과 논평</h2>
+  <div class="grid">
+    <div class="card"><h3>발표 요지 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>멕시코인을 모델로 파는 가게가 배경이고, 주지사 사무실 비서가 구매자다.</li>
+      <li>도시형 모델(Pachuco)은 위험하고 불량한 존재라는 고정관념으로 그려진다.</li>
+      <li>영어를 하는 모델이 학교에서 배운 말로 욕하는 장면은 저항으로도, 학교 교육의 결과로도 읽힌다.</li>
+      <li>농장 노동자 모델은 값싼 노동과 경제적 착취의 풍자다.</li>
+      <li>비서는 개인으로 볼 수도, 제도적 시선의 대리인으로 볼 수도 있다.</li>
+      <li>해석 확장: 인간과 기계의 관계를 뒤집어 AI 시대로 개작할 수 있다는 제안(기계처럼 취급되던 쪽이 인간이었다는 구도).</li>
+    </ul></div>
+    <div class="card"><h3>교수 논평 <span class="tag t-ok">녹취</span></h3><ul>
+      <li>발표가 재미있었다고 평가했다. 특히 "학교에서 배운 것"을 ISA 개념으로 읽은 점을 짚었다.</li>
+      <li>농장 노동자극은 15~20분 정도의 짧은 풍자(acto)이고, 이 연극단은 농장 노동자 운동과 함께 시작했다.</li>
+      <li>60년대 흑인 예술 운동과 함께 이야기가 나왔는데, 부모가 그런 일을 겪은 사람이라면 남의 일이 될 수 없다고 했다.</li>
+      <li>교수는 농장 모델이 필요할 때만 오고 시즌이 끝나면 멕시코로 돌아간다는 설정에 주목했다.</li>
+      <li>멕시코계 남성을 대중문화 이미지로 상품화하는 모델도 있다고 했다(영웅이자 연인이라는 소비 이미지).</li>
+      <li>"그 사람을 개인으로 볼지, 제도의 시선을 가진 대리인으로 볼지" 학생에게 물었다. 답은 정하지 않았다.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>이름, 칭찬, 정체성</h2>
+  <ul class="plain">
+    <li><span class="tag t-ok">녹취</span> 교수는 미국에서 17년을 살면서 영어 이름을 쓰지 않았다. 그러나 영어 이름을 쓰는 사람을 쉽게 비난할 수는 없다고 했다. 대중을 상대하며 먹고살아야 하는 사람(예: 부동산 중개인)은 영어 이름을 쓸 수밖에 없다는 취지였다. "돌을 던질 수 있겠는가"라는 말로 정리했다.</li>
+    <li><span class="tag t-ok">녹취</span> 이 문제에는 정답이 없고, 문제의식을 제기하는 것이 더 의미 있다고 했다. 어디까지 용인할지는 그 사람의 맥락과 처지에 달려 있어 흑백으로 볼 수 없다는 입장이다.</li>
+    <li><span class="tag t-ok">녹취</span> 교수의 샌프란시스코 친구(멕시코계 미국인)는 "멕시코계 치고는 잘생겼다"는 말이 가장 싫다고 했다. 한국인에게 "한국인 치고는 잘생겼다"고 하는 것과 같아서, 집단을 하나의 틀로 묶는 말이라는 것이다. 작품의 "멕시코인이 왜 비싸냐"는 반응도 같은 구조라고 했다. <span class="tag t-warn">일화는 교수의 전언</span></li>
+    <li><span class="tag t-ok">녹취</span> 색깔: 한국에서도 피부가 밝을수록 선호하고, 미국에서 멕시코계에게는 상황에 따라 더 어두운 쪽 또는 더 밝은 쪽을 원하기도 한다고 했다. <span class="tag t-warn">교수의 일반화이며 근거 자료 없음</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>아시아계·한국인의 고정관념 <small>학생 응답과 교수 정리</small></h2>
+  <div class="scroll"><table>
+    <thead><tr><th>고정관념</th><th>교수의 설명</th></tr></thead>
+    <tbody>
+      <tr><td>과묵하다, 유순하다, 말을 잘 듣는다</td><td>이민자는 언어가 모국어가 아니라 밖에서 조용해지는 경우가 많다고 했다. 정치적으로 소란을 일으키지 않는다는 이미지와도 연결된다.</td></tr>
+      <tr><td>개를 먹는다</td><td>야만성을 강조하려는 정치적 도구로 쓰였다고 했다.</td></tr>
+      <tr><td>수학과 공부를 잘한다, 운전을 못한다, 교회에 열심히 다닌다</td><td>학생 응답이 나왔고 교수가 보탰다.</td></tr>
+      <tr><td>피부가 좋다, 멋있다 (최근)</td><td>화장품, K-pop(BTS) 등으로 이미지가 바뀌고 있다고 했다.</td></tr>
+      <tr><td>로봇 같다</td><td>대학원 시절 한 친구가 면접 때 정장을 입고 표정을 드러내지 않아야 한다고 했다는 일화를 소개했다. 약 20년 전 이야기라고 했다. <span class="tag t-warn">일화</span></td></tr>
+    </tbody></table></div>
+  <p style="font-size:15px;margin-top:10px"><span class="tag t-ok">녹취</span> 교수는 이런 이미지 속에서 개인은 보이지 않는 배경 인물이 되고 목소리에 권위가 없다고 했다. 고정관념을 깨야 하는 이유는 개인이 복잡하고 계속 변하기 때문이라고 했다. 학생이 교수의 취향을 맞춰 보고서를 쓰려 하지 말라는 농담을 하며 "나도 나를 모른다"고 말했다.</p>
+</section>
+
+<section>
+  <h2>시험 연결</h2>
+  <div class="box">
+    <p style="font-size:15px">이날 녹취에는 시험 범위에 대한 직접 언급이 없다. 아래는 연습 문항이며 교수 출제와는 무관하다. <span class="tag t-note">해석</span></p>
+  </div>
+  <div style="margin-top:12px">
+    <details><summary>Los Vendidos에서 사람을 기계처럼 다루는 설정은 무엇을 풍자하는가?</summary><p>모델을 규격화해 사고파는 시선, 즉 멕시코계를 기능을 가진 유형으로 보는 구매자와 제도의 시선을 풍자한다. 모델이 기계라는 뜻이 아니라, 결말에서 모델들이 인간이고 Sancho가 기계임이 드러난다.</p></details>
+    <details><summary>작품은 토큰 다양성을 어떻게 비판하는가?</summary><p>주지사 사무실이 "브라운 얼굴 하나"를 행사에 필요로 하는 설정에서 드러난다. 조건에 맞는 "미국적이면서 멕시코적인" 유형만 고르고, 정작 말하는 내용은 통제하려 한다.</p></details>
+    <details><summary>ISA 개념으로 이 작품의 영어 욕설 장면을 어떻게 읽을 수 있는가?</summary><p>학교가 주체를 만든다고 보면 모델이 학교에서 배운 말로 욕하는 것은 모순이다. 그래서 이 장면은 교육의 통제가 완전하지 않으며 비판이 가능함을 보여 주는 장면으로 읽힌다.</p></details>
+    <details><summary>정체성을 판다는 비판의 한계는?</summary><p>영어 이름을 쓰는 사람처럼 생계와 맥락 때문에 어쩔 수 없는 선택을 개인 탓으로 돌릴 수 있는지의 문제가 있다. 교수는 정답이 없고 문제의식 제기가 중요하다고 했다.</p></details>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>녹취</th><th>다른 자료</th></tr></thead>
+    <tbody>
+      <tr><td>Jill Dolan, Althusser</td><td>받아쓰기 "질 돌론", "알트제"</td><td>일반 지식으로 인물 추정 <span class="tag t-note">일반 지식</span></td></tr>
+      <tr><td>레이건 언급</td><td>교수는 "80년대 보수 대통령, 그 주지사"라고 말한 것으로 들림</td><td>작품 각주는 집필 당시 Reagan이 캘리포니아 주지사였다고 설명함. 대통령 시기와 섞였을 가능성</td></tr>
+      <tr><td>"면도 크림 / 하얗게" 언급</td><td>받아쓰기 흐림</td><td>대본 지문에는 말쑥하게 면도한 중산층 유형이라는 서술만 있음. 해석은 교수의 의견으로 보임</td></tr>
+      <tr><td>명문대 다양성 사례</td><td>인물과 잡지 이름이 받아쓰기로 깨짐</td><td>확인하지 못함</td></tr>
+      <tr><td>극단 창립 연도</td><td>교수는 "65년"이라고 언급</td><td>작품 각주는 1965년 El Teatro Campesino 창립이라고 설명함 (일치)</td></tr>
+      <tr><td>5분 토론 내용</td><td>녹음 없음</td><td>확인 불가</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer>
+  <p><b>확실도</b> 위 내용은 10/7 녹취(자동 받아쓰기)를 정리한 것이다. 학생 이름은 적지 않았고, 인물·작품·연도는 받아쓰기 오류 가능성이 있다. 교수의 일화와 일반화는 근거 자료가 제시되지 않았다.</p>
+  <p><b>범위 한계</b> 마지막 약 5분의 학생 토론은 기록이 없다. 발표 슬라이드는 교수 설명과 공유 자료로만 확인했다.</p>
+</footer>
+</div>
+</body></html>
