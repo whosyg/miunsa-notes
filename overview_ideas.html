@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>수업 전체 아이디어 종합</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+body{margin:0}
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#1d2430; --muted:#5a6475; --line:#d9dde5;
+  --accent:#8a5a00; --link:#1f4f8f;
+  --ok:#1f6b45; --ok-soft:#e1f1e8; --warn:#8a4b00; --warn-soft:#fbead2; --note:#44506a; --note-soft:#e6eaf2;
+  --serif:'Noto Serif KR','Nanum Myeongjo',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --fg:#e6e9ef; --muted:#9aa4b5; --line:#2c3440;
+  --accent:#e0b25a; --link:#8db8f0;
+  --ok:#6fcf9b; --ok-soft:#14281e; --warn:#e8b36a; --warn-soft:#2d2112; --note:#a9b6d3; --note-soft:#1e2636; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;border-bottom:2px solid var(--fg)}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+h1{font-family:var(--serif);font-size:clamp(26px,5.4vw,36px);line-height:1.3;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:21px;margin:0 0 14px;text-wrap:balance}
+h2 small{font:500 12px var(--sans);letter-spacing:.06em;color:var(--muted);margin-left:8px}
+p{margin:0}
+.lead{font-size:17px}
+section{display:flex;flex-direction:column;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}
+.tag{padding:2px 9px;border-radius:4px;font-weight:500;font-size:12.5px;white-space:nowrap}
+.t-ok{background:var(--ok-soft);color:var(--ok)}.t-warn{background:var(--warn-soft);color:var(--warn)}.t-note{background:var(--note-soft);color:var(--note)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.reads{display:grid;gap:8px;padding:0;margin:0;list-style:none}
+.reads li{padding-left:14px;border-left:3px solid var(--accent)}
+ol.flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.flow>li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px}
+ol.flow>li::before{content:counter(s);font:700 14px var(--sans);width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;margin-top:3px}
+ol.flow b{display:block}
+ol.flow ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{font-size:15px;margin:0 0 6px;font-family:var(--sans)}
+.card p{font-size:14.5px;line-height:1.65}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;line-height:1.65}
+ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px}
+details+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+details p{margin-top:8px;color:var(--muted);font-size:15px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.05em;color:var(--muted)}
+footer{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+</style></head><body>
+<div class="wrap">
+
+<header>
+  <div class="meta"><span>2026-2 · 미국문화와 현대사회의 이해</span><span>1~11주차 종합</span><span>근거: 각 주차 강의 노트와 교재 요약</span></div>
+  <h1>이 수업을 꿰는 질문: 누가, 누구를, 무엇을 위해 그리는가</h1>
+  <p class="lead">1주차 리스부터 11주차 한국 힙합까지, 교재를 쉽게 풀고 수업에서 짚은 점을 종합해 근간이 되는 아이디어를 6가지로 묶었다. 시험(구절 해석, 한국의 수용 문제)에 어떻게 연결되는지도 정리했다.</p>
+  <div class="legend"><span class="tag t-ok">녹취 근거</span><span class="tag t-note">일반 지식·해석 (녹취 밖)</span><span class="tag t-warn">확인 필요</span></div>
+</header>
+
+<section>
+  <h2>한 문장으로</h2>
+  <div class="box"><p>이 수업은 <b>"누가, 누구를, 어떤 시선으로, 무엇을 위해 그리는가"</b>를 반복해서 묻는다. 도시 빈민(리스)에서 시작해 흑인 문화, 성별, 이민, 혼혈, 풍자극과 영화, 일본의 블랙페이스, 한국의 힙합까지 소재는 달라도 질문은 같다: 이미지와 범주(인종, 성별, 민족)는 <b>만들어진 것</b>이고, 그것을 만들고 소비하는 쪽에 <b>권력</b>이 있으며, 그 안에서도 당사자는 <b>선택(agency)</b>을 한다. <span class="tag t-note">종합 해석</span></p></div>
+</section>
+
+<section>
+  <h2>근간이 되는 아이디어 6가지</h2>
+  <div class="grid">
+    <div class="card"><h3>① 재현의 정치: 누가 누구를 그리는가 <span class="tag t-note">종합 해석</span></h3><ul><li>리스는 빈민을 돕고자 했지만 민족마다 "성격"을 정해 버렸다(1주).</li><li>Campbell의 지도처럼 할렘은 구경꾼의 눈으로 그려지기도 한다(2주).</li><li>주요섭 「혼혈」은 차별을 고발하면서도 정형화를 되풀이한다는 지적을 받았다(5주).</li><li>질문: 그리는 사람은 누구이고, 그림에서 사라지는 것은 무엇인가?</li></ul></div>
+    <div class="card"><h3>② 고정관념과 상품화 <span class="tag t-note">종합 해석</span></h3><ul><li>Los Vendidos: 멕시코인 "유형"이 카탈로그 상품으로 팔린다(8주). 주류가 원하는 "이상적 소수자"도 상품이다(토큰 다양성).</li><li>드랙 볼과 보깅은 대중화되며 전유 비판을 받았다(3주). 블랙페이스는 "멋"이라는 이름으로 소비된다(10주).</li><li>질문: 이미지가 팔릴 때 이득은 누구에게 가는가?</li></ul></div>
+    <div class="card"><h3>③ 범주는 만들어진 것: 인종, 성별, 혈통 <span class="tag t-note">종합 해석</span></h3><ul><li>Butler: 젠더는 타고난 명사가 아니라 반복하는 행동(3주).</li><li>「혼혈」의 서술자: 순수한 피는 없다(5주). Rodriguez: 한 방울 규칙과 brown(9주).</li><li>인종도 바뀐다: 아일랜드계 등이 "백인이 되었다"는 수업 설명(9주), 리스 책의 백인성 획득 논의(1주).</li><li>질문: 범주는 누가 정했고, 누구에게 유리한가?</li></ul></div>
+    <div class="card"><h3>④ 구조 안의 선택(agency) <span class="tag t-note">종합 해석</span></h3><ul><li>사진신부는 강제혼과 가난 사이에서 선택했지만 그 선택이 "만들어진 것"일 수도 있다(4주).</li><li>드랙은 de Certeau의 "약자의 전술"로 읽힌다(3주). Clay는 말로 분노를 삼킨다(6주).</li><li>블랙페이스 청년의 agency는 "공격받을 수밖에 없는 agency"라는 교수의 정리(10주).</li><li>질문: 선택은 어디까지 자유이고, 누가 그 선택의 값을 치르는가?</li></ul></div>
+    <div class="card"><h3>⑤ 제국과 그 흔적 <span class="tag t-note">종합 해석</span></h3><ul><li>하와이 왕국의 전복과 합병(4주). 미군과 한국의 혼혈 아이(5주).</li><li>일본은 근대화하며 서구의 인종 위계를 받아들였고, 한국 지식인도 일본과 미국을 통해 이를 들여왔다고 교수는 설명했다(10주).</li><li>질문: 미국 문화는 한국에 어떤 구조와 시선을 함께 들여왔나?</li></ul></div>
+    <div class="card"><h3>⑥ 수용, 전유, 토착화: 한국의 입장 <span class="tag t-note">종합 해석</span></h3><ul><li>전유(가져다 씀)와 감상(이해하고 존중)의 경계는 사례마다 다르고 문화 권력과 떼어 볼 수 없다(10주).</li><li>힙합: 동질화에서 혼종화, 토착화로. 한국에서는 인종과 계층이 지워지고 한국 청년의 이야기가 들어갔다(11주).</li><li>질문: 왜 어떤 맥락은 지워지고 어떤 것은 남는가? 한국은 이제 생산하는 쪽이 아닌가?</li></ul></div>
+  </div>
+  <ul class="plain">
+    <li>이 6가지는 서로 연결된다: ①②는 "그림의 문제", ③은 "범주의 문제", ④는 "당사자의 문제", ⑤⑥은 "한국에 오는 길의 문제"다. <span class="tag t-note">종합 해석</span></li>
+    <li>교수가 반복한 방법론: 맞다/틀리다보다 <b>"왜 그렇게 되었나, 어떻게 작동하나"</b>를 묻는다. 디테일(색, 사물, 장면, 단어)이 분석의 힘이라고도 했다(7주, 11주). <span class="tag t-ok">녹취</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>각 강의: 교재를 쉽게 풀면 + 수업에서 짚은 것</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>주차</th><th>교재를 쉽게 풀면</th><th>수업에서 나온 핵심 개념</th><th>근간 아이디어</th></tr></thead>
+    <tbody>
+      <tr><td>1주 9/7</td><td><b>Riis</b> 빈민가를 사진과 글로 알린 개혁가. 가난의 원인을 집주인 탓으로 돌린 점은 좋지만, 민족마다 성격을 정해 놓은 점이 문제.</td><td>결정론, 인종 지도, slumming(구경 다니기), 백인성 획득</td><td>①②③</td></tr>
+      <tr><td>2주 9/9</td><td><b>Hughes의 시, Campbell의 지도, Lawrence의 연작</b> 할렘의 밤: 경찰이 겉모습으로 사람을 가르려는 새벽 카페, 재즈 소리가 겹치는 클럽. 지도와 그림은 직접 못 봄.</td><td>즐김의 정치성, 규범을 비트는 시공간, 확정할 수 없는 시선</td><td>①④</td></tr>
+      <tr><td>3주 9/14</td><td><b>Butler와 드랙 볼</b> 젠더는 행동이다. 드랙 볼은 차별에서 "선택 가족(하우스)"으로, 대중화되며 전유 논란까지.</td><td>수행성, 권력의 생산성, 양가성(끌림과 착취), 다른 삶의 가능성</td><td>②③④</td></tr>
+      <tr><td>4주 9/16</td><td><b>하와이 왕국과 사진신부</b> 설탕 산업의 백인 지도층이 1893년 왕정을 뒤엎음. 사진신부는 큰 힘 사이에서 살아남으려 선택한 여성.</td><td>agency, 제국, 사실 중심 vs 주장 중심 글쓰기</td><td>④⑤</td></tr>
+      <tr><td>5주 9/21</td><td><b>주요섭 「혼혈」</b> 전쟁 뒤 서울의 한 여성과 혼혈 아이의 비극. 뒷부분은 "순수한 피는 없다"는 에세이.</td><td>제국의 흔적, 차별 고발의 딜레마, 혈통과 "행복" 이데올로기</td><td>①③⑤</td></tr>
+      <tr><td>6주 9/23</td><td><b>Dutchman</b> 지하철에서 백인 여성 Lula가 흑인 청년 Clay를 유혹, 조롱하다 찌르는 단막극. 같은 일이 반복될 것임을 암시. (녹취 없음)</td><td>"아는 유형"으로 단정하기, 억눌린 분노</td><td>①②④</td></tr>
+      <tr><td>7주 9/30</td><td><b>Get Out</b> 호러 영화. 백인 진보주의자의 피상적 친절, 흑인 몸을 탐하는 시선, 대체 가능한 몸. (교재 요약 없음)</td><td>white liberal, 몸의 소비, 왜 공포인가</td><td>①②③</td></tr>
+      <tr><td>8주 10/7</td><td><b>Los Vendidos</b> "멕시코인 모델"을 파는 가게. 반전: 팔려 나가는 쪽은 상인. 상품이 사람이고 상인이 기계.</td><td>토큰 다양성, 악당과 피해자라는 두 고정관념, 이데올로기적 국가기구</td><td>②③</td></tr>
+      <tr><td>9주 10/12</td><td><b>Rodriguez, The Third Man</b> 흑과 백 사이의 "세 번째 사람". Hispanic은 인종이 아니라 문화. 소망은 섞임(brown)을 인정하는 "백인의 자유".</td><td>백인의 자유, 한 방울 규칙, 백인성 연구, 비판 연습</td><td>③④</td></tr>
+      <tr><td>10주 10/14</td><td><b>Wood, The Yellow Negro</b> 일본에서 피부를 어둡게 하고 흑인 문화를 흉내 내는 청년들. 모욕인가 동경인가. 일본 안의 소수자도 같이 본다.</td><td>전유 vs 감상, <i>Love and Theft</i>, 문화 권력, 시험 3번 연결</td><td>②④⑤⑥</td></tr>
+      <tr><td>11주 10/19</td><td><b>이규탁, 한국 힙합의 형성</b> 힙합이 한국에서 중산층의 세련된 유행이 되고 인종과 계층의 맥락이 지워짐. 토착화는 진행 중, 불평등은 남음.</td><td>동질화, 혼종화, 토착화, 한국은 생산국</td><td>⑤⑥</td></tr>
+    </tbody></table></div>
+  <ul class="plain">
+    <li>표의 "교재" 설명은 각 주차 교재 요약 문서의 내용이다. 2주차 지도와 그림, 7주차 영화, 6주차 수업은 직접 확인하지 못한 부분이 있다. <span class="tag t-warn">해당 주차 문서의 "확인 필요" 참조</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>흐름으로 보면</h2>
+  <ol class="flow">
+    <li><div><b>1~2주: 그림의 문제</b>빈민가와 할렘이 어떻게 그려졌는가. 개혁과 구경, 규범과 즐김.</div></li>
+    <li><div><b>3주: 범주는 행동이다</b>젠더 수행성을 통해 "원본과 흉내"의 구분이 흔들린다. 이 시각이 이후 인종 논의에도 쓰인다. <span class="tag t-note">종합 해석</span></div></li>
+    <li><div><b>4~5주: 제국과 한국</b>미국을 한국의 눈으로 본다. 하와이, 사진신부, 혼혈을 통해 제국의 흔적과 한국 안의 차별을 본다.</div></li>
+    <li><div><b>6~8주: 풍자와 공포로 드러내기</b>희곡과 영화는 고정관념과 분노를 극적으로 드러낸다. 직접 설명 대신 장치로 보여 주는 장르라는 점이 수업에서 강조됨.</div></li>
+    <li><div><b>9주: 백인의 자유</b>왜 어떤 사람은 정체성을 선택하고, 어떤 사람은 정체성에 갇히는가.</div></li>
+    <li><div><b>10~11주: 우리의 문제로</b>일본의 블랙페이스와 한국 힙합 사례로 "수용"을 묻는다. 시험 3번이 이 부분에서 나온다.</div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>시험에 쓰는 법</h2>
+  <div class="grid">
+    <div class="card"><h3>1번(주제 선택) <span class="tag t-ok">녹취</span></h3><ul><li>다섯 주제는 모두 수업에서 다룬 것이고 텍스트 하나를 골라 쓴다. 위 6가지 아이디어를 "주제"로 놓고 텍스트를 하나씩 짝지어 두면 된다. <span class="tag t-note">종합 해석</span></li></ul></div>
+    <div class="card"><h3>2번(구절 해석) <span class="tag t-ok">녹취</span></h3><ul><li>작가와 제목은 문항지에 있고, 의미를 3문장으로 쓴다. 수업 내용을 반복하면 최대 2.7점, 자기 생각을 설득력 있게 쓰면 3점. 아이디어 ④(선택의 한계)나 ②(상품화)를 한 문장 덧붙이면 "자기 생각"이 되기 쉽다. <span class="tag t-note">종합 해석</span></li></ul></div>
+    <div class="card"><h3>3번(한국의 수용) <span class="tag t-ok">녹취</span></h3><ul><li>사례를 제시하면 의견을 7문장 이내로 쓴다. "무엇을 가져오고 무엇을 지웠나, 왜, 누가 이득을 보나"를 쓰고 문화 권력을 언급하면 좋다. <span class="tag t-note">종합 해석</span></li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>확인 필요</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>항목</th><th>상태</th></tr></thead>
+    <tbody>
+      <tr><td>이 문서의 "근간 아이디어"</td><td>각 주차 문서를 종합한 해석이다. 교수가 이런 틀을 명시한 것은 아니다.</td></tr>
+      <tr><td>교재 해석</td><td>교재 요약 문서 근거. 2주차 지도, 그림, 기사와 아리랑 TV, KBS 다큐는 원문 미확인.</td></tr>
+      <tr><td>시험 날짜와 범위</td><td>녹취에 날짜가 없음. 11/2 이후 수업은 아직 반영되지 않음.</td></tr>
+    </tbody></table></div>
+</section>
+
+<footer><p><b>확실도</b> 중간. 각 주차 문서(원문과 녹취 근거)를 종합한 해석이며, 교수가 명시한 구조는 아니다. 학생 이름은 포함하지 않았다.</p><p><b>범위 한계</b> 1~11주차까지만 반영했다. 이후 수업은 녹취가 올라오면 추가한다.</p></footer>
+
+</div></body></html>
